@@ -58,7 +58,8 @@ fetch('data/violations.json')
   selects.forEach( (selectInput) => {
     let summaryEl = document.querySelector('.summary');
     selectInput.addEventListener('change', function(event) {
-      let mapKey = document.querySelector('select[name="'+this.name+'"]').options[document.querySelector('select[name="'+this.name+'"]').selectedIndex].value;
+      let currentIndex = document.querySelector('select[name="'+this.name+'"]').selectedIndex;
+      let mapKey = document.querySelector('select[name="'+this.name+'"]').options[currentIndex].value;
       if(this.name == 'system') {
         summaryEl.innerHTML = summary(systemMap.get(mapKey))
       }
@@ -74,7 +75,23 @@ fetch('data/violations.json')
       if(this.name == 'analyte') {
         summaryEl.innerHTML = summary(analyteMap.get(mapKey))
       }
+      if(mapKey == '') {
+        // if you changed a selector back to the default value, reset summary view to full state
+        document.querySelector('.summary').innerHTML = summary(myJson)
+      }
+      resetElements(this.name,currentIndex);
     })
   })
-  // when one changes we gotta send some new json to summary
 });
+
+function resetElements(currentName, currentIndex) {
+  console.log(currentName)
+  console.log(currentIndex)
+  // revert everything not touched back to default
+  document.querySelector('select[name="system"]').selectedIndex = 0;
+  document.querySelector('select[name="city"]').selectedIndex = 0;
+  document.querySelector('select[name="county"]').selectedIndex = 0;
+  document.querySelector('select[name="zip"]').selectedIndex = 0;
+  document.querySelector('select[name="analyte"]').selectedIndex = 0;
+  document.querySelector('select[name="'+currentName+'"]').selectedIndex = currentIndex;
+}
