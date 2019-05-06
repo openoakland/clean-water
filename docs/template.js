@@ -1,8 +1,4 @@
-function updateList(map,key,newItem) {
-  let existingItems = map.get(key);
-  existingItems.push(newItem);
-  map.set(key,existingItems);
-}
+import { updateList } from  './updatelist.js';
 
 export function summary(json) {
   let population = 0;
@@ -32,8 +28,19 @@ export function summary(json) {
   let analyteCount = analyteMap.size;
 
   return `
-    Total Population: ${population}<br>
-    Total Analytes: ${analyteCount}<br>
-    Total Systems: ${systemCount}
+    <div class="numcards">
+      <p class="numcard">
+        <span class="bignum">${population}</span> 
+        <span>People with unsafe drinking water</span>
+      </p>
+      <p class="numcard">
+        <span class="bignum">${systemCount}</span> 
+        <span>Incompliant water systems</span>
+      </p>
+      <p class="numcard">
+        <span class="bignum">${analyteCount}</span> 
+        <span>Analytes exceeding thresholds</span>
+      </p>
+    </div>
   `
 }
