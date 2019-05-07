@@ -19,9 +19,11 @@ fetch('data/'+window.location.search.replace('?id=','')+'.json')
   })
 
   let output = `
-  <h1>Water System:  ${systemData[0].WATER_SYSTEM_NAME}</h1>
+  <h1>Water System: ${systemData[0].WATER_SYSTEM_NAME}</h1>
+  <h2 style="text-align: center; font-weight: 500;">${systemData[0].POPULATION} People affected</h2>
+  <h3 class="erf-align">${systemData[0].CITY}, ${systemData[0].ZIPCODE}</h3>
+  <h3 class="erf-align">${systemData[0].COUNTY} COUNTY</h3>
   <h3 class="erf-align">Regulating Agency:  ${systemData[0].REGULATING_AGENCY}</h3>
-  <h3 class="erf-align">Location:  ${systemData[0].CITY}, ${systemData[0].COUNTY} ${systemData[0].ZIPCODE}</h3>
 
   <h4 class="erf-align">Analyte History:</h4>
   <div class="violaters">

@@ -24,12 +24,15 @@ fetch('data/violations.json')
       let currentIndex = document.querySelector('select[name="'+this.name+'"]').selectedIndex;
       let mapKey = document.querySelector('select[name="'+this.name+'"]').options[currentIndex].value;
       
-      summaryEl.innerHTML = summary(mapsObj[this.name+'Map'].get(mapKey))
-      violatorsEl.innerHTML = listViol(mapsObj[this.name+'Map'].get(mapKey));
-
       if(mapKey == '') {
         // if you changed a selector back to the default value, reset summary view to full state
         document.querySelector('.summary').innerHTML = summary(myJson)
+        document.querySelector('.violating-systems').innerHTML = listViol(myJson)
+        document.querySelector('h1').innerHTML = 'California Drinking Water';
+      } else {
+        summaryEl.innerHTML = summary(mapsObj[this.name+'Map'].get(mapKey))
+        violatorsEl.innerHTML = listViol(mapsObj[this.name+'Map'].get(mapKey));
+        document.querySelector('h1').innerHTML = mapKey+' Drinking Water';
       }
       resetElements(this.name,currentIndex);
     })

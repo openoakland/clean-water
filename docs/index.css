@@ -51,18 +51,18 @@ select {
 .violaters {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
   max-width: 90%;
   margin: 0 auto;
 }
 .violaters span {
-  background-color: rgba(0,0,255,.3);
-  padding: 5px;
+  background-color: rgba(0,0,255,.25);
+  padding: 10px;
   color: #000;
 }
 .violaters span.head {
-  background: blue;
+  background: rgba(0,0,255,.6);
   color: #fff;
 }
 .violaters span a {
@@ -71,4 +71,5 @@ select {
 .erf-align {
   max-width: 90%;
   margin: 10px auto;
+  font-weight: 500;
 }

@@ -1,10 +1,10 @@
 export function selectors(systemMap, cityMap, countyMap, zipMap, analyteMap) {
 
-  let systemKeys = Array.from( systemMap.keys() );
-  let cityKeys = Array.from( cityMap.keys() );
-  let countyKeys = Array.from( countyMap.keys() );
-  let zipKeys = Array.from( zipMap.keys() );
-  let analyteKeys = Array.from( analyteMap.keys() );
+  let systemKeys = Array.from( systemMap.keys() ).sort();
+  let cityKeys = Array.from( cityMap.keys() ).sort();
+  let countyKeys = Array.from( countyMap.keys() ).sort();
+  let zipKeys = Array.from( zipMap.keys() ).sort();
+  let analyteKeys = Array.from( analyteMap.keys() ).sort();
 
   return `
     <div class="selects">
