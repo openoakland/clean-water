@@ -56,6 +56,9 @@ select {
   max-width: 90%;
   margin: 0 auto;
 }
+.violaters.system-specific {
+  grid-template-columns: auto auto auto auto;
+}
 .violaters span {
   background-color: rgba(0,0,255,.25);
   padding: 10px;

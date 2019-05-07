@@ -1,4 +1,18 @@
-fetch('data/'+window.location.search.replace('?id=','')+'.json')
+import { updateList } from  './updatelist.js';
+
+let waterSystemId = window.location.search.replace('?id=','');
+
+fetch('data/loc-'+waterSystemId+'.json')
+.then(function(response) {
+  return response.json();
+})
+.then(function(locationData) {
+  console.log(locationData.geometry.coordinates);
+  // add map element
+  // write map js with coordinates
+});
+
+fetch('data/'+waterSystemId+'.json')
 .then(function(response) {
   return response.json();
 })
@@ -18,30 +32,44 @@ fetch('data/'+window.location.search.replace('?id=','')+'.json')
     }
   })
 
+  // split these by unique analyte
+  let uniqueAnalyteMap = new Map();
+  uniqueSystemData.forEach( (item) => {
+    let foundAnalyte = uniqueAnalyteMap.get(item.ANALYTE_NAME)
+    if(typeof(foundAnalyte) == 'undefined') {
+      uniqueAnalyteMap.set(item.ANALYTE_NAME,[item]);
+    } else {
+      updateList(uniqueAnalyteMap,item.ANALYTE_NAME,item);
+    }
+  })
+
   let output = `
   <h1>Water System: ${systemData[0].WATER_SYSTEM_NAME}</h1>
   <h2 style="text-align: center; font-weight: 500;">${systemData[0].POPULATION} People affected</h2>
   <h3 class="erf-align">${systemData[0].CITY}, ${systemData[0].ZIPCODE}</h3>
   <h3 class="erf-align">${systemData[0].COUNTY} COUNTY</h3>
   <h3 class="erf-align">Regulating Agency:  ${systemData[0].REGULATING_AGENCY}</h3>
+  <br><br>
 
-  <h4 class="erf-align">Analyte History:</h4>
-  <div class="violaters">
-    <span class="head">Analyte</span>
-    <span class="head">Violation Begin Date</span>
-    <span class="head">Violation End Date</span>
-    <span class="head">Exceedance Level</span>
-    <span class="head">Allowed Level</span>
-  ${uniqueSystemData.map((item) => {
+  ${Array.from(uniqueAnalyteMap).map((analyte) => {
     return `
-      <span>${item.ANALYTE_NAME}</span>
-      <span>${item.VIOL_BEGIN_DATE}</span>
-      <span>${item.VIOL_END_DATE}</span>
-      <span>${item.RESULT}</span>
-      <span>${item.MCL}</span>
-    `;
+      <h2 class="erf-align">${analyte[0]}</h2>
+      <div class="violaters system-specific">
+        <span class="head">Violation Begin Date</span>
+        <span class="head">Violation End Date</span>
+        <span class="head">Exceedance Level</span>
+        <span class="head">Allowed Level</span>
+        ${analyte[1].map((item) => {
+          return `
+            <span>${item.VIOL_BEGIN_DATE}</span>
+            <span>${item.VIOL_END_DATE}</span>
+            <span>${item.RESULT}</span>
+            <span>${item.MCL}</span>
+          `;
+        }).join(' ')}
+      </div>
+    `
   }).join(' ')}
-  </div>
   `;
 
   document.querySelector('.system-history').innerHTML = output;
