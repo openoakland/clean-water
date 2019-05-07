@@ -45,3 +45,30 @@ select {
   display: flex;
   justify-content: space-between;
 }
+.violating-systems {
+  margin-bottom: 150px;
+}
+.violaters {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.violaters span {
+  background-color: rgba(0,0,255,.3);
+  padding: 5px;
+  color: #000;
+}
+.violaters span.head {
+  background: blue;
+  color: #fff;
+}
+.violaters span a {
+  color: #000;
+}
+.erf-align {
+  max-width: 90%;
+  margin: 10px auto;
+}

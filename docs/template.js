@@ -30,7 +30,7 @@ export function summary(json) {
   return `
     <div class="numcards">
       <p class="numcard">
-        <span class="bignum">count: ${population.toLocaleString('en')}</span> 
+        <span class="bignum">${population.toLocaleString('en')}</span> 
         <span>People with unsafe drinking water</span>
       </p>
       <p class="numcard">
