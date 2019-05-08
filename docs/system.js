@@ -40,14 +40,15 @@ fetch('data/'+waterSystemId+'.json')
   <h3 class="erf-align">${systemData[0].COUNTY} COUNTY</h3>
   <h3 class="erf-align">Regulating Agency:  ${systemData[0].REGULATING_AGENCY}</h3>
   <br><br>
-
+  <h3 class="erf-align">The following table(s) show all measurements for all analytes which exceeded allowed levels</h3>
+  <br><br>
   ${Array.from(uniqueAnalyteMap).map((analyte) => {
     return `
       <h2 class="erf-align">${analyte[0]}</h2>
       <div class="violaters system-specific">
         <span class="head">Violation Begin Date</span>
         <span class="head">Violation End Date</span>
-        <span class="head">Exceedance Level</span>
+        <span class="head">Measured Level</span>
         <span class="head">Allowed Level</span>
         ${analyte[1].map((item) => {
           return `
