@@ -2,16 +2,6 @@ import { updateList } from  './updatelist.js';
 
 let waterSystemId = window.location.search.replace('?id=','');
 
-fetch('data/loc-'+waterSystemId+'.json')
-.then(function(response) {
-  return response.json();
-})
-.then(function(locationData) {
-  console.log(locationData.geometry.coordinates);
-  // add map element
-  // write map js with coordinates
-});
-
 fetch('data/'+waterSystemId+'.json')
 .then(function(response) {
   return response.json();

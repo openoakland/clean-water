@@ -58,6 +58,7 @@ select {
 }
 .violaters.system-specific {
   grid-template-columns: auto auto auto auto;
+  margin-bottom: 50px;
 }
 .violaters span {
   background-color: rgba(0,0,255,.25);
