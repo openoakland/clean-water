@@ -7,8 +7,9 @@ fetch('data/violations.json')
 .then(function(response) {
   return response.json();
 })
-.then(function(myJson) {
+.then(function(incomingJSON) {
 
+  let myJson = incomingJSON;
   let mapsObj = uniqueMaps(myJson);
 
   document.querySelector('.summary').innerHTML = summary(myJson)

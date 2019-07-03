@@ -2,6 +2,7 @@ import { updateList } from  './updatelist.js';
 
 export function uniqueMaps(json) {
   let mapsObj = {};
+  console.log(json)
 
   mapsObj.systemMap = new Map();
   mapsObj.zipMap = new Map();

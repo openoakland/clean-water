@@ -8,4 +8,4 @@ var myFile = fs.createWriteStream("locations.json");
  
 // or
  
-toJSON.fromShpFile('./shapefiles/EC_Summary_Apr2019.shp').pipe(myFile);
+toJSON.fromShpFile('./shapefiles/EC_Summary_Jun2019.shp').pipe(myFile);

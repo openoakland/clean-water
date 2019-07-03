@@ -1,0 +1,791 @@
+{
+  "kind": "civicinfo#representativeInfoResponse",
+  "normalizedInput": {
+   "line1": "64900 Lakeview Drive",
+   "city": "Hume",
+   "state": "CA",
+   "zip": "93628"
+  },
+  "divisions": {
+   "ocd-division/country:us": {
+    "name": "United States",
+    "officeIndices": [
+     0,
+     1
+    ]
+   },
+   "ocd-division/country:us/state:ca": {
+    "name": "California",
+    "officeIndices": [
+     2,
+     4,
+     5,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ]
+   },
+   "ocd-division/country:us/state:ca/cd:4": {
+    "name": "California's 4th congressional district",
+    "officeIndices": [
+     3
+    ]
+   },
+   "ocd-division/country:us/state:ca/county:fresno": {
+    "name": "Fresno County",
+    "officeIndices": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   }
+  },
+  "offices": [
+   {
+    "name": "President of the United States",
+    "divisionId": "ocd-division/country:us",
+    "levels": [
+     "country"
+    ],
+    "roles": [
+     "headOfState",
+     "headOfGovernment"
+    ],
+    "officialIndices": [
+     0
+    ]
+   },
+   {
+    "name": "Vice-President of the United States",
+    "divisionId": "ocd-division/country:us",
+    "levels": [
+     "country"
+    ],
+    "roles": [
+     "deputyHeadOfGovernment"
+    ],
+    "officialIndices": [
+     1
+    ]
+   },
+   {
+    "name": "United States Senate",
+    "divisionId": "ocd-division/country:us/state:ca",
+    "levels": [
+     "country"
+    ],
+    "roles": [
+     "legislatorUpperBody"
+    ],
+    "officialIndices": [
+     2,
+     3
+    ]
+   },
+   {
+    "name": "United States House of Representatives CA-04",
+    "divisionId": "ocd-division/country:us/state:ca/cd:4",
+    "levels": [
+     "country"
+    ],
+    "roles": [
+     "legislatorLowerBody"
+    ],
+    "officialIndices": [
+     4
+    ]
+   },
+   {
+    "name": "Governor",
+    "divisionId": "ocd-division/country:us/state:ca",
+    "levels": [
+     "administrativeArea1"
+    ],
+    "roles": [
+     "headOfGovernment"
+    ],
+    "officialIndices": [
+     5
+    ]
+   },
+   {
+    "name": "Lieutenant Governor",
+    "divisionId": "ocd-division/country:us/state:ca",
+    "levels": [
+     "administrativeArea1"
+    ],
+    "roles": [
+     "deputyHeadOfGovernment"
+    ],
+    "officialIndices": [
+     6
+    ]
+   },
+   {
+    "name": "Assessor-Recorder",
+    "divisionId": "ocd-division/country:us/state:ca/county:fresno",
+    "officialIndices": [
+     7
+    ]
+   },
+   {
+    "name": "Superintendent of Schools",
+    "divisionId": "ocd-division/country:us/state:ca/county:fresno",
+    "officialIndices": [
+     8
+    ]
+   },
+   {
+    "name": "District Attorney",
+    "divisionId": "ocd-division/country:us/state:ca/county:fresno",
+    "officialIndices": [
+     9
+    ]
+   },
+   {
+    "name": "Sheriff",
+    "divisionId": "ocd-division/country:us/state:ca/county:fresno",
+    "officialIndices": [
+     10
+    ]
+   },
+   {
+    "name": "Auditor-Controller-Treasurer-Tax Collector",
+    "divisionId": "ocd-division/country:us/state:ca/county:fresno",
+    "officialIndices": [
+     11
+    ]
+   },
+   {
+    "name": "County Clerk-Registar of Voters",
+    "divisionId": "ocd-division/country:us/state:ca/county:fresno",
+    "officialIndices": [
+     12
+    ]
+   },
+   {
+    "name": "Attorney General",
+    "divisionId": "ocd-division/country:us/state:ca",
+    "officialIndices": [
+     13
+    ]
+   },
+   {
+    "name": "State Superintendent of Public Instruction",
+    "divisionId": "ocd-division/country:us/state:ca",
+    "officialIndices": [
+     14
+    ]
+   },
+   {
+    "name": "State Controller",
+    "divisionId": "ocd-division/country:us/state:ca",
+    "officialIndices": [
+     15
+    ]
+   },
+   {
+    "name": "Secretary of State",
+    "divisionId": "ocd-division/country:us/state:ca",
+    "officialIndices": [
+     16
+    ]
+   },
+   {
+    "name": "State Treasurer",
+    "divisionId": "ocd-division/country:us/state:ca",
+    "officialIndices": [
+     17
+    ]
+   },
+   {
+    "name": "Insurance Commissioner",
+    "divisionId": "ocd-division/country:us/state:ca",
+    "officialIndices": [
+     18
+    ]
+   },
+   {
+    "name": "State Supreme Court Justice",
+    "divisionId": "ocd-division/country:us/state:ca",
+    "officialIndices": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ]
+   }
+  ],
+  "officials": [
+   {
+    "name": "Donald J. Trump",
+    "address": [
+     {
+      "line1": "The White House",
+      "line2": "1600 Pennsylvania Ave NW",
+      "line3": "",
+      "city": "Washington",
+      "state": "DC",
+      "zip": "20500"
+     }
+    ],
+    "party": "Republican Party",
+    "phones": [
+     "(202) 456-1111"
+    ],
+    "urls": [
+     "http://www.whitehouse.gov/"
+    ],
+    "photoUrl": "https://www.whitehouse.gov/sites/whitehouse.gov/files/images/45/PE%20Color.jpg",
+    "channels": [
+     {
+      "type": "GooglePlus",
+      "id": "+whitehouse"
+     },
+     {
+      "type": "Facebook",
+      "id": "whitehouse"
+     },
+     {
+      "type": "Twitter",
+      "id": "potus"
+     },
+     {
+      "type": "YouTube",
+      "id": "whitehouse"
+     }
+    ]
+   },
+   {
+    "name": "Mike Pence",
+    "address": [
+     {
+      "line1": "The White House",
+      "line2": "1600 Pennsylvania Avenue NW",
+      "line3": "",
+      "city": "Washington",
+      "state": "DC",
+      "zip": "20500"
+     }
+    ],
+    "party": "Republican Party",
+    "phones": [
+     "(202) 456-1111"
+    ],
+    "urls": [
+     "http://www.whitehouse.gov/"
+    ],
+    "photoUrl": "https://www.whitehouse.gov/sites/whitehouse.gov/files/images/45/VPE%20Color.jpg",
+    "channels": [
+     {
+      "type": "GooglePlus",
+      "id": "+whitehouse"
+     },
+     {
+      "type": "Facebook",
+      "id": "whitehouse"
+     },
+     {
+      "type": "Twitter",
+      "id": "VP"
+     }
+    ]
+   },
+   {
+    "name": "Dianne Feinstein",
+    "address": [
+     {
+      "line1": "United States Senate",
+      "line2": "331 Hart Senate Office Building",
+      "line3": "",
+      "city": "Washington",
+      "state": "DC",
+      "zip": "20510"
+     },
+     {
+      "line1": "One Post Street",
+      "line2": "Suite 2450",
+      "line3": "",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94104"
+     }
+    ],
+    "party": "Democratic Party",
+    "phones": [
+     "(202) 224-3841"
+    ],
+    "urls": [
+     "http://www.feinstein.senate.gov/public/"
+    ],
+    "photoUrl": "http://bioguide.congress.gov/bioguide/photo/F/F000062.jpg",
+    "channels": [
+     {
+      "type": "Facebook",
+      "id": "SenatorFeinstein"
+     },
+     {
+      "type": "Twitter",
+      "id": "SenFeinstein"
+     },
+     {
+      "type": "YouTube",
+      "id": "SenatorFeinstein"
+     }
+    ]
+   },
+   {
+    "name": "Kamala D. Harris",
+    "address": [
+     {
+      "line1": "United States Senate",
+      "line2": "112 Hart Senate Office Building",
+      "line3": "",
+      "city": "Washington",
+      "state": "DC",
+      "zip": "20510"
+     },
+     {
+      "line1": "501 I Street",
+      "line2": "Suite 7-600",
+      "line3": "",
+      "city": "Sacramento",
+      "state": "CA",
+      "zip": "95814"
+     }
+    ],
+    "party": "Democratic Party",
+    "phones": [
+     "(202) 224-3553"
+    ],
+    "urls": [
+     "https://www.harris.senate.gov"
+    ],
+    "channels": [
+     {
+      "type": "Facebook",
+      "id": "KamalaHarris"
+     },
+     {
+      "type": "Twitter",
+      "id": "KamalaHarris"
+     },
+     {
+      "type": "YouTube",
+      "id": "UC0XBsJpPhOLg0k4x9ZwrWzw"
+     }
+    ]
+   },
+   {
+    "name": "Tom McClintock",
+    "address": [
+     {
+      "line1": "United States House of Representatives",
+      "line2": "2312 Rayburn House Office Building",
+      "line3": "",
+      "city": "Washington",
+      "state": "DC",
+      "zip": "20515"
+     },
+     {
+      "line1": "2200A Douglas Boulevard",
+      "line2": "Suite 240",
+      "line3": "",
+      "city": "Roseville",
+      "state": "CA",
+      "zip": "95661"
+     }
+    ],
+    "party": "Republican Party",
+    "phones": [
+     "(202) 225-2511"
+    ],
+    "urls": [
+     "http://mcclintock.house.gov/"
+    ],
+    "photoUrl": "http://mcclintock.house.gov/sites/mcclintock.house.gov/files/wysiwyg_uploaded/McCPhoto.JPG",
+    "channels": [
+     {
+      "type": "Facebook",
+      "id": "81125319109"
+     },
+     {
+      "type": "Twitter",
+      "id": "RepMcClintock"
+     },
+     {
+      "type": "YouTube",
+      "id": "McClintockCA04"
+     }
+    ]
+   },
+   {
+    "name": "Gavin Newsom",
+    "address": [
+     {
+      "line1": "Office of the Lieutenant Governor",
+      "line2": "California State Capitol",
+      "line3": "Suite 1114",
+      "city": "Sacramento",
+      "state": "CA",
+      "zip": "95814"
+     }
+    ],
+    "party": "Democratic Party",
+    "phones": [
+     "(916) 445-2841"
+    ],
+    "urls": [
+     "https://www.gov.ca.gov/"
+    ],
+    "channels": [
+     {
+      "type": "Facebook",
+      "id": "GavinNewsom"
+     },
+     {
+      "type": "Twitter",
+      "id": "GavinNewsom"
+     }
+    ]
+   },
+   {
+    "name": "Eleni Kounalakis",
+    "party": "Democratic Party",
+    "phones": [
+     "(916) 445-8994"
+    ],
+    "urls": [
+     "https://ltg.ca.gov/"
+    ],
+    "channels": [
+     {
+      "type": "Facebook",
+      "id": "EleniKounalakis"
+     },
+     {
+      "type": "Twitter",
+      "id": "EleniForCA"
+     }
+    ]
+   },
+   {
+    "name": "Paul Dictos",
+    "party": "Nonpartisan",
+    "phones": [
+     "(559) 600-3534"
+    ],
+    "urls": [
+     "https://www.co.fresno.ca.us/departments/assessor"
+    ],
+    "emails": [
+     "assessorWebmail@fresnocountyca.gov"
+    ]
+   },
+   {
+    "name": "Jim Yovino",
+    "party": "Nonpartisan",
+    "phones": [
+     "(559) 265-3010"
+    ],
+    "urls": [
+     "http://fcoe.org/"
+    ],
+    "emails": [
+     "jyovino@fcoe.org"
+    ]
+   },
+   {
+    "name": "Lisa A. Smittcamp",
+    "party": "Nonpartisan",
+    "phones": [
+     "(559) 600-3141"
+    ],
+    "urls": [
+     "https://www.co.fresno.ca.us/departments/district-attorney"
+    ],
+    "emails": [
+     "damail@co.fresno.ca.us"
+    ]
+   },
+   {
+    "name": "Margaret Mims",
+    "party": "Nonpartisan",
+    "phones": [
+     "(559) 600-8400"
+    ],
+    "urls": [
+     "https://www.fresnosheriff.org/"
+    ],
+    "channels": [
+     {
+      "type": "Facebook",
+      "id": "135913479775617"
+     },
+     {
+      "type": "Twitter",
+      "id": "FresnoSheriff"
+     }
+    ]
+   },
+   {
+    "name": "Oscar J. Garcia",
+    "party": "Nonpartisan",
+    "phones": [
+     "(559) 600-3496"
+    ],
+    "urls": [
+     "https://www.co.fresno.ca.us/departments/auditor-controller-treasurer-tax-collector"
+    ],
+    "emails": [
+     "FresnoAuditor@co.fresno.ca.us"
+    ]
+   },
+   {
+    "name": "Brandi L. Orth",
+    "party": "Nonpartisan",
+    "phones": [
+     "(559) 600-2575"
+    ],
+    "urls": [
+     "https://www.co.fresno.ca.us/departments/county-clerk-registrar-of-voters"
+    ],
+    "emails": [
+     "Clerk-Elections@fresnocountyca.gov"
+    ]
+   },
+   {
+    "name": "Xavier Becerra",
+    "party": "Democratic Party",
+    "phones": [
+     "(916) 445-9555"
+    ],
+    "urls": [
+     "https://oag.ca.gov/"
+    ],
+    "channels": [
+     {
+      "type": "Facebook",
+      "id": "XavierBecerra"
+     },
+     {
+      "type": "Twitter",
+      "id": "AGBecerra"
+     }
+    ]
+   },
+   {
+    "name": "Tony K. Thurmond",
+    "party": "Nonpartisan",
+    "phones": [
+     "(916) 319-0800"
+    ],
+    "urls": [
+     "http://www.cde.ca.gov/"
+    ],
+    "channels": [
+     {
+      "type": "Facebook",
+      "id": "CAEducation"
+     },
+     {
+      "type": "Twitter",
+      "id": "CADeptEd"
+     }
+    ]
+   },
+   {
+    "name": "Betty T. Yee",
+    "party": "Democratic Party",
+    "phones": [
+     "(916) 445-2636"
+    ],
+    "urls": [
+     "https://www.sco.ca.gov/"
+    ],
+    "channels": [
+     {
+      "type": "Facebook",
+      "id": "137732083043662"
+     },
+     {
+      "type": "Twitter",
+      "id": "CAController"
+     }
+    ]
+   },
+   {
+    "name": "Alex Padilla",
+    "party": "Democratic Party",
+    "phones": [
+     "(916) 653-6814"
+    ],
+    "urls": [
+     "https://www.sos.ca.gov/"
+    ],
+    "channels": [
+     {
+      "type": "Facebook",
+      "id": "CaliforniaSOS"
+     },
+     {
+      "type": "Twitter",
+      "id": "CASOSvote"
+     }
+    ]
+   },
+   {
+    "name": "Fiona Ma",
+    "party": "Democratic Party",
+    "phones": [
+     "(916) 653-2995"
+    ],
+    "channels": [
+     {
+      "type": "Facebook",
+      "id": "CaliforniaSTO"
+     },
+     {
+      "type": "Twitter",
+      "id": "CalTreasurer"
+     }
+    ]
+   },
+   {
+    "name": "Ricardo Lara",
+    "party": "Democratic Party",
+    "urls": [
+     "http://www.insurance.ca.gov/"
+    ],
+    "channels": [
+     {
+      "type": "Facebook",
+      "id": "insurancecagov"
+     },
+     {
+      "type": "Twitter",
+      "id": "ICRicardoLara"
+     }
+    ]
+   },
+   {
+    "name": "Ming W. Chin",
+    "party": "Nonpartisan",
+    "phones": [
+     "(415) 865-7000"
+    ],
+    "urls": [
+     "https://www.courts.ca.gov/5762.htm"
+    ],
+    "channels": [
+     {
+      "type": "Twitter",
+      "id": "CalCourts"
+     }
+    ]
+   },
+   {
+    "name": "Goodwin H. Liu",
+    "party": "Nonpartisan",
+    "phones": [
+     "(415) 865-7000"
+    ],
+    "urls": [
+     "https://www.courts.ca.gov/15450.htm"
+    ],
+    "channels": [
+     {
+      "type": "Twitter",
+      "id": "CalCourts"
+     }
+    ]
+   },
+   {
+    "name": "Carol A. Corrigan",
+    "party": "Nonpartisan",
+    "phones": [
+     "(415) 865-7000"
+    ],
+    "urls": [
+     "https://www.courts.ca.gov/5766.htm"
+    ],
+    "channels": [
+     {
+      "type": "Twitter",
+      "id": "CalCourts"
+     }
+    ]
+   },
+   {
+    "name": "Tani G. Cantil-Sakauye",
+    "party": "Nonpartisan",
+    "phones": [
+     "(415) 865-7000"
+    ],
+    "urls": [
+     "https://www.courts.ca.gov/2664.htm"
+    ],
+    "channels": [
+     {
+      "type": "Twitter",
+      "id": "CalCourts"
+     }
+    ]
+   },
+   {
+    "name": "Mariano-Florentino Cuéllar",
+    "party": "Nonpartisan",
+    "phones": [
+     "(415) 865-7000"
+    ],
+    "urls": [
+     "https://www.courts.ca.gov/28724.htm"
+    ],
+    "channels": [
+     {
+      "type": "Twitter",
+      "id": "CalCourts"
+     }
+    ]
+   },
+   {
+    "name": "Leondra R. Kruger",
+    "party": "Nonpartisan",
+    "phones": [
+     "(415) 865-7000"
+    ],
+    "urls": [
+     "https://www.courts.ca.gov/33016.htm"
+    ],
+    "channels": [
+     {
+      "type": "Twitter",
+      "id": "CalCourts"
+     }
+    ]
+   },
+   {
+    "name": "Joshua Groban",
+    "party": "Nonpartisan",
+    "phones": [
+     "(415) 865-7000"
+    ],
+    "channels": [
+     {
+      "type": "Twitter",
+      "id": "CalCourts"
+     }
+    ]
+   }
+  ]
+ }
