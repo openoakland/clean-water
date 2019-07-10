@@ -31,15 +31,15 @@ export function summary(json) {
     <div class="numcards">
       <p class="numcard">
         <span class="bignum">${population.toLocaleString('en')}</span> 
-        <span>People with unsafe drinking water</span>
+        <span>People with Unsafe Drinking Water</span>
       </p>
       <p class="numcard">
         <span class="bignum">${systemCount}</span> 
-        <span>Incompliant water systems</span>
+        <span>Non-Compliant Water Systems</span>
       </p>
       <p class="numcard">
         <span class="bignum">${analyteCount}</span> 
-        <span>Analytes exceeding thresholds</span>
+        <span>Analyte(s) Exceeding a Drinking Water Standard</span>
       </p>
     </div>
   `
