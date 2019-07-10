@@ -36,7 +36,6 @@ select {
   min-width: 200px;
 }
 .selects {
-  position: fixed;
   box-sizing: border-box;
   bottom: 0;
   width: 100%;
