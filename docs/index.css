@@ -57,7 +57,7 @@ select {
   margin: 0 auto;
 }
 .violaters.system-specific {
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   margin-bottom: 50px;
 }
 .violaters span {

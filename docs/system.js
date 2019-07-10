@@ -50,12 +50,14 @@ fetch('data/'+waterSystemId+'.json')
         <span class="head">Violation End Date</span>
         <span class="head">Measured Level</span>
         <span class="head">Allowed Level</span>
+        <span class="head">Action</span>
         ${analyte[1].map((item) => {
           return `
-            <span>${item.VIOL_BEGIN_DATE}</span>
-            <span>${item.VIOL_END_DATE}</span>
+            <span>${new Date(item.VIOL_BEGIN_DATE).toLocaleDateString("en-US")}</span>
+            <span>${new Date(item.VIOL_END_DATE).toLocaleDateString("en-US")}</span>
             <span>${item.RESULT}</span>
             <span>${item.MCL}</span>
+            <span>${item.ENF_ACTION_TYPE_ISSUED}</span>
           `;
         }).join(' ')}
       </div>

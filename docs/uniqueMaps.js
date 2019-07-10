@@ -9,6 +9,7 @@ export function uniqueMaps(json) {
   mapsObj.countyMap = new Map();
   mapsObj.cityMap = new Map();
   mapsObj.analyteMap = new Map();
+  mapsObj.legislatorMap = new Map();
 
   json.forEach( (v) => {
     let foundSystemMap = mapsObj.systemMap.get(v.WATER_SYSTEM_NUMBER)
@@ -44,6 +45,13 @@ export function uniqueMaps(json) {
       mapsObj.analyteMap.set(v.ANALYTE_NAME,[v]);
     } else {
       updateList(mapsObj.analyteMap,v.ANALYTE_NAME,v);
+    }
+
+    let foundLegislatoreMap = mapsObj.analyteMap.get(v.LEGISLATOR)
+    if(typeof(foundLegislatoreMap) == 'undefined') {
+      mapsObj.legislatorMap.set(v.LEGISLATOR,[v]);
+    } else {
+      updateList(mapsObj.legislatorMap,v.LEGISLATOR,v);
     }
   })
 
