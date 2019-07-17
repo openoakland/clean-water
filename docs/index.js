@@ -14,7 +14,7 @@ fetch('data/violations.json')
 
   document.querySelector('.summary').innerHTML = summary(myJson)
   document.querySelector('.violating-systems').innerHTML = listViol(myJson)
-  document.querySelector('.selectors').innerHTML = selectors(mapsObj.systemMap, mapsObj.cityMap, mapsObj.countyMap, mapsObj.zipMap, mapsObj.analyteMap);
+  document.querySelector('.selectors').innerHTML = selectors(mapsObj.systemMap, mapsObj.cityMap, mapsObj.countyMap, mapsObj.zipMap, mapsObj.analyteMap, mapsObj.senatorMap, mapsObj.assemblyMap);
 
   // setup selector listeners
   let selects = document.querySelectorAll('.selectors select');
@@ -33,7 +33,14 @@ fetch('data/violations.json')
       } else {
         summaryEl.innerHTML = summary(mapsObj[this.name+'Map'].get(mapKey))
         violatorsEl.innerHTML = listViol(mapsObj[this.name+'Map'].get(mapKey));
-        document.querySelector('h1').innerHTML = mapKey+' Drinking Water';
+        if(this.name == 'senator') {
+          
+          document.querySelector('h1').innerHTML = 'CA State Senate District '+mapKey+' Drinking Water';
+        } else if(this.name == 'assembly') {
+          document.querySelector('h1').innerHTML = 'CA State Assembly District '+mapKey+' Drinking Water';
+        } else {
+          document.querySelector('h1').innerHTML = mapKey+' Drinking Water';
+        }
       }
       resetElements(this.name,currentIndex);
     })

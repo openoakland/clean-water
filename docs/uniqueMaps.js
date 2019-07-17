@@ -2,14 +2,14 @@ import { updateList } from  './updatelist.js';
 
 export function uniqueMaps(json) {
   let mapsObj = {};
-  console.log(json)
 
   mapsObj.systemMap = new Map();
   mapsObj.zipMap = new Map();
   mapsObj.countyMap = new Map();
   mapsObj.cityMap = new Map();
   mapsObj.analyteMap = new Map();
-  mapsObj.legislatorMap = new Map();
+  mapsObj.senatorMap = new Map();
+  mapsObj.assemblyMap = new Map();
 
   json.forEach( (v) => {
     let foundSystemMap = mapsObj.systemMap.get(v.WATER_SYSTEM_NUMBER)
@@ -47,11 +47,18 @@ export function uniqueMaps(json) {
       updateList(mapsObj.analyteMap,v.ANALYTE_NAME,v);
     }
 
-    let foundLegislatoreMap = mapsObj.analyteMap.get(v.LEGISLATOR)
-    if(typeof(foundLegislatoreMap) == 'undefined') {
-      mapsObj.legislatorMap.set(v.LEGISLATOR,[v]);
+    let foundSenatorMap = mapsObj.senatorMap.get(v.CA_STATE_SENATE_DISTRICT)
+    if(typeof(foundSenatorMap) == 'undefined') {
+      mapsObj.senatorMap.set(v.CA_STATE_SENATE_DISTRICT,[v]);
     } else {
-      updateList(mapsObj.legislatorMap,v.LEGISLATOR,v);
+      updateList(mapsObj.senatorMap,v.CA_STATE_SENATE_DISTRICT,v);
+    }
+
+    let foundAssemplyMap = mapsObj.assemblyMap.get(v.CA_STATE_ASSEMBLY_DISTRICT)
+    if(typeof(foundAssemplyMap) == 'undefined') {
+      mapsObj.assemblyMap.set(v.CA_STATE_ASSEMBLY_DISTRICT,[v]);
+    } else {
+      updateList(mapsObj.assemblyMap,v.CA_STATE_ASSEMBLY_DISTRICT,v);
     }
   })
 

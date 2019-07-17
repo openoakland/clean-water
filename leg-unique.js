@@ -30,6 +30,13 @@ async function readFiles(dir) {
   console.log('total files; '+count)
   console.log('unique legislators: '+legislators.size)
 
+  let uniqueItemArray = [];
+  legislators.forEach( (item) => {
+    console.log(item.chamber +' '+item.district)
+  })
+  // CA State Assembly District X
+  // CA State Senate District X
+
   // for each unique legislator create a file with all their water systems
 }
 readFiles('./docs/data');

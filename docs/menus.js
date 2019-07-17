@@ -1,10 +1,12 @@
-export function selectors(systemMap, cityMap, countyMap, zipMap, analyteMap) {
+export function selectors(systemMap, cityMap, countyMap, zipMap, analyteMap, senateMap, assemblyMap) {
 
   let systemKeys = Array.from( systemMap.keys() ).sort();
   let cityKeys = Array.from( cityMap.keys() ).sort();
   let countyKeys = Array.from( countyMap.keys() ).sort();
   let zipKeys = Array.from( zipMap.keys() ).sort();
   let analyteKeys = Array.from( analyteMap.keys() ).sort();
+  let senateKeys = Array.from( senateMap.keys() ).sort();
+  let assemblyKeys = Array.from( assemblyMap.keys() ).sort();
 
   return `
     <div class="selects">
@@ -37,7 +39,19 @@ export function selectors(systemMap, cityMap, countyMap, zipMap, analyteMap) {
         ${analyteKeys.map( (item) => {
           return `<option value="${item}">${item}</option>`
         })}
-      </select>      
+      </select>
+      <select name="senator">
+        <option value="">CA State Senate</option>
+        ${senateKeys.map( (item) => {
+          return `<option value="${item}">District ${item}</option>`
+        })}
+      </select>
+      <select name="assembly">
+        <option value="">CA State Assembly</option>
+        ${assemblyKeys.map( (item) => {
+          return `<option value="${item}">District ${item}</option>`
+        })}
+      </select>
     </div>
   `
 }

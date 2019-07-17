@@ -32,10 +32,17 @@ The browseable website is in the ```docs/``` folder
 
 Attempt to get the latest data: ```fetch/index.js``` (This needs to run on a lambda or something so it can run regularly)
 
-Attempt to apply the legislative data to the files in the docs/data folder: ```legislators.js```
+Apply the legislative data to the files in the docs/data folder: ```legislators.js```
 
+Add the legislative district to each system:
+
+```
+node add-legislators-to-violations.js
+```
+<!--
 Finding the list of unique legislators for our select menu: ```leg-unique.js```
-
+The list of unique legislators can be dynamically built out of violations.json too
+-->
 
 ### Plan
 

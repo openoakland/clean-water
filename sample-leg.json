@@ -1,0 +1,24 @@
+{
+  "legislators": [
+    {
+      "name": "Bob Wieckowski",
+      "id": "ocd-person/c4167cdb-2f4b-4fce-a106-e4d033b83651",
+      "image": "https://senate.ca.gov/sites/senate.ca.gov/files/senator_photos/wieckowski_9781_lls.jpg",
+      "pretty_url": "/person/bob-wieckowski-5y0lvQxC5m9RulUnPxgb57/",
+      "party": "Democratic",
+      "chamber": "upper",
+      "district": "10",
+      "division_id": "ocd-division/country:us/state:ca/sldu:10"
+    },
+    {
+      "name": "Bill Quirk",
+      "id": "ocd-person/9ef08f26-f81d-433e-b055-841432a7d52c",
+      "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad20.jpg",
+      "pretty_url": "/person/bill-quirk-4puirD8EbUta8qtLvutvG0/",
+      "party": "Democratic",
+      "chamber": "lower",
+      "district": "20",
+      "division_id": "ocd-division/country:us/state:ca/sldl:20"
+    }
+  ]
+}
