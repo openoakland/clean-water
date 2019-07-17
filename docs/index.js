@@ -54,5 +54,7 @@ function resetElements(currentName, currentIndex) {
   document.querySelector('select[name="county"]').selectedIndex = 0;
   document.querySelector('select[name="zip"]').selectedIndex = 0;
   document.querySelector('select[name="analyte"]').selectedIndex = 0;
+  document.querySelector('select[name="senator"]').selectedIndex = 0;
+  document.querySelector('select[name="assembly"]').selectedIndex = 0;
   document.querySelector('select[name="'+currentName+'"]').selectedIndex = currentIndex;
 }
