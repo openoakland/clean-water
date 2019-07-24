@@ -34,7 +34,6 @@ fetch('data/violations.json')
         summaryEl.innerHTML = summary(mapsObj[this.name+'Map'].get(mapKey))
         violatorsEl.innerHTML = listViol(mapsObj[this.name+'Map'].get(mapKey));
         if(this.name == 'senator') {
-          
           document.querySelector('h1').innerHTML = 'CA State Senate District '+mapKey+' Drinking Water';
         } else if(this.name == 'assembly') {
           document.querySelector('h1').innerHTML = 'CA State Assembly District '+mapKey+' Drinking Water';
