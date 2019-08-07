@@ -1,1 +1,24 @@
-{"legislators":[{"name":"Hannah-Beth Jackson","id":"ocd-person/99a1bf4a-2bc5-41d4-ba5b-4d40ef65fe48","image":"https://senate.ca.gov/sites/senate.ca.gov/files/senator_photos/jackson-hannah-beth.jpg","pretty_url":"/person/hannah-beth-jackson-4ftkAh3jDyn2EpbcQt97oe/","party":"Democratic","chamber":"upper","district":"19","division_id":"ocd-division/country:us/state:ca/sldu:19"},{"name":"Jacqui Irwin","id":"ocd-person/e7ad99fd-fda5-4114-af3e-320f5be9be3c","image":"https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD44_Irwin_Portrait150_20141201.jpg","pretty_url":"/person/jacqui-irwin-73AYwgwC83PVhmxChW8616/","party":"Democratic","chamber":"lower","district":"44","division_id":"ocd-division/country:us/state:ca/sldl:44"}]}
+{
+  "legislators": [
+    {
+      "name": "Hannah-Beth Jackson",
+      "id": "ocd-person/99a1bf4a-2bc5-41d4-ba5b-4d40ef65fe48",
+      "image": "https://senate.ca.gov/sites/senate.ca.gov/files/senator_photos/jackson-hannah-beth.jpg",
+      "pretty_url": "/person/hannah-beth-jackson-4ftkAh3jDyn2EpbcQt97oe/",
+      "party": "Democratic",
+      "chamber": "upper",
+      "district": "19",
+      "division_id": "ocd-division/country:us/state:ca/sldu:19"
+    },
+    {
+      "name": "Jacqui Irwin",
+      "id": "ocd-person/e7ad99fd-fda5-4114-af3e-320f5be9be3c",
+      "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD44_Irwin_Portrait150_20141201.jpg",
+      "pretty_url": "/person/jacqui-irwin-73AYwgwC83PVhmxChW8616/",
+      "party": "Democratic",
+      "chamber": "lower",
+      "district": "44",
+      "division_id": "ocd-division/country:us/state:ca/sldl:44"
+    }
+  ]
+}

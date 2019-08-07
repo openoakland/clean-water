@@ -32,8 +32,11 @@ async function readFiles(dir) {
 
   let uniqueItemArray = [];
   legislators.forEach( (item) => {
-    console.log(item.chamber +' '+item.district)
+    if(item.chamber == 'lower') {
+      uniqueItemArray.push(item)
+    }
   })
+  console.log(JSON.stringify(uniqueItemArray))
   // CA State Assembly District X
   // CA State Senate District X
 

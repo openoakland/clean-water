@@ -37,6 +37,7 @@ fetch('data/violations.json')
           document.querySelector('h1').innerHTML = 'CA State Senate District '+mapKey+' Drinking Water';
         } else if(this.name == 'assembly') {
           document.querySelector('h1').innerHTML = 'CA State Assembly District '+mapKey+' Drinking Water';
+          // writeMapData(mapsObj[this.name+'Map'].get(mapKey));
         } else {
           document.querySelector('h1').innerHTML = mapKey+' Drinking Water';
         }
@@ -56,4 +57,21 @@ function resetElements(currentName, currentIndex) {
   document.querySelector('select[name="senator"]').selectedIndex = 0;
   document.querySelector('select[name="assembly"]').selectedIndex = 0;
   document.querySelector('select[name="'+currentName+'"]').selectedIndex = currentIndex;
+}
+
+function writeMapData(data) {
+  // would like to find unique analytes+system combos, keeping last date only
+  let uniqueAnalyteSystemMap = new Map();
+  data.forEach( (item) => {
+    let key = item.WATER_SYSTEM_NUMBER+'-'+item.ANALYTE_NAME;
+    let existingItem = uniqueAnalyteSystemMap.get(key);
+    if(existingItem) {
+      if(existingItem.ENF_ACTION_ISSUE_DATE < item.ENF_ACTION_ISSUE_DATE) {
+        uniqueAnalyteSystemMap.set(key, item);
+      }
+    } else {
+      uniqueAnalyteSystemMap.set(key, item);
+    }
+  })
+  console.log(JSON.stringify(Array.from(uniqueAnalyteSystemMap)))
 }

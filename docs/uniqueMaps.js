@@ -62,5 +62,38 @@ export function uniqueMaps(json) {
     }
   })
 
+  /*let popObjs = [];
+  mapsObj.assemblyMap.forEach( (item) => {
+    let popCount = leaderboard(item);
+    let districtInfo = item[0].CA_STATE_ASSEMBLY_DISTRICT;
+    let popObj = {}
+    popObj.population = popCount;
+    popObj.dist = districtInfo;
+    popObj.type = 'Assembly';
+    console.log(`CA Assembly District ${districtInfo} has a population of ${popCount}`)
+    popObjs.push(popObj)
+  })
+  console.log(JSON.stringify(popObjs))*/
+
   return mapsObj;
+}
+
+
+function leaderboard(json) {
+  let population = 0;
+
+  let systemMap = new Map();
+
+  json.forEach( (v) => {
+    let foundSystemMap = systemMap.get(v.WATER_SYSTEM_NUMBER)
+    if(typeof(foundSystemMap) == 'undefined') {
+      systemMap.set(v.WATER_SYSTEM_NUMBER,[v]);
+    } else {
+      updateList(systemMap,v.WATER_SYSTEM_NUMBER,v);
+    }
+  })
+  systemMap.forEach( (item) => {
+    population += parseInt(item[0].POPULATION);
+  })
+  return population;
 }
