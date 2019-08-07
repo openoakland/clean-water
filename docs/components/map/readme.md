@@ -1,5 +1,9 @@
 # Mapbox map with 3D columns Custom Element
 
+## Example
+
+<img src="map-example.png" />
+
 ## How to use
 
 ### Put the custom element HTML tag in you page:
