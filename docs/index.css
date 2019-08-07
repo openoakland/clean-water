@@ -36,6 +36,7 @@ select {
   min-width: 200px;
 }
 .selects {
+  position: fixed;
   box-sizing: border-box;
   bottom: 0;
   width: 100%;
@@ -56,7 +57,7 @@ select {
   margin: 0 auto;
 }
 .violaters.system-specific {
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto;
   margin-bottom: 50px;
 }
 .violaters span {
@@ -75,4 +76,9 @@ select {
   max-width: 90%;
   margin: 10px auto;
   font-weight: 500;
+}
+button {
+  justify-content:flex-end;
+  margin-right: 40px;
+  margin-bottom: 10px;
 }

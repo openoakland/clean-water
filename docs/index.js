@@ -2,6 +2,7 @@ import { summary } from './template.js';
 import { listViol } from './listViol.js';
 import { selectors } from './menus.js';
 import { uniqueMaps } from './uniqueMaps.js';
+import { exportList } from './exportList.js';
 
 fetch('data/violations.json')
 .then(function(response) {
@@ -14,7 +15,7 @@ fetch('data/violations.json')
 
   document.querySelector('.summary').innerHTML = summary(myJson)
   document.querySelector('.violating-systems').innerHTML = listViol(myJson)
-  document.querySelector('.selectors').innerHTML = selectors(mapsObj.systemMap, mapsObj.cityMap, mapsObj.countyMap, mapsObj.zipMap, mapsObj.analyteMap, mapsObj.senatorMap, mapsObj.assemblyMap);
+  document.querySelector('.selectors').innerHTML = selectors(mapsObj.systemMap, mapsObj.cityMap, mapsObj.countyMap, mapsObj.zipMap, mapsObj.analyteMap);
 
   // setup selector listeners
   let selects = document.querySelectorAll('.selectors select');
@@ -24,7 +25,7 @@ fetch('data/violations.json')
     selectInput.addEventListener('change', function(event) {
       let currentIndex = document.querySelector('select[name="'+this.name+'"]').selectedIndex;
       let mapKey = document.querySelector('select[name="'+this.name+'"]').options[currentIndex].value;
-      
+
       if(mapKey == '') {
         // if you changed a selector back to the default value, reset summary view to full state
         document.querySelector('.summary').innerHTML = summary(myJson)
@@ -33,18 +34,19 @@ fetch('data/violations.json')
       } else {
         summaryEl.innerHTML = summary(mapsObj[this.name+'Map'].get(mapKey))
         violatorsEl.innerHTML = listViol(mapsObj[this.name+'Map'].get(mapKey));
-        if(this.name == 'senator') {
-          document.querySelector('h1').innerHTML = 'CA State Senate District '+mapKey+' Drinking Water';
-        } else if(this.name == 'assembly') {
-          document.querySelector('h1').innerHTML = 'CA State Assembly District '+mapKey+' Drinking Water';
-        } else {
-          document.querySelector('h1').innerHTML = mapKey+' Drinking Water';
-        }
+        document.querySelector('h1').innerHTML = mapKey+' Drinking Water';
       }
       resetElements(this.name,currentIndex);
     })
   })
-});
+
+  document.getElementById("export-list").addEventListener("click", function() {
+    exportList(document.querySelectorAll('.violating-systems span'), document.querySelectorAll('.violating-systems span.head').length);
+
+
+  })
+
+  });
 
 function resetElements(currentName, currentIndex) {
   // revert everything not touched back to default
@@ -53,7 +55,5 @@ function resetElements(currentName, currentIndex) {
   document.querySelector('select[name="county"]').selectedIndex = 0;
   document.querySelector('select[name="zip"]').selectedIndex = 0;
   document.querySelector('select[name="analyte"]').selectedIndex = 0;
-  document.querySelector('select[name="senator"]').selectedIndex = 0;
-  document.querySelector('select[name="assembly"]').selectedIndex = 0;
   document.querySelector('select[name="'+currentName+'"]').selectedIndex = currentIndex;
 }
