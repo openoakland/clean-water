@@ -15,7 +15,8 @@ fetch('data/violations.json')
 
   document.querySelector('.summary').innerHTML = summary(myJson)
   document.querySelector('.violating-systems').innerHTML = listViol(myJson)
-  document.querySelector('.selectors').innerHTML = selectors(mapsObj.systemMap, mapsObj.cityMap, mapsObj.countyMap, mapsObj.zipMap, mapsObj.analyteMap);
+  document.querySelector('.selectors').innerHTML = selectors(mapsObj.systemMap, mapsObj.cityMap, mapsObj.countyMap, mapsObj.zipMap, mapsObj.analyteMap, mapsObj.senatorMap, mapsObj.assemblyMap);
+
 
   // setup selector listeners
   let selects = document.querySelectorAll('.selectors select');
@@ -62,5 +63,7 @@ function resetElements(currentName, currentIndex) {
   document.querySelector('select[name="county"]').selectedIndex = 0;
   document.querySelector('select[name="zip"]').selectedIndex = 0;
   document.querySelector('select[name="analyte"]').selectedIndex = 0;
+  document.querySelector('select[name="senator"]').selectedIndex = 0;
+  document.querySelector('select[name="assembly"]').selectedIndex = 0;
   document.querySelector('select[name="'+currentName+'"]').selectedIndex = currentIndex;
 }
