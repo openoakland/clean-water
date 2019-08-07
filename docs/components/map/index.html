@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Map Custom Element Sample</title>
+
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; bottom:0; width:100%; }
+      .marker {
+        background-color: white;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <cfa-oak-map-columns color="#00c" center="" key="pk.eyJ1IjoiYWFyb25oYW5zIiwiYSI6ImNqNGs4cms1ZzBocXkyd3FzZGs3a3VtamYifQ.HQjFfVzwwxwCmGr2nvnvSA"></cfa-oak-map-columns>
+
+    <script type="module" src="index.js"></script>
+    <script>
+      fetch('test.json').then(function(response) {
+        return response.json();
+      })
+      .then(function(myJson) {
+        let mapComponent = document.querySelector('cfa-oak-map-columns');
+        mapComponent.json = myJson;
+        mapComponent.setAttribute('center','-121.918099,39.043447');
+      });
+    </script>
+    <!--
+      feed it real data
+      make column heights work
+
+      use in leaderboard
+    -->
+  </body>
+</html>

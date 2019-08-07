@@ -1,0 +1,57 @@
+body {
+  font-family: Helvetica;
+  background-color: blue;
+  margin: 0; padding: 0;
+}
+.bar {
+  height: 80px;
+  background: #383636;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 20px 0 0 20px;
+  border-radius: 40px 10px 10px 40px;
+  cursor: pointer;
+}
+.label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  min-width: 90vw;
+}
+.label img {
+  height: 100px;
+  width: auto;
+}
+.member-details {
+  line-height: 28px;
+}
+.member-details strong {
+  font-size: 120%;
+}
+.politician {
+  font-size: 120%;
+}
+.cropper {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  overflow: hidden;
+  margin: 0px 20px 0 0;
+}
+cfa-oak-map-columns {
+  width: 800px;
+  height: 400px;
+  display: block;
+}
+
+/* #map { position:absolute; top:0; bottom:0; width:100%; } */
+.marker {
+  background-color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}

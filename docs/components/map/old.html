@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+        .marker {
+          background-color: white;
+          cursor: pointer;
+          padding: 5px;
+          border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id='map'>
+</div>
+<script>
+mapboxgl.accessToken = ';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [-121.46330579183154, 38.19427650730316, ],
+    zoom: 9.8,
+    pitch: 47,
+    bearing: -38.37113944877393
+});
+
+map.on('load', function() {
+
+  let data = getData( function(geojson) {
+    console.log('calling back')
+
+    map.addLayer({
+        'id': 'room-extrusion',
+        'type': 'fill-extrusion',
+        'source': {
+            // Geojson Data source used in vector tiles, documented at
+            // https://gist.github.com/ryanbaumann/a7d970386ce59d11c16278b90dde094d
+            'type': 'geojson',
+            'data': geojson
+          },
+        'paint': {
+          // See the Mapbox Style Spec for details on property functions
+          // https://www.mapbox.com/mapbox-gl-style-spec/#types-function
+          'fill-extrusion-color': {
+            // Get the fill-extrusion-color from the source 'color' property.
+            'property': 'color',
+            'type': 'identity'
+          },
+            'fill-extrusion-height': {
+            // Get fill-extrusion-height from the source 'height' property.
+            'property': 'height',
+            'type': 'identity'
+          },
+            'fill-extrusion-base': {
+              // Get fill-extrusion-base from the source 'base_height' property.
+              'property': 'base_height',
+              'type': 'identity'
+          },
+            // Make extrusions slightly opaque for see through indoor walls.
+            'fill-extrusion-opacity': 0.7
+        }
+    });
+  })
+
+});
+
+function getCoords(points, color) {
+  let blueCenter = { lng: points[0], lat: points[1] };
+  //console.log(blueCenter)
+  var blueCoords = [
+    [
+      [
+        blueCenter.lng,
+        blueCenter.lat
+      ],
+      [
+        blueCenter.lng,
+        blueCenter.lat - 0.005
+      ],
+      [
+        blueCenter.lng + 0.0082,
+        blueCenter.lat - 0.005
+      ],
+      [
+        blueCenter.lng + 0.0082,
+        blueCenter.lat
+      ],
+      [
+        blueCenter.lng,
+        blueCenter.lat
+      ]
+    ]
+  ]
+  return blueCoords;
+}
+
+function getData(callback) {
+  
+  window.dataObj = {
+    "features": [],
+    "type": "FeatureCollection"
+  };
+
+
+  fetch('data/violations-output.json').then(function(response) {
+    var contentType = response.headers.get("content-type");
+    if(contentType && contentType.indexOf("application/json") !== -1) {
+      return response.json().then(function(json) {
+        let recordsFound = 0;
+        json.features.forEach(function(result) {
+          recordsFound++;
+          let coords = getCoords(result.geometry.coordinates);
+          //console.log(result.geometry.coordinates)
+          let featureBlue = buildFeatureContaminant(result,coords)
+          window.dataObj.features.push(featureBlue);
+
+          coords = getCoords([ result.geometry.coordinates[0] - -0.003776000000002, result.geometry.coordinates[1] + 0.00020300000000617047 ]);
+          let featureRed = buildFeatureMCL(result,coords)
+          window.dataObj.features.push(featureRed);
+
+          // create a HTML element for each feature
+          var el = document.createElement('div');
+          el.innerHTML = result.properties['ANALYTE_NAME'];
+          el.className = 'marker';
+
+          let customPopUp = new mapboxgl.Popup(
+            { offset: 25 }
+          ).setHTML('<iframe src="https://aaronhans.github.io/water-challenge/html/chart.html?'+result.properties['WATER_SYSTEM_NUMBER']+'"></iframe>')
+
+          // make a marker for each feature and add to the map
+          new mapboxgl.Marker(el)
+          .setLngLat(result.geometry.coordinates)
+          .setPopup(customPopUp)
+          .addTo(map);
+
+        });
+        callback(window.dataObj);
+      });
+    } else {
+      console.log("Oops, we haven't got JSON!");
+    }
+  });
+
+}
+
+function buildFeatureMCL(item,coords) {
+  return {
+    "type": "Feature",
+    "properties": {
+      "level": 1,
+      "height": 5000,
+      "base_height": 0,
+      "color": "#07dbf6"
+    },
+    "geometry": {
+      "coordinates": coords,
+      "type": "Polygon"
+    },
+    "id": randomString()
+  };
+}
+
+function buildFeatureContaminant(item,coords) {
+  return {
+    "type": "Feature",
+    "properties": {
+      "level": 1,
+      "height": 5000 * item.properties.proportion_mcl,
+      "base_height": 0,
+      "color": "#3f3e3e"
+    },
+    "geometry": {
+      "coordinates": coords,
+      "type": "Polygon"
+    },
+    "id": randomString()
+  }
+}
+
+function randomString() {
+  let length = 32;
+  let chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+  var result = '';
+  for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+  return result;
+}
+</script>
+
+</body>
+</html>

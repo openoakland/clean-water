@@ -1,0 +1,752 @@
+[
+  {
+    "name": "Bill Quirk",
+    "id": "ocd-person/9ef08f26-f81d-433e-b055-841432a7d52c",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad20.jpg",
+    "pretty_url": "/person/bill-quirk-4puirD8EbUta8qtLvutvG0/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "20",
+    "division_id": "ocd-division/country:us/state:ca/sldl:20"
+  },
+  {
+    "name": "Rob Bonta",
+    "id": "ocd-person/1529b892-b3da-4958-bb3a-5bf04d7b5e0c",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD18-Bonta.jpg",
+    "pretty_url": "/person/rob-bonta-dvu8OyK5ilubazFymCJgq/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "18",
+    "division_id": "ocd-division/country:us/state:ca/sldl:18"
+  },
+  {
+    "name": "Rebecca Bauer-Kahan",
+    "id": "ocd-person/2918acca-40a2-4819-a79a-b2873c7895bc",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/a16_r_b_kahan.jpg",
+    "pretty_url": "/person/rebecca-bauer-kahan-1FXxdWYlCINstFYRVYfxL2/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "16",
+    "division_id": "ocd-division/country:us/state:ca/sldl:16"
+  },
+  {
+    "name": "Jim  Frazier",
+    "id": "ocd-person/193620ba-dd85-48ff-9b0e-4611ef2d9613",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad11_frazier.jpg",
+    "pretty_url": "/person/jim-frazier-lZXliYUclKZdQO8F1PFh5/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "11",
+    "division_id": "ocd-division/country:us/state:ca/sldl:11"
+  },
+  {
+    "name": "Jim Wood",
+    "id": "ocd-person/798893c7-4969-4b39-b9d3-f920806424f3",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/asm_wood_120_x_170.jpg",
+    "pretty_url": "/person/jim-wood-3hKUE8DRmXBVdQ7KtawTpL/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "2",
+    "division_id": "ocd-division/country:us/state:ca/sldl:2"
+  },
+  {
+    "name": "Frank Bigelow",
+    "id": "ocd-person/b8ba6ec8-fecd-4fc9-b98f-74f2888f7fdb",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD05-Frank_Bigelow.jpg",
+    "pretty_url": "/person/frank-bigelow-5cZmrjZ3rTHDWqGqrywGst/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "5",
+    "division_id": "ocd-division/country:us/state:ca/sldl:5"
+  },
+  {
+    "name": "James Gallagher",
+    "id": "ocd-person/5d93a1cb-7a01-43ab-a26c-a2abecdee135",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/Gallagher_LDC_headshot.jpg",
+    "pretty_url": "/person/james-gallagher-2qZkm1AUAk0Zw72tZqoz93/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "3",
+    "division_id": "ocd-division/country:us/state:ca/sldl:3"
+  },
+  {
+    "name": "Brian Dahle",
+    "id": "ocd-person/91915f3b-c93f-4f55-a164-58b8c1587d6d",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD01-Brian_Dahle.jpg",
+    "pretty_url": "/person/brian-dahle-4QgK05vET7EM3mVBmIof41/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "1",
+    "division_id": "ocd-division/country:us/state:ca/sldl:1"
+  },
+  {
+    "name": "Cecilia M. Aguiar-Curry",
+    "id": "ocd-person/434bcfb4-1279-40cc-916b-f89af5805a9c",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad04_aguiar-curry_roster150_20161205.jpg",
+    "pretty_url": "/person/cecilia-m-aguiar-curry-22z8AalOo8QsISWxTrruf6/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "4",
+    "division_id": "ocd-division/country:us/state:ca/sldl:4"
+  },
+  {
+    "name": "Timothy S. Grayson",
+    "id": "ocd-person/972cffb0-32a6-4cef-8a0f-a8cd901395b0",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad14_header.jpg",
+    "pretty_url": "/person/timothy-s-grayson-4bGPABbsw6dFRBia5mPAC8/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "14",
+    "division_id": "ocd-division/country:us/state:ca/sldl:14"
+  },
+  {
+    "name": "Ken Cooley",
+    "id": "ocd-person/96fcafb9-0183-46b0-aaa3-dbb21d8d6135",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD08-Cooley_0.jpg",
+    "pretty_url": "/person/ken-cooley-4auKHEJeEaKtG40AHBzDmv/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "8",
+    "division_id": "ocd-division/country:us/state:ca/sldl:8"
+  },
+  {
+    "name": "Kevin Kiley",
+    "id": "ocd-person/35eec890-026c-412f-8bcf-27e24206a608",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/kiley.jpg",
+    "pretty_url": "/person/kevin-kiley-1dliUj2E9uYWJjWwvytEgy/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "6",
+    "division_id": "ocd-division/country:us/state:ca/sldl:6"
+  },
+  {
+    "name": "Dr. Joaquin  Arambula",
+    "id": "ocd-person/e2da0f08-1bd8-4ac2-95f1-002870238527",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad31_2.jpg",
+    "pretty_url": "/person/dr-joaquin-arambula-6u3uyg9EulRo1VENeajVKx/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "31",
+    "division_id": "ocd-division/country:us/state:ca/sldl:31"
+  },
+  {
+    "name": "Jim Patterson",
+    "id": "ocd-person/2cb9d19b-360d-4568-a781-b54a483b081e",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD23-Jim_Patterson.jpg",
+    "pretty_url": "/person/jim-patterson-1MOa4SMN2IgYrurC818qvm/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "23",
+    "division_id": "ocd-division/country:us/state:ca/sldl:23"
+  },
+  {
+    "name": "Devon J. Mathis",
+    "id": "ocd-person/3ffead8c-6856-4592-8594-182e295b8e87",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/mathis.jpg",
+    "pretty_url": "/person/devon-j-mathis-1wku5o3pMyePzL08ZZebcl/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "26",
+    "division_id": "ocd-division/country:us/state:ca/sldl:26"
+  },
+  {
+    "name": "Ash Kalra",
+    "id": "ocd-person/820619fd-d053-4915-b099-1d134a880228",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad27_karla_roster150_20161205.jpg",
+    "pretty_url": "/person/ash-kalra-3xLn2H9yyE25Agsny9tcWu/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "27",
+    "division_id": "ocd-division/country:us/state:ca/sldl:27"
+  },
+  {
+    "name": "Christy Smith",
+    "id": "ocd-person/820a24d1-6453-4090-912d-7a3c96826983",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/a38_c_smith.jpg",
+    "pretty_url": "/person/christy-smith-3xNdZQ82N0PIKwcG5283wh/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "38",
+    "division_id": "ocd-division/country:us/state:ca/sldl:38"
+  },
+  {
+    "name": "Eduardo Garcia",
+    "id": "ocd-person/c4f4c9c1-1f1b-4cb6-854b-434c53495006",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD56_Garcia_Portrait150_20141201.jpg",
+    "pretty_url": "/person/eduardo-garcia-5zeMbO56lKpPv7W0coexnS/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "56",
+    "division_id": "ocd-division/country:us/state:ca/sldl:56"
+  },
+  {
+    "name": "Phillip Chen",
+    "id": "ocd-person/6ba768a4-2756-42b5-a5c5-f6b8b5db0491",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/chen.jpg",
+    "pretty_url": "/person/phillip-chen-3H8gT9EkN35vhhhZHBNhmj/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "55",
+    "division_id": "ocd-division/country:us/state:ca/sldl:55"
+  },
+  {
+    "name": "Freddie Rodriguez",
+    "id": "ocd-person/b1d10c0c-3d3d-4ae1-8c7e-02227cd18aa0",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD52_Rodriguez_0.jpg",
+    "pretty_url": "/person/freddie-rodriguez-5PXAx2qiFbg7wHy1PFbkKe/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "52",
+    "division_id": "ocd-division/country:us/state:ca/sldl:52"
+  },
+  {
+    "name": "Vince Fong",
+    "id": "ocd-person/3dc86015-2733-405e-ba6b-715006f4ab19",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/fong.jpg",
+    "pretty_url": "/person/vince-fong-1sa6QiTzwzihGy4suMuGRl/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "34",
+    "division_id": "ocd-division/country:us/state:ca/sldl:34"
+  },
+  {
+    "name": "Rudy Salas, Jr.",
+    "id": "ocd-person/7e9b4527-8dc0-4525-9394-23909909e953",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD32-Salas_0.jpg",
+    "pretty_url": "/person/rudy-salas-jr-3qtzUfgUNj6Zvm83rq8iMl/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "32",
+    "division_id": "ocd-division/country:us/state:ca/sldl:32"
+  },
+  {
+    "name": "Tom Lackey",
+    "id": "ocd-person/a8879d70-713c-4d0c-b723-77d0e96c18df",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/lackey.png",
+    "pretty_url": "/person/tom-lackey-580gbRbwQRycc4I0Dsqffj/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "36",
+    "division_id": "ocd-division/country:us/state:ca/sldl:36"
+  },
+  {
+    "name": "James C. Ramos",
+    "id": "ocd-person/156660b1-4c3f-45e3-8384-53cda60d7ea5",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/a40_jc_ramos.jpg",
+    "pretty_url": "/person/james-c-ramos-eNcmq6IPdNVwqmhNbEkXl/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "40",
+    "division_id": "ocd-division/country:us/state:ca/sldl:40"
+  },
+  {
+    "name": "Blanca E. Rubio",
+    "id": "ocd-person/82cbb6e9-8486-44ec-8450-86d1e700f828",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/rubio.jpg",
+    "pretty_url": "/person/blanca-e-rubio-3yo6DXAsf2qMrNKwBKc8ee/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "48",
+    "division_id": "ocd-division/country:us/state:ca/sldl:48"
+  },
+  {
+    "name": "Luz M. Rivas",
+    "id": "ocd-person/db75b62c-0713-4075-89cb-1437a9648b00",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/a39_l_rivas.jpg",
+    "pretty_url": "/person/luz-m-rivas-6g7745GEd8HGCh4ME7dlYG/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "39",
+    "division_id": "ocd-division/country:us/state:ca/sldl:39"
+  },
+  {
+    "name": "Ed Chau",
+    "id": "ocd-person/7a8deb33-ca1f-4c20-93b5-a16cd9536cc2",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD49-Chau.jpg",
+    "pretty_url": "/person/ed-chau-3jFv67L14LZIta0vAScTmU/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "49",
+    "division_id": "ocd-division/country:us/state:ca/sldl:49"
+  },
+  {
+    "name": "Ian C. Calderon",
+    "id": "ocd-person/3e08c682-6d05-495e-87b4-e546b5f005e8",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD57.jpg",
+    "pretty_url": "/person/ian-c-calderon-1t3X9DDB1Zl1A2sr2JcmTY/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "57",
+    "division_id": "ocd-division/country:us/state:ca/sldl:57"
+  },
+  {
+    "name": "Patrick O'Donnell",
+    "id": "ocd-person/e3c486d0-3173-4d1e-a106-9c28c32e7429",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD70_ODonnell_Portrait150_20141201.jpg",
+    "pretty_url": "/person/patrick-odonnell-6vn4PSaP4QqPRoGp1BK2cz/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "70",
+    "division_id": "ocd-division/country:us/state:ca/sldl:70"
+  },
+  {
+    "name": "Cristina Garcia",
+    "id": "ocd-person/024ce6f2-cbc1-4331-9466-7b57e52cdb8c",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD58-Garcia.jpg",
+    "pretty_url": "/person/cristina-garcia-4L7zzkd8Rba6SzcnJDGhw/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "58",
+    "division_id": "ocd-division/country:us/state:ca/sldl:58"
+  },
+  {
+    "name": "Chris R. Holden",
+    "id": "ocd-person/154c4712-4a1f-4a57-bd37-b75ee5bfbab5",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD41-Holden.jpg",
+    "pretty_url": "/person/chris-r-holden-eBhGUHW4FPqTq9Dl6CX1J/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "41",
+    "division_id": "ocd-division/country:us/state:ca/sldl:41"
+  },
+  {
+    "name": "Mike A. Gipson",
+    "id": "ocd-person/404dbee4-6b74-4249-ab26-9644cab7c7d5",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD64_Gipson_Portrait150_20141201.jpg",
+    "pretty_url": "/person/mike-a-gipson-1xL2P8scJyJmtynkdPcPOX/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "64",
+    "division_id": "ocd-division/country:us/state:ca/sldl:64"
+  },
+  {
+    "name": "Laura Friedman",
+    "id": "ocd-person/e4fdea57-14a2-4fa7-a40c-92cf06c07edd",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad43_friedman.jpg",
+    "pretty_url": "/person/laura-friedman-6y6HzZQTtCCTAcPSJMcqNh/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "43",
+    "division_id": "ocd-division/country:us/state:ca/sldl:43"
+  },
+  {
+    "name": "Al Muratsuchi",
+    "id": "ocd-person/78610d0e-c790-4fc9-ab8e-0887adbbe063",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad66.jpg",
+    "pretty_url": "/person/al-muratsuchi-3f9QlLdFSsonjDLkj9caGp/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "66",
+    "division_id": "ocd-division/country:us/state:ca/sldl:66"
+  },
+  {
+    "name": "Autumn R. Burke",
+    "id": "ocd-person/0fec719d-4fca-4119-88c2-02c3b4faed85",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD62_Burke_Portrait150_20141201_v2.jpg",
+    "pretty_url": "/person/autumn-r-burke-U2wHScWtwd6DWNJo8h9LZ/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "62",
+    "division_id": "ocd-division/country:us/state:ca/sldl:62"
+  },
+  {
+    "name": "Miguel Santiago",
+    "id": "ocd-person/2e27cd32-daea-4a11-987b-bef3c4068e02",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD53_Santiago_Portrait150_20141201.jpg",
+    "pretty_url": "/person/miguel-santiago-1P5pr8SnlSN1uzFOdVjI6U/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "53",
+    "division_id": "ocd-division/country:us/state:ca/sldl:53"
+  },
+  {
+    "name": "Anthony Rendon",
+    "id": "ocd-person/27c957dd-86a1-4bbe-9007-f4ebf931a795",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad63-rendon_0.jpg",
+    "pretty_url": "/person/anthony-rendon-1D4iJvrz9g8TWdShKTioTN/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "63",
+    "division_id": "ocd-division/country:us/state:ca/sldl:63"
+  },
+  {
+    "name": "Richard Bloom",
+    "id": "ocd-person/550a055e-b1d5-406d-9ecb-0f02818baa74",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD50-Bloom.jpg",
+    "pretty_url": "/person/richard-bloom-2aSvUtfJ2fc3uYwi0icBNc/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "50",
+    "division_id": "ocd-division/country:us/state:ca/sldl:50"
+  },
+  {
+    "name": "Jesse Gabriel",
+    "id": "ocd-person/407f6fda-8638-4cca-9704-7aa8df7de26e",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/jgabriel.jpg",
+    "pretty_url": "/person/jesse-gabriel-1xhkMPb2PaqZOKDuGmXGVq/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "45",
+    "division_id": "ocd-division/country:us/state:ca/sldl:45"
+  },
+  {
+    "name": "Marc Levine",
+    "id": "ocd-person/a3645286-b3a4-4065-af84-a84a6cf0091d",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD10-Levine_0.jpg",
+    "pretty_url": "/person/marc-levine-4yJazu15OOn4K8CkqeQ6YP/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "10",
+    "division_id": "ocd-division/country:us/state:ca/sldl:10"
+  },
+  {
+    "name": "Adam C. Gray",
+    "id": "ocd-person/fd14f876-4b18-4101-8ad4-d45d8586683a",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/gray.png",
+    "pretty_url": "/person/adam-c-gray-7hYdozbrHHA8mwa9LQfrMQ/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "21",
+    "division_id": "ocd-division/country:us/state:ca/sldl:21"
+  },
+  {
+    "name": "Heath Flora",
+    "id": "ocd-person/c830a90c-8964-4c0f-b31b-729cab1144fd",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/flora.jpg",
+    "pretty_url": "/person/heath-flora-65khbFNdTi2aA3p0nCqsm5/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "12",
+    "division_id": "ocd-division/country:us/state:ca/sldl:12"
+  },
+  {
+    "name": "Mark Stone",
+    "id": "ocd-person/af97aad8-2e95-4648-8cd4-6b710df6b3ce",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad29.jpg",
+    "pretty_url": "/person/mark-stone-5LKy6NGjWgzquszbb4pccw/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "29",
+    "division_id": "ocd-division/country:us/state:ca/sldl:29"
+  },
+  {
+    "name": "Robert Rivas",
+    "id": "ocd-person/68f5ee30-aa70-489b-84b7-6501e6188751",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/a30_r_rivas.jpg",
+    "pretty_url": "/person/robert-rivas-3C3ajfqG87onDc0PwKAYBl/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "30",
+    "division_id": "ocd-division/country:us/state:ca/sldl:30"
+  },
+  {
+    "name": "Jordan Cunningham",
+    "id": "ocd-person/16d16f4a-1551-4546-bec2-e7f336a3e90f",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/cunningham.jpg",
+    "pretty_url": "/person/jordan-cunningham-h3Xfn7lZhNXpJagCUDH5T/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "35",
+    "division_id": "ocd-division/country:us/state:ca/sldl:35"
+  },
+  {
+    "name": "Sharon Quirk-Silva",
+    "id": "ocd-person/840aa009-3ae4-4484-b9f0-5c5f5060e7db",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad65_quirk-silva.jpg",
+    "pretty_url": "/person/sharon-quirk-silva-419qFyN2B8ManVh0v6Fevb/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "65",
+    "division_id": "ocd-division/country:us/state:ca/sldl:65"
+  },
+  {
+    "name": "Tyler Diep",
+    "id": "ocd-person/387d1902-a97e-4dea-a8ce-d9060accfdd8",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/a72_t_diep.jpg",
+    "pretty_url": "/person/tyler-diep-1iajt0xm4vLtst5bypYwZM/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "72",
+    "division_id": "ocd-division/country:us/state:ca/sldl:72"
+  },
+  {
+    "name": "William P. Brough",
+    "id": "ocd-person/cb98648f-c217-45d4-9edd-6b9e8f4af0bd",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/Brough_LDC_headshot.jpg",
+    "pretty_url": "/person/william-p-brough-6CB5Kvu225mO1cLoSSGDeP/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "73",
+    "division_id": "ocd-division/country:us/state:ca/sldl:73"
+  },
+  {
+    "name": "Tom Daly",
+    "id": "ocd-person/6e15bad0-0813-443e-bc20-83d70860b9b9",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD69-Daly.jpg",
+    "pretty_url": "/person/tom-daly-3Lj5MS2M3dqDiSipa9Yxnl/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "69",
+    "division_id": "ocd-division/country:us/state:ca/sldl:69"
+  },
+  {
+    "name": "Cottie Petrie-Norris",
+    "id": "ocd-person/c766abf8-06ca-4a98-9665-82b87149ca96",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/a74_c_p_norris.jpg",
+    "pretty_url": "/person/cottie-petrie-norris-64GORHAiJOn5TOA2yDc1GI/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "74",
+    "division_id": "ocd-division/country:us/state:ca/sldl:74"
+  },
+  {
+    "name": "Steven S. Choi, Ph.D.",
+    "id": "ocd-person/8b61aa87-d573-47e2-b17b-bd0edd3c8cf2",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/choi.jpg",
+    "pretty_url": "/person/steven-s-choi-phd-4F0Z9XtX30FFRz4eczAfMw/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "68",
+    "division_id": "ocd-division/country:us/state:ca/sldl:68"
+  },
+  {
+    "name": "Kevin McCarty",
+    "id": "ocd-person/723bd312-e1c3-490c-9a8c-65388f834092",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD07_McCarty_Portrait150_20141201.jpg",
+    "pretty_url": "/person/kevin-mccarty-3TYSq2s5TUY0sGoRXBE56g/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "7",
+    "division_id": "ocd-division/country:us/state:ca/sldl:7"
+  },
+  {
+    "name": "Randy Voepel",
+    "id": "ocd-person/63a9e3aa-9baf-444e-820e-1d1caaf2aa3e",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/voepel.jpg",
+    "pretty_url": "/person/randy-voepel-323sYkkLsgg08NK6im20YI/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "71",
+    "division_id": "ocd-division/country:us/state:ca/sldl:71"
+  },
+  {
+    "name": "Chad Mayes",
+    "id": "ocd-person/29f9b8cf-ac19-49d8-93c5-299f402532f9",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/Mayes_LDC_headshot.jpg",
+    "pretty_url": "/person/chad-mayes-1HCo8Q6hVVNzUc3aNrOszh/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "42",
+    "division_id": "ocd-division/country:us/state:ca/sldl:42"
+  },
+  {
+    "name": "Melissa A. Melendez",
+    "id": "ocd-person/d7cb8647-1324-42e9-b2a6-a26d05863806",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/MelissaMelendez.jpg",
+    "pretty_url": "/person/melissa-a-melendez-6ZCMOiR28Brzis4KBy4m06/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "67",
+    "division_id": "ocd-division/country:us/state:ca/sldl:67"
+  },
+  {
+    "name": "Marie Waldron",
+    "id": "ocd-person/9df241a1-0f02-456a-9dbf-8706e0b6c15c",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD75-Marie_Waldron.jpg",
+    "pretty_url": "/person/marie-waldron-4o2VQ9j3ioSgfAoIcoHPNE/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "75",
+    "division_id": "ocd-division/country:us/state:ca/sldl:75"
+  },
+  {
+    "name": "Eloise Gómez Reyes",
+    "id": "ocd-person/19f694d8-b409-40e5-9f87-d8e3e84afc7f",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad47_reyes_roster150_20161205.jpg",
+    "pretty_url": "/person/eloise-gomez-reyes-mzUlPHDphYpi1OvP5KBlX/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "47",
+    "division_id": "ocd-division/country:us/state:ca/sldl:47"
+  },
+  {
+    "name": "Sabrina Cervantes",
+    "id": "ocd-person/61cc77e3-551f-40e6-bb6f-16edd89b04db",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad60_cervantes_roster150_20161205.jpg",
+    "pretty_url": "/person/sabrina-cervantes-2yXhH6Omrc8HWh33A4zIoV/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "60",
+    "division_id": "ocd-division/country:us/state:ca/sldl:60"
+  },
+  {
+    "name": "Jose Medina",
+    "id": "ocd-person/3b14d4a7-73fa-4c85-b6fd-d84a9dd60a47",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD61-Medina_0.jpg",
+    "pretty_url": "/person/jose-medina-1nU49Jac2N9KJUfJuA5ZGZ/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "61",
+    "division_id": "ocd-division/country:us/state:ca/sldl:61"
+  },
+  {
+    "name": "Jim Cooper",
+    "id": "ocd-person/9629be48-b082-4880-85a8-d2e14a4ad1a8",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD09_Cooper_Portrait150_20141201.jpg",
+    "pretty_url": "/person/jim-cooper-4ZLvOjAv7MqJPIvIJkKYTw/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "9",
+    "division_id": "ocd-division/country:us/state:ca/sldl:9"
+  },
+  {
+    "name": "Jay Obernolte",
+    "id": "ocd-person/0c2304ce-468c-421d-9c48-8715aeae4f96",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/obernolte.png",
+    "pretty_url": "/person/jay-obernolte-MtuVzJkNODG0tBH0MHVpe/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "33",
+    "division_id": "ocd-division/country:us/state:ca/sldl:33"
+  },
+  {
+    "name": "Todd Gloria",
+    "id": "ocd-person/1465de6a-ec39-4986-b3e4-e30ef7a47c20",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad78_gloria_roster150_20161205.jpg",
+    "pretty_url": "/person/todd-gloria-cUOqMpOo22ZaD6iMjRfkW/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "78",
+    "division_id": "ocd-division/country:us/state:ca/sldl:78"
+  },
+  {
+    "name": "Tasha Boerner Horvath",
+    "id": "ocd-person/9e69729e-4383-410b-840e-ad4ea0f1ab4a",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/a76_t_b_horvath.jpg",
+    "pretty_url": "/person/tasha-boerner-horvath-4ouybAAhbHOxQ8noMjFzRq/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "76",
+    "division_id": "ocd-division/country:us/state:ca/sldl:76"
+  },
+  {
+    "name": "Shirley N. Weber",
+    "id": "ocd-person/71cfb6c2-577a-4813-8bdf-a1083314c491",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD79-Weber.jpg",
+    "pretty_url": "/person/shirley-n-weber-3Sl3ckfIdRi9qnVyh4Qujx/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "79",
+    "division_id": "ocd-division/country:us/state:ca/sldl:79"
+  },
+  {
+    "name": "Brian Maienschein",
+    "id": "ocd-person/4c0ad3f7-b949-4206-a550-99633351236c",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad77-brian_maienschein_120x150.jpg",
+    "pretty_url": "/person/brian-maienschein-2JUMe3jt2XoSE3YD5Z0RTg/",
+    "party": "Republican",
+    "chamber": "lower",
+    "district": "77",
+    "division_id": "ocd-division/country:us/state:ca/sldl:77"
+  },
+  {
+    "name": "Lorena Gonzalez",
+    "id": "ocd-person/dfe28cb5-1e06-418d-b4dd-8328f43c2783",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD80.jpg",
+    "pretty_url": "/person/lorena-gonzalez-6oSozH6EQ5W28E9J5W7uwl/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "80",
+    "division_id": "ocd-division/country:us/state:ca/sldl:80"
+  },
+  {
+    "name": "David Chiu",
+    "id": "ocd-person/322fc0ac-b105-4e36-8fab-cf74b0a4e87e",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD17_Chiu_Portrait150_20141201.jpg",
+    "pretty_url": "/person/david-chiu-1WhREusEhFgrkJ30eOrT70/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "17",
+    "division_id": "ocd-division/country:us/state:ca/sldl:17"
+  },
+  {
+    "name": "Susan Talamantes Eggman",
+    "id": "ocd-person/796593d1-498e-4980-bd5e-2db033754c62",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD13.jpg",
+    "pretty_url": "/person/susan-talamantes-eggman-3h4UXRp0CZFe8uExE5oOcE/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "13",
+    "division_id": "ocd-division/country:us/state:ca/sldl:13"
+  },
+  {
+    "name": "Philip Y.  Ting",
+    "id": "ocd-person/bf88659d-b2dd-462e-84b3-82ead47ff360",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad19-ting_0.jpg",
+    "pretty_url": "/person/philip-y-ting-5pProhe4A3J3KD5zBf4tBA/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "19",
+    "division_id": "ocd-division/country:us/state:ca/sldl:19"
+  },
+  {
+    "name": "Marc Berman",
+    "id": "ocd-person/24facf9e-7fb1-4475-9120-05cd0145c7c1",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad24_berman_roster150_20161205.jpg",
+    "pretty_url": "/person/marc-berman-17mLN7UhRdWcQpFfpdR9RR/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "24",
+    "division_id": "ocd-division/country:us/state:ca/sldl:24"
+  },
+  {
+    "name": "Kevin Mullin",
+    "id": "ocd-person/a9171d37-d00b-4d46-98ca-a066bce640e5",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD22-Mullin.jpg",
+    "pretty_url": "/person/kevin-mullin-594GWEFvjATDSRzqhJUIoX/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "22",
+    "division_id": "ocd-division/country:us/state:ca/sldl:22"
+  },
+  {
+    "name": "Monique Limón",
+    "id": "ocd-person/e924a3ec-c7c0-4094-8504-7611bcf8979f",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad37.jpg",
+    "pretty_url": "/person/monique-limon-75vxKC1syP4Km0kgWdlDzj/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "37",
+    "division_id": "ocd-division/country:us/state:ca/sldl:37"
+  },
+  {
+    "name": "Evan Low",
+    "id": "ocd-person/b6e6e287-12e9-4067-a607-28bf5c481935",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad28-low.jpg",
+    "pretty_url": "/person/evan-low-5Z87KKrp327HMyhbEpsLp7/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "28",
+    "division_id": "ocd-division/country:us/state:ca/sldl:28"
+  },
+  {
+    "name": "Kansen Chu",
+    "id": "ocd-person/afd1280f-b6cb-4f48-810a-65c05a4b9fd1",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/ad25.jpg",
+    "pretty_url": "/person/kansen-chu-5LlF0GimsmSpzUseF3JVJ3/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "25",
+    "division_id": "ocd-division/country:us/state:ca/sldl:25"
+  },
+  {
+    "name": "Jacqui Irwin",
+    "id": "ocd-person/e7ad99fd-fda5-4114-af3e-320f5be9be3c",
+    "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/AD44_Irwin_Portrait150_20141201.jpg",
+    "pretty_url": "/person/jacqui-irwin-73AYwgwC83PVhmxChW8616/",
+    "party": "Democratic",
+    "chamber": "lower",
+    "district": "44",
+    "division_id": "ocd-division/country:us/state:ca/sldl:44"
+  }
+]
