@@ -25,7 +25,7 @@ export function formatData(json, map, color) {
     el.innerHTML = `${result.properties['ANALYTE_NAME']}`;
 
     if(result.properties.RESULT.trim() != '' && result.properties.MCL.trim() != '') {
-      el.innerHTML = `${result.properties['ANALYTE_NAME']} ${result.properties.proportion_mcl.toFixed(2)}% MCL`;
+      el.innerHTML = `${result.properties['ANALYTE_NAME']} ${parseInt(result.properties.proportion_mcl * 100)}% MCL`;
     }
     el.className = 'marker';
 
