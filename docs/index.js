@@ -2,6 +2,7 @@ import { summary } from './template.js';
 import { listViol } from './listViol.js';
 import { selectors } from './menus.js';
 import { uniqueMaps } from './uniqueMaps.js';
+import { exportList } from './exportList.js';
 
 fetch('data/violations.json')
 .then(function(response) {
@@ -16,6 +17,7 @@ fetch('data/violations.json')
   document.querySelector('.violating-systems').innerHTML = listViol(myJson)
   document.querySelector('.selectors').innerHTML = selectors(mapsObj.systemMap, mapsObj.cityMap, mapsObj.countyMap, mapsObj.zipMap, mapsObj.analyteMap, mapsObj.senatorMap, mapsObj.assemblyMap);
 
+
   // setup selector listeners
   let selects = document.querySelectorAll('.selectors select');
   selects.forEach( (selectInput) => {
@@ -24,7 +26,7 @@ fetch('data/violations.json')
     selectInput.addEventListener('change', function(event) {
       let currentIndex = document.querySelector('select[name="'+this.name+'"]').selectedIndex;
       let mapKey = document.querySelector('select[name="'+this.name+'"]').options[currentIndex].value;
-      
+
       if(mapKey == '') {
         // if you changed a selector back to the default value, reset summary view to full state
         document.querySelector('.summary').innerHTML = summary(myJson)
@@ -45,7 +47,14 @@ fetch('data/violations.json')
       resetElements(this.name,currentIndex);
     })
   })
-});
+
+  document.getElementById("export-list").addEventListener("click", function() {
+    exportList(document.querySelectorAll('.violating-systems span'), document.querySelectorAll('.violating-systems span.head').length);
+
+
+  })
+
+  });
 
 function resetElements(currentName, currentIndex) {
   // revert everything not touched back to default
@@ -57,21 +66,4 @@ function resetElements(currentName, currentIndex) {
   document.querySelector('select[name="senator"]').selectedIndex = 0;
   document.querySelector('select[name="assembly"]').selectedIndex = 0;
   document.querySelector('select[name="'+currentName+'"]').selectedIndex = currentIndex;
-}
-
-function writeMapData(data) {
-  // would like to find unique analytes+system combos, keeping last date only
-  let uniqueAnalyteSystemMap = new Map();
-  data.forEach( (item) => {
-    let key = item.WATER_SYSTEM_NUMBER+'-'+item.ANALYTE_NAME;
-    let existingItem = uniqueAnalyteSystemMap.get(key);
-    if(existingItem) {
-      if(existingItem.ENF_ACTION_ISSUE_DATE < item.ENF_ACTION_ISSUE_DATE) {
-        uniqueAnalyteSystemMap.set(key, item);
-      }
-    } else {
-      uniqueAnalyteSystemMap.set(key, item);
-    }
-  })
-  console.log(JSON.stringify(Array.from(uniqueAnalyteSystemMap)))
 }
