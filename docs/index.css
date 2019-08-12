@@ -33,7 +33,8 @@ h1 {
 
 select {
   font-size: 1.5rem;
-  min-width: 200px;
+  min-width: 187px;
+  margin-right: 10px;
 }
 .selects {
   position: fixed;
