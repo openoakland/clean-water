@@ -43,11 +43,11 @@ function drawMap(err, world) {
   var features = world.features
   if (err) throw err
   svg.append("path")
-    .datum(graticule)
+    //.datum(graticule)
     .attr("class", "graticule")
     .attr("d", path);
   svg.append("path")
-    .datum(graticule.outline)
+    //.datum(graticule.outline)
     .attr("class", "foreground")
     .attr("d", path);
   svg.append("g")
