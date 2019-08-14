@@ -8,6 +8,7 @@
  Water Systems Out of Compliance</h1>
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="https://d3js.org/d3-geo.v1.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
    <!-- https://medium.com/@amy.degenaro/introduction-to-digital-cartography-geojson-and-d3-js-c27f066aa84 -->
   <style>
     path {
@@ -35,7 +36,7 @@
 const data = "data/cb_2014_us_county_5m.json";
     d3.json(data, drawMap)
 const svg = d3.select("svg")
-const myProjection = d3.geoAlbers().scale(2300).translate([1480, 350])
+const myProjection = d3.geoAlbers().scale(2500).translate([1580, 350])
 const path = d3.geoPath().projection(myProjection)
 const graticule = d3.geoGraticule()
 
@@ -56,6 +57,36 @@ function drawMap(err, world) {
     .enter().append("path")
     .attr("d", path);
 }
+
+// Data and color scale
+var mapdata = d3.map();
+var colorScale = d3.scaleThreshold()
+  .domain([100000, 1000000, 10000000, 30000000, 100000000, 500000000])
+  .range(d3.schemeBlues[7]);
+
+// Load external data and boot
+d3.queue()
+  .defer(d3.json, "leaderboard/data-by-district/lower-12.json", function(d) { mapdata.set(d.code, +d.pop); })
+  .await(ready);
+
+function ready(error, topo) {
+
+  // Draw the map
+  svg.append("g")
+    .selectAll("path")
+    .mapdata(topo.features)
+    .enter()
+    .append("path")
+      // draw each county
+      .attr("d", d3.geoPath()
+        .projection(projection)
+      )
+      // set the color of each county
+      .attr("fill", function (d) {
+        d.total = mapdata.get(d.COUNTY) || 0;
+        return colorScale(d.total);
+      });
+    }
 
   </script>
 
