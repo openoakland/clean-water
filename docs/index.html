@@ -44,11 +44,11 @@ function drawMap(err, world) {
   var features = world.features
   if (err) throw err
   svg.append("path")
-    .datum(graticule)
+    //.datum(graticule)
     .attr("class", "graticule")
     .attr("d", path);
   svg.append("path")
-    .datum(graticule.outline)
+    //.datum(graticule.outline)
     .attr("class", "foreground")
     .attr("d", path);
   svg.append("g")
@@ -59,34 +59,35 @@ function drawMap(err, world) {
 }
 
 // Data and color scale
-var mapdata = d3.map();
+var counties = d3.map();
 var colorScale = d3.scaleThreshold()
   .domain([100000, 1000000, 10000000, 30000000, 100000000, 500000000])
   .range(d3.schemeBlues[7]);
 
-// Load external data and boot
+
 d3.queue()
-  .defer(d3.json, "leaderboard/data-by-district/lower-12.json", function(d) { mapdata.set(d.code, +d.pop); })
+  .defer(d3.json, "leaderboard/data-by-district/augmented-lower-12.json", function(d) { console.log(d3.values(d[0].properties.COUNTY)); })
   .await(ready);
 
-function ready(error, topo) {
 
-  // Draw the map
-  svg.append("g")
-    .selectAll("path")
-    .mapdata(topo.features)
-    .enter()
-    .append("path")
-      // draw each county
-      .attr("d", d3.geoPath()
-        .projection(projection)
-      )
-      // set the color of each county
-      .attr("fill", function (d) {
-        d.total = mapdata.get(d.COUNTY) || 0;
-        return colorScale(d.total);
-      });
-    }
+  function ready(error, topo) {
+
+    // Draw the map
+    svg.append("g")
+      .selectAll("path")
+      .counties(topo.features)
+      .enter()
+      .append("path")
+        // draw each country
+        .attr("d", d3.geoPath()
+          .projection(projection)
+        )
+        // set the color of each country
+        .attr("fill", function (d) {
+          d.total = counties.get(d.COUNTY) || 0;
+          return colorScale(d.total);
+        });
+      }
 
   </script>
 
