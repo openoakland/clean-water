@@ -23,6 +23,8 @@ node format.js
 
 ```
 node more-fields.js
+cp violations-current.json output/violations.json
+cp output/* ../docs/data/
 ```
 
 - Split up the violations into separate files per water system ID: ```write.js```
@@ -43,6 +45,7 @@ Add the legislative district to each system:
 
 ```
 node add-legislators-to-violations.js
+cp violations-current-plus-legislators.json ../docs/data/violations.json
 ```
 <!--
 Finding the list of unique legislators for our select menu: ```leg-unique.js```
