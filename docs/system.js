@@ -45,7 +45,7 @@ fetch('data/'+waterSystemId+'.json')
   <br><br>
   ${Array.from(uniqueAnalyteMap).map((analyte) => {
     return `
-      <h2 class="erf-align">${analyte[0]}</h2>
+      <h2 class="erf-align">${analyte[0]} - ${analyte[1][0].VIOLATION_TYPE_NAME}</h2>
         <div align="right">
         <button id="export-list">Export</button>
         </div>
