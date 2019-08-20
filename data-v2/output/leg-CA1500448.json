@@ -1,0 +1,24 @@
+{
+  "legislators": [
+    {
+      "name": "Shannon Grove",
+      "id": "ocd-person/b4b8e8fb-831b-4cae-9081-b8f75477fcd0",
+      "image": "https://senate.ca.gov/sites/senate.ca.gov/files/senator_photos/senator_grove.jpg",
+      "pretty_url": "/person/shannon-grove-5V17cpGtXDjzhb6z6Jxcky/",
+      "party": "Republican",
+      "chamber": "upper",
+      "district": "16",
+      "division_id": "ocd-division/country:us/state:ca/sldu:16"
+    },
+    {
+      "name": "Devon J. Mathis",
+      "id": "ocd-person/3ffead8c-6856-4592-8594-182e295b8e87",
+      "image": "https://assembly.ca.gov/sites/assembly.ca.gov/files/memberphotos/mathis.jpg",
+      "pretty_url": "/person/devon-j-mathis-1wku5o3pMyePzL08ZZebcl/",
+      "party": "Republican",
+      "chamber": "lower",
+      "district": "26",
+      "division_id": "ocd-division/country:us/state:ca/sldl:26"
+    }
+  ]
+}
