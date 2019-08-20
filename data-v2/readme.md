@@ -1,8 +1,5 @@
 # Todo:
 
-Display all fields on system.js
-Review that La system in the excel summary and violations
-
 How did I generate by loc-id files? Is the GIS status there relevant?
 
 
