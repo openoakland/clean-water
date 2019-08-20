@@ -6,7 +6,7 @@ function updateList(map,key,newItem) {
   map.set(key,existingItems);
 }
 
-let viols = JSON.parse(fs.readFileSync('./violations.json','utf8'))
+let viols = JSON.parse(fs.readFileSync('./violations-all.json','utf8'))
 
 let systemMap = new Map();
 
