@@ -59,7 +59,6 @@ fetch('data/'+waterSystemId+'.json')
         <span class="head">% Exceedance</span>
         <!-- need to loop through all violations -->
         ${uniqueSystemData.map((item) => {
-          console.log(item.ANALYTE_NAME +'=='+ analyte[0])
           if(item.ANALYTE_NAME == analyte[0]) {
             var absexc = item.RESULT - item.MCL_VALUE;
             var pctexc = absexc/item.MCL_VALUE*100;

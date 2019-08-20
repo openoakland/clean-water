@@ -1,9 +1,3 @@
-# Todo:
-
-How did I generate by loc-id files? Is the GIS status there relevant?
-
-
-
 ## Data processing
 
 The excel file can be transformed into the json format the site needs by running this series of scripts:
