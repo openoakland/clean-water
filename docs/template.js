@@ -22,7 +22,11 @@ export function summary(json) {
     }
   })
   systemMap.forEach( (item) => {
-    population += parseInt(item[0].POPULATION);
+    if(item[0].POPULATION) {
+      population += parseInt(item[0].POPULATION);
+    } else {
+      console.log(item[0])
+    }
   })
   let systemCount = systemMap.size;
   let analyteCount = analyteMap.size;

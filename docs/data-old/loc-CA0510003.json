@@ -1,0 +1,25 @@
+{
+  "type": "Feature",
+  "properties": {
+    "ObjectID": 93003,
+    "WATER_SYST": "CA0510003",
+    "WATER_SY_1": "ANGELS, CITY OF",
+    "REGULATING": "DISTRICT 10 - STOCKTON",
+    "COUNTY": "CALAVERAS",
+    "POPULATION": "3836",
+    "CLASSIFICA": "COMMUNITY",
+    "CITY_1": "ANGELS CAMP",
+    "ZIPCODE": "95222",
+    "GIS_STATUS": "RETURNED TO COMPLIANCE",
+    "DEFAULT_ME": null,
+    "Service_Co": 1835,
+    "DETAILED_V": "https://www.waterboards.ca.gov/water_issues/programs/hr2w/docs/data/hr2w_web_data_rtc.xlsx"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -120.5599795028072,
+      38.0693804411396
+    ]
+  }
+}

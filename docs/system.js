@@ -15,7 +15,7 @@ fetch('data/'+waterSystemId+'.json')
     uniqueSystemData.forEach( (existingItem) => {
       if(item.ANALYTE_NAME == existingItem.ANALYTE_NAME && item.VIOL_BEGIN_DATE == existingItem.VIOL_BEGIN_DATE && item.VIOL_END_DATE == existingItem.VIOL_END_DATE) {
         // skip
-        matchFound = true;
+        // matchFound = true;
       }
     })
     if(!matchFound) {
@@ -47,7 +47,7 @@ fetch('data/'+waterSystemId+'.json')
     return `
       <h2 class="erf-align">${analyte[0]}</h2>
         <div align="right">
-        <button id="export-list" >Export</button>
+        <button id="export-list">Export</button>
         </div>
       <div class="violaters system-specific">
         <span class="head">Violation Begin Date</span>
@@ -57,18 +57,22 @@ fetch('data/'+waterSystemId+'.json')
         <span class="head">Action</span>
         <span class="head">Absolute Exceedance</span>
         <span class="head">% Exceedance</span>
-        ${analyte[1].map((item) => {
-          var absexc = item.RESULT.split(" ")[0] - item.MCL.split(" ")[0];
-          var pctexc = absexc/item.MCL.split(" ")[0]*100;
-          return `
-            <span>${new Date(item.VIOL_BEGIN_DATE).toLocaleDateString("en-US")}</span>
-            <span>${new Date(item.VIOL_END_DATE).toLocaleDateString("en-US")}</span>
-            <span>${item.RESULT}</span>
-            <span>${item.MCL}</span>
-            <span>${item.ENF_ACTION_TYPE_ISSUED}</span>
-            <span>${absexc.toFixed(3) + " " + item.MCL.split(" ")[1]}</span>
-            <span>${pctexc.toFixed(2)}</span>
-          `;
+        <!-- need to loop through all violations -->
+        ${uniqueSystemData.map((item) => {
+          console.log(item.ANALYTE_NAME +'=='+ analyte[0])
+          if(item.ANALYTE_NAME == analyte[0]) {
+            var absexc = item.RESULT - item.MCL_VALUE;
+            var pctexc = absexc/item.MCL_VALUE*100;
+            return `
+              <span>${new Date(item.VIOL_BEGIN_DATE).toLocaleDateString("en-US")}</span>
+              <span>${new Date(item.VIOL_END_DATE).toLocaleDateString("en-US")}</span>
+              <span>${item.RESULT} ${item.RESULT_UOM}</span>
+              <span>${item.MCL_VALUE} ${item.MCL_UOM}</span>
+              <span>${item.ENF_ACTION_TYPE_ISSUED} ${new Date(item.ENF_ACTION_ISSUE_DATE).toLocaleDateString("en-US")}</span>
+              <span>${absexc.toFixed(3) + " " + item.MCL_UOM}</span>
+              <span>${pctexc.toFixed(2)}</span>
+            `;
+          }
         }).join(' ')}
       </div>
     `

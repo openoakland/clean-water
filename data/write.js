@@ -21,5 +21,4 @@ viols.forEach( (v) => {
 
 systemMap.forEach( (value, key, index) => {
   fs.writeFileSync('../docs/data/'+key+'.json',JSON.stringify(value),'utf8');
-  
 })
