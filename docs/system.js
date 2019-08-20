@@ -36,7 +36,7 @@ fetch('data/'+waterSystemId+'.json')
 
   let output = `
   <h1>Water System: ${systemData[0].WATER_SYSTEM_NAME}</h1>
-  <h2 style="text-align: center; font-weight: 500;">${systemData[0].POPULATION} People affected</h2>
+  <h2 style="text-align: center; font-weight: 500;">${parseInt(systemData[0].POPULATION).toLocaleString()} People affected</h2>
   <h3 class="erf-align">${systemData[0].CITY}, ${systemData[0].ZIPCODE}</h3>
   <h3 class="erf-align">${systemData[0].COUNTY} COUNTY</h3>
   <h3 class="erf-align">Regulating Agency:  ${systemData[0].REGULATING_AGENCY}</h3>
