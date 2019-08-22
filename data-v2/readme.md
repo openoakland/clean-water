@@ -1,11 +1,3 @@
-## Todo
-
-Integrate D3 chloropleth
-update leaderboard to be based on latest data
-make leaderboard overlay map be filterable by analyte
-create additional leaderboards
-what is the relation to cal enviro screen, link to census data by race or poverty levels
-
 ## Data processing
 
 The excel file can be transformed into the json format the site needs by running this series of scripts:
