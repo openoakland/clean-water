@@ -79,7 +79,10 @@ select {
   font-weight: 500;
 }
 button {
-  justify-content:flex-end;
-  margin-right: 40px;
-  margin-bottom: 10px;
+  position: relative;
+  left: 45px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-bottom: 10px
+  }
 }
