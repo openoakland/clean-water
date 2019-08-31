@@ -2,13 +2,12 @@ import { formatData } from './stuff.js';
 
 class OpenOaklandMapboxColumns extends HTMLElement {
   static get observedAttributes() {
-    return ['center'];
+    return ['center','reset'];
   }
 
   // append an attribute with a checksum of the stringified content?
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.render();
-
   }
 
   connectedCallback() {
@@ -16,7 +15,6 @@ class OpenOaklandMapboxColumns extends HTMLElement {
     if(!this.color) {
       this.color = '#c00';
     }
-    // this.render();
   }
 
   render() {

@@ -7,29 +7,30 @@ export function summary(json) {
   let analyteMap = new Map();
 
   json.forEach( (v) => {
+    systemMap.set(v.WATER_SYSTEM_NUMBER,v.POPULATION);
+    /*
     let foundSystemMap = systemMap.get(v.WATER_SYSTEM_NUMBER)
     if(typeof(foundSystemMap) == 'undefined') {
-      systemMap.set(v.WATER_SYSTEM_NUMBER,[v]);
     } else {
       updateList(systemMap,v.WATER_SYSTEM_NUMBER,v);
-    }
+    }*/
 
     let foundAnalyteMap = analyteMap.get(v.ANALYTE_NAME)
     if(typeof(foundAnalyteMap) == 'undefined') {
-      analyteMap.set(v.ANALYTE_NAME,[v]);
+      analyteMap.set(v.ANALYTE_NAME,1);
     } else {
-      updateList(analyteMap,v.ANALYTE_NAME,v);
+      let currentCount = analyteMap.get(v.ANALYTE_NAME)
+      analyteMap.set(v.ANALYTE_NAME,currentCount + 1);
     }
   })
   systemMap.forEach( (item) => {
-    if(item[0].POPULATION) {
-      population += parseInt(item[0].POPULATION);
-    } else {
-      console.log(item[0])
-    }
+    population += parseInt(item);
   })
   let systemCount = systemMap.size;
   let analyteCount = analyteMap.size;
+
+  // console.log(systemMap)
+  // console.log(analyteMap)
 
   return `
     <div class="numcards">
@@ -46,5 +47,51 @@ export function summary(json) {
         <span>Analyte(s) Exceeding a Drinking Water Standard</span>
       </p>
     </div>
+    <div class="chartcards">
+      <style>
+      /* D3 map */
+      path {
+        fill: lightgray;
+        stroke: #000;
+      }
+      .graticule {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: .5px;
+      }
+      .foreground {
+        fill: none;
+        stroke: #333;
+        stroke-width: 1.5px;
+      }
+      /* footer */    
+      .footnote {
+        color: gray;
+        margin-bottom: 200px;
+        margin-top: -100px;
+        margin-left: 70px;
+      }
+      </style>
+      <div>
+        <div class="california-svg">
+          <svg width="320" height="400"></svg>
+        </div>
+        <h3>Population affected per CA Congressional district</h3>
+        <a href="/leaderboard/">see leaderboard for more info</a>
+      </div>
+      
+      <style>
+      .bar { fill: steelblue; }
+      </style>
+      <div>
+        <div class="chart-container history"></div>
+        <h3>Previous violations in these systems</h3>
+      </div>
+      <div>
+        <div class="chart-container analytes"></div>
+        <h3>Violations per analyte</h3>
+      </div>
+
+      </div>
   `
 }
