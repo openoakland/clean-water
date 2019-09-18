@@ -3,6 +3,9 @@ import { listViol } from './listViol.js';
 import { selectors } from './menus.js';
 import { uniqueMaps } from './uniqueMaps.js';
 import { exportList } from './exportList.js';
+import { bars } from './bars.js';
+import { cali } from './cali-map.js';
+import { barsHistory } from './viol-history.js';
 
 fetch('data/violations.json')
 .then(function(response) {
@@ -17,6 +20,9 @@ fetch('data/violations.json')
   document.querySelector('.violating-systems').innerHTML = listViol(myJson)
   document.querySelector('.selectors').innerHTML = selectors(mapsObj.systemMap, mapsObj.cityMap, mapsObj.countyMap, mapsObj.zipMap, mapsObj.analyteMap, mapsObj.senatorMap, mapsObj.assemblyMap);
 
+  cali();
+  barsHistory(myJson, '.chart-container.history');
+  bars(myJson, '.chart-container.analytes');
 
   // setup selector listeners
   let selects = document.querySelectorAll('.selectors select');
@@ -32,6 +38,9 @@ fetch('data/violations.json')
         document.querySelector('.summary').innerHTML = summary(myJson)
         document.querySelector('.violating-systems').innerHTML = listViol(myJson)
         document.querySelector('h1').innerHTML = 'California Drinking Water';
+        cali();
+        barsHistory(myJson, '.chart-container.history');
+        bars(myJson, '.chart-container.analytes');
       } else {
         summaryEl.innerHTML = summary(mapsObj[this.name+'Map'].get(mapKey))
         violatorsEl.innerHTML = listViol(mapsObj[this.name+'Map'].get(mapKey));
@@ -43,6 +52,9 @@ fetch('data/violations.json')
         } else {
           document.querySelector('h1').innerHTML = mapKey+' Drinking Water';
         }
+        cali();
+        barsHistory(mapsObj[this.name+'Map'].get(mapKey), '.chart-container.history');
+        bars(mapsObj[this.name+'Map'].get(mapKey), '.chart-container.analytes');
       }
       resetElements(this.name,currentIndex);
     })

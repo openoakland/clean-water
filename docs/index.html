@@ -3,41 +3,46 @@
 <head>
   <title>Drinking Water Safety Violations</title>
   <link rel="stylesheet" media="screen" href="index.css" />
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+  <script src="https://d3js.org/d3-geo.v1.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 </head>
 <body>
 
   <span class="dates">Reporting period 2012 - Current *</span>
 
-  <h1>California Drinking Water
-   <br>
- Water Systems Out of Compliance</h1>
- <div class="selectors"></div>
+  <div class="selectors"></div>
+  
+  <div class="header-section" style="display: flex; margin: 80px 0 20px 0;">
+    <div>
+      <h1 style="margin-top: 20px;">California Drinking Water
+      <br>
+      Water Systems Out of Compliance</h1>
+      <div class="summary"></div>
+    </div>
+  </div>
 
-  <div class="summary"></div>
+
+
+
   <div align="left">
     <button id="export-list" >Export Displayed Data</button>
 </div>
+
   <div class="violating-systems"></div>
-  <div class="selectors"></div>
+
   <script type="module" src="index.js"></script>
-  <style>
-.footnote {
-color: gray;
-    margin-bottom: 200px;
-    margin-top: -100px;
-    margin-left: 70px;
-}
-</style>
-
-
-<p class="footnote">
+  <p class="footnote">
     <b>* Current Data Source:</b>
     Community, Schools, Daycares, Public Water Systems Who Have Current Exceedance/Compliance Issues, <a href="https://www.waterboards.ca.gov/water_issues/programs/hr2w/#data">Human Right to Water Portal</a>, State Water Resources Control Board
-<br>
-  <br>
+    <br>
+    <br>
     <b>** Disclaimer:</b>
     Data contained in this display represents the information available on community and non-transient non-community (specifically schools and day cares) public drinking water systems
-that are regulated by the State Water Resources Control Board (State Water Board) or Local Primacy Agency (LPA). Population total does not equal the actual total served by a public water system exceeding a primary state/federal drinking water standard by analyte because a water system can be out-of-compliance for multiple analytes resulting in duplication.
+  that are regulated by the State Water Resources Control Board (State Water Board) or Local Primacy Agency (LPA). Population total does not equal the actual total served by a public water system exceeding a primary state/federal drinking water standard by analyte because a water system can be out-of-compliance for multiple analytes resulting in duplication.
   </p>
+
 </body>
 </html>

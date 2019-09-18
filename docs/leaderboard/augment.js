@@ -15,8 +15,7 @@ async function readFiles(dir) {
       console.log(file)
       let data = JSON.parse(fs.readFileSync('./data-by-district/'+file,'utf8'))
       let outputData = [];
-      data.forEach( (pair) => {
-        let item = pair[1];
+      data.forEach( (item) => {
         if(item) {
           let outputItem = {
             "type": "Feature"

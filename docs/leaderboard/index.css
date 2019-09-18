@@ -55,3 +55,15 @@ cfa-oak-map-columns {
   padding: 5px;
   border-radius: 5px;
 }
+.overlay-interior {
+  width: 800px;
+}
+.overlay-interior .analyte-button {
+  background:white;
+  color:red;
+  margin:0 10px 10px 0;
+}
+.overlay-interior .analyte-button.active {
+  color: white;
+  background: #c00;
+}

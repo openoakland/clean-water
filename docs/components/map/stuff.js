@@ -11,11 +11,9 @@ export function formatData(json, map, color) {
   let recordsFound = 0;
   json.forEach(function(result) {
     recordsFound++;
-    console.log(result.geometry.coordinates)
     let coords = getCoords(result.geometry.coordinates);
-    //console.log(result.geometry.coordinates)
-    if(result.properties.RESULT.trim() != '' && result.properties.MCL.trim() != '') {
-      result.properties.proportion_mcl = parseFloat(result.properties.RESULT.split(' ')[0]) / parseFloat(result.properties.MCL.split(' ')[0])
+    if(result.properties.RESULT.trim() != '') {
+      result.properties.proportion_mcl = parseFloat(result.properties.RESULT) / parseFloat(result.properties.MCL_VALUE)
     }
     let featureBlue = buildFeatureMCL(result,coords,color)
     dataObj.features.push(featureBlue);
@@ -24,7 +22,7 @@ export function formatData(json, map, color) {
     var el = document.createElement('div');
     el.innerHTML = `${result.properties['ANALYTE_NAME']}`;
 
-    if(result.properties.RESULT.trim() != '' && result.properties.MCL.trim() != '') {
+    if(result.properties.RESULT.trim() != '' && result.properties.MCL_VALUE.trim() != '') {
       el.innerHTML = `${result.properties['ANALYTE_NAME']} ${parseInt(result.properties.proportion_mcl * 100)}% MCL`;
     }
     el.className = 'marker';

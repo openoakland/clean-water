@@ -19,6 +19,8 @@ export function listViol(json) {
       <span class="head">City</span>
       <span class="head">County</span>
       <span class="head">Zip</span>
+      <span class="head">Population</span>
+      <span class="head"># Past violations</span>
     ${Array.from(systemMap).map((item) => {
       return `
         <span><a class="view-system" href="system.html?id=${item[1][0].WATER_SYSTEM_NUMBER}">${item[1][0].WATER_SYSTEM_NAME}</a></span>
@@ -26,6 +28,8 @@ export function listViol(json) {
         <span>${item[1][0].CITY}</span>
         <span>${item[1][0].COUNTY}</span>
         <span>${item[1][0].ZIPCODE}</span>
+        <span>${parseInt(item[1][0].POPULATION).toLocaleString()}</span>
+        <span>${item[1][0].VIOLATION_HISTORY_TOTAL}</span>
       `;
     }).join(' ')}
     </div>
