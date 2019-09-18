@@ -57,7 +57,7 @@ select {
 .violating-systems {
   margin-bottom: 150px;
 }
-.violaters {
+table, th, td {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
   grid-column-gap: 1px;
