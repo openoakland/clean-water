@@ -57,7 +57,7 @@ select {
 .violating-systems {
   margin-bottom: 150px;
 }
-table, th, td {
+.violaters table {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
   grid-column-gap: 1px;
@@ -69,12 +69,12 @@ table, th, td {
   grid-template-columns: auto auto auto auto auto auto auto;
   margin-bottom: 50px;
 }
-.violaters span {
+.violaters td {
   background-color: rgba(0,0,255,.25);
   padding: 10px;
   color: #000;
 }
-.violaters span.head {
+.violaters th {
   background: rgba(0,0,255,.6);
   color: #fff;
 }

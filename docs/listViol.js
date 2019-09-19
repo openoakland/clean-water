@@ -14,22 +14,25 @@ export function listViol(json) {
 
   return `
   <table class="violaters">
+  <tr>
     <th class="head">Name</th>
     <th class="head">ID</th>
     <th class="head">City</th>
     <th class="head">County</th>
     <th class="head">Zip</th>
-      <th class="head">Population</th>
-      <th class="head"># Past violations</th>
+    <th class="head">Population</th>
+    <th class="head"># Past violations</th>
+    </tr>
     ${Array.from(systemMap).map((item) => {
-      return `
-        <tr><a class="view-system" href="system.html?id=${item[1][0].WATER_SYSTEM_NUMBER}">${item[1][0].WATER_SYSTEM_NAME}</a></tr>
-        <tr>${item[1][0].WATER_SYSTEM_NUMBER}</tr>
-        <tr>${item[1][0].CITY}</tr>
-        <tr>${item[1][0].COUNTY}</tr>
-        <tr>${item[1][0].ZIPCODE}</tr>
-        <tr>${parseInt(item[1][0].POPULATION).toLocaleString()}</tr>
-        <tr>${item[1][0].VIOLATION_HISTORY_TOTAL}</tr>
+      return `<tr>
+        <td><a class="view-system" href="system.html?id=${item[1][0].WATER_SYSTEM_NUMBER}">${item[1][0].WATER_SYSTEM_NAME}</a></td>
+        <td>${item[1][0].WATER_SYSTEM_NUMBER}</td>
+        <td>${item[1][0].CITY}</td>
+        <td>${item[1][0].COUNTY}</td>
+        <td>${item[1][0].ZIPCODE}</td>
+        <td>${parseInt(item[1][0].POPULATION).toLocaleString()}</td>
+        <td>${item[1][0].VIOLATION_HISTORY_TOTAL}</td>
+        </tr>
       `;
     }).join(' ')}
     </table>
