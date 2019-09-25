@@ -98,7 +98,7 @@ function resetMap(url) {
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWFyb25oYW5zIiwiYSI6ImNqNGs4cms1ZzBocXkyd3FzZGs3a3VtamYifQ.HQjFfVzwwxwCmGr2nvnvSA';
 var map = new mapboxgl.Map({
   container: 'map',
-  zoom: 7,
+  zoom: 6,
   center: [-119.29007140322268, 35.96972352218545],
   style: 'mapbox://styles/aaronhans/ck0eofhpm1v1x1co6y46u3qhi'
 });
