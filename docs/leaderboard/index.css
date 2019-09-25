@@ -9,6 +9,7 @@ h1 {
 h2 {
   font-size: 32px;
   font-weight: normal;
+  margin-bottom: 0;
 }
 .page-title {
   padding: 25px;
