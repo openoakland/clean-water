@@ -18,6 +18,26 @@ h3 {
   font-weight: normal;
   text-align: center;
 }
+.header {
+  margin: 0;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: blue;
+  box-sizing: border-box;
+}
+.header a.link {
+  margin-right: 30px;
+  text-decoration: none;
+}
+.header .link.active {
+  color: #000;
+}
 .numcards {
   display: flex;
   justify-content: space-around;
