@@ -1,4 +1,4 @@
-export function cali(json) {
+export function cali(selectedDistrict) {
   fetch('leaderboard-ca-state-assembly.json')
   .then(function(response) {
     return response.json();
@@ -30,6 +30,9 @@ export function cali(json) {
         .attr("d", path)
         .style("fill", function(d){
           let dist = d.properties.DISTRICT;
+          if (selectedDistrict != null && dist != selectedDistrict) {
+            return;
+          }
           let affPop = 0;
           // get the affected pop number
           affectedPeopleData.forEach( (aff) => {

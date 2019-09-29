@@ -23,7 +23,7 @@ fetch('data/violations.json')
   document.querySelector('.violating-systems').innerHTML = listViol(myJson)
   document.querySelector('.selectors').innerHTML = selectors(mapsObj.systemMap, mapsObj.cityMap, mapsObj.countyMap, mapsObj.zipMap, mapsObj.analyteMap, mapsObj.senatorMap, mapsObj.assemblyMap);
 
-  regenerateCaliMapIfNeeded();
+  regenerateCaliMapIfNeeded(regenerateCaliMap);
   barsHistory(myJson, '.chart-container.history');
   bars(myJson, '.chart-container.analytes');
 
@@ -41,7 +41,7 @@ fetch('data/violations.json')
         document.querySelector('.summary').innerHTML = summary(myJson)
         document.querySelector('.violating-systems').innerHTML = listViol(myJson)
         document.querySelector('h1').innerHTML = 'California Drinking Water';
-        regenerateCaliMapIfNeeded();
+        regenerateCaliMapIfNeeded(regenerateCaliMap);
         barsHistory(myJson, '.chart-container.history');
         bars(myJson, '.chart-container.analytes');
       } else {
@@ -49,13 +49,15 @@ fetch('data/violations.json')
         violatorsEl.innerHTML = listViol(mapsObj[this.name+'Map'].get(mapKey));
         if(this.name == 'senator') {
           document.querySelector('h1').innerHTML = 'CA State Senate District '+mapKey+' Drinking Water';
+          regenerateCaliMapIfNeeded(regenerateCaliMap);
         } else if(this.name == 'assembly') {
           document.querySelector('h1').innerHTML = 'CA State Assembly District '+mapKey+' Drinking Water';
           // writeMapData(mapsObj[this.name+'Map'].get(mapKey));
+          regenerateCaliMapIfNeeded(true, mapKey);
         } else {
           document.querySelector('h1').innerHTML = mapKey+' Drinking Water';
+          regenerateCaliMapIfNeeded(regenerateCaliMap);
         }
-        regenerateCaliMapIfNeeded();
         barsHistory(mapsObj[this.name+'Map'].get(mapKey), '.chart-container.history');
         bars(mapsObj[this.name+'Map'].get(mapKey), '.chart-container.analytes');
       }
@@ -83,10 +85,10 @@ function resetElements(currentName, currentIndex) {
   document.querySelector('select[name="'+currentName+'"]').selectedIndex = currentIndex;
 }
 
-function regenerateCaliMapIfNeeded() {
-  if (regenerateCaliMap) {
+function regenerateCaliMapIfNeeded(shouldRegenerate, selectedDistrict) {
+  if (shouldRegenerate) {
     document.getElementById('cali-map').remove();
     document.querySelector('.cali-map-container').innerHTML = '<svg width="320" height="400"></svg>';
-    cali();
+    cali(selectedDistrict);
   }
 }
