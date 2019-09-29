@@ -6,7 +6,7 @@ The latest version of this is browseable here at <a href="https://aaronhans.gith
 
 ## This repo is the Frontend
 
-This is a repository containing the frontend code, we are doing data analysis and transformation in 
+This is a repository containing the frontend code, we are doing data analysis and transformation in
 <a href="https://github.com/r-b-g-b/clean-water-tool">https://github.com/r-b-g-b/clean-water-tool</a>
 
 ## History
@@ -18,3 +18,7 @@ We started working on a new project led by water quality expert Rucker Alex who 
 ## Participate
 
 This project is an evolving open source effort and your assistance is welcome. To collaborate join the #ca-water-challenge channel in the <a href="http://openoakland.slack.com">Open Oakland Slack</a>
+
+### Updating The CA Map
+
+On the landing page, there is a map showing the number of people affected by CA Congressional district. This is presently a png to optimize load time. If/when `leaderboard-ca-state-assembly.json` data is updated, this chart will need to be updated as well. To have the site regenerate the map drawing, simply change <a href="https://github.com/openoakland/clean-water/blob/2810a374f60bab366d018f5db627ab325571589b/docs/index.js#L11">this line</a> to "true". After that, the new map can be screenshotted/downloaded and used to replace docs/cali-map.png.

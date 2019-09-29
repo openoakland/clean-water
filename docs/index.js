@@ -7,6 +7,9 @@ import { bars } from './bars.js';
 import { cali } from './cali-map.js';
 import { barsHistory } from './viol-history.js';
 
+// Set to true if California map png needs to be updated
+let regenerateCaliMap = false;
+
 fetch('data/violations.json')
 .then(function(response) {
   return response.json();
@@ -20,7 +23,7 @@ fetch('data/violations.json')
   document.querySelector('.violating-systems').innerHTML = listViol(myJson)
   document.querySelector('.selectors').innerHTML = selectors(mapsObj.systemMap, mapsObj.cityMap, mapsObj.countyMap, mapsObj.zipMap, mapsObj.analyteMap, mapsObj.senatorMap, mapsObj.assemblyMap);
 
-  cali();
+  regenerateCaliMapIfNeeded();
   barsHistory(myJson, '.chart-container.history');
   bars(myJson, '.chart-container.analytes');
 
@@ -38,7 +41,7 @@ fetch('data/violations.json')
         document.querySelector('.summary').innerHTML = summary(myJson)
         document.querySelector('.violating-systems').innerHTML = listViol(myJson)
         document.querySelector('h1').innerHTML = 'California Drinking Water';
-        cali();
+        regenerateCaliMapIfNeeded();
         barsHistory(myJson, '.chart-container.history');
         bars(myJson, '.chart-container.analytes');
       } else {
@@ -52,7 +55,7 @@ fetch('data/violations.json')
         } else {
           document.querySelector('h1').innerHTML = mapKey+' Drinking Water';
         }
-        cali();
+        regenerateCaliMapIfNeeded();
         barsHistory(mapsObj[this.name+'Map'].get(mapKey), '.chart-container.history');
         bars(mapsObj[this.name+'Map'].get(mapKey), '.chart-container.analytes');
       }
@@ -78,4 +81,12 @@ function resetElements(currentName, currentIndex) {
   document.querySelector('select[name="senator"]').selectedIndex = 0;
   document.querySelector('select[name="assembly"]').selectedIndex = 0;
   document.querySelector('select[name="'+currentName+'"]').selectedIndex = currentIndex;
+}
+
+function regenerateCaliMapIfNeeded() {
+  if (regenerateCaliMap) {
+    document.getElementById('cali-map').remove();
+    document.querySelector('.cali-map-container').innerHTML = '<svg width="320" height="400"></svg>';
+    cali();
+  }
 }
