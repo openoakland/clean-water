@@ -49,6 +49,8 @@ fetch('data/'+waterSystemId+'.json')
         <div align="left">
         <button id="export-list">Export Displayed Data</button>
         </div>
+        <button class="collapsible">Show/Hide Table</button>
+        <div class="content">
       <table class="violaters system-specific">
       <tr>
         <th class="head">Violation Begin Date</th>
@@ -75,7 +77,7 @@ fetch('data/'+waterSystemId+'.json')
             `;
           }
         }).join(' ')}
-      </table>
+      </table></div>
     `
   }).join(' ')}
   `;
