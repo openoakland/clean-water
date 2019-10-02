@@ -43,12 +43,12 @@ fetch('data/'+waterSystemId+'.json')
   <br><br>
   <h3 class="erf-align">The following table(s) show all measurements for all analytes which exceeded allowed levels</h3>
   <br><br>
+  <div align="left">
+  <button id="export-list">Export Displayed Data</button>
+  </div>
   ${Array.from(uniqueAnalyteMap).map((analyte) => {
     return `
       <h2 class="erf-align">${analyte[0]} - ${analyte[1][0].VIOLATION_TYPE_NAME}</h2>
-        <div align="left">
-        <button id="export-list">Export Displayed Data</button>
-        </div>
         <button class="collapsible">Show/Hide Table</button>
         <div class="content">
       <table class="violaters system-specific">
@@ -84,9 +84,8 @@ fetch('data/'+waterSystemId+'.json')
 
   document.querySelector('.system-history').innerHTML = output;
 
-  document.getElementById("export-list").addEventListener("click", function() {
-    exportList(document.querySelectorAll(".violaters > span"), document.querySelectorAll(".violaters > span.head").length);
-
+    document.getElementById("export-list").addEventListener("click", function() {
+      exportList(document.querySelectorAll('table tr'));
 
   })
 })
