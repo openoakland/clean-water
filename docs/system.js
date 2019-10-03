@@ -49,8 +49,6 @@ fetch('data/'+waterSystemId+'.json')
   ${Array.from(uniqueAnalyteMap).map((analyte) => {
     return `
       <h2 class="erf-align">${analyte[0]} - ${analyte[1][0].VIOLATION_TYPE_NAME}</h2>
-        <button class="collapsible">Show/Hide Table</button>
-        <div class="content">
       <table class="violaters system-specific">
       <tr>
         <th class="head">Violation Begin Date</th>
@@ -77,7 +75,7 @@ fetch('data/'+waterSystemId+'.json')
             `;
           }
         }).join(' ')}
-      </table></div>
+      </table>
     `
   }).join(' ')}
   `;
