@@ -2,15 +2,16 @@ export function exportList(rows) {
 
 console.log()
 console.log("First row / headers" + rows[0].querySelectorAll('th')[0].innerText)
-var rowlen = document.getElementsByClassName("head").length/2; //Get length of row
+var rowlen = document.getElementsByClassName("head").length/document.querySelectorAll('table').length; //Get length of row
 //copied from codepen
+console.log(rowlen)
 var csv = [];
 
 
 var frow = []
 for (var i = 0; i < rowlen; i++){
 //Get content of each header, pushing into row
-console.log(rows[0].querySelectorAll('th')[i].innerText);
+//console.log(rows[0].querySelectorAll('th')[i].innerText);
 //Push item into first row
 frow.push(  '"' +rows[0].querySelectorAll('th')[i].innerText + '"');
 
