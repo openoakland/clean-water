@@ -59,6 +59,7 @@ fetch('data/'+waterSystemId+'.json')
         <th class="head">Absolute Exceedance</th>
         <th class="head">% Exceedance</th>
         <th class="head">Enforcement Action #</th>
+        <th class="head">Enforcement Action Issue Date</th>
         </tr>
         <!-- need to loop through all violations -->
         ${uniqueSystemData.map((item) => {
@@ -73,7 +74,8 @@ fetch('data/'+waterSystemId+'.json')
               <td>${item.ENF_ACTION_TYPE_ISSUED} ${new Date(item.ENF_ACTION_ISSUE_DATE).toLocaleDateString("en-US")}</td>
               <td>${absexc.toFixed(3) + " " + item.MCL_UOM}</td>
               <td>${pctexc.toFixed(2)}</td>
-              <td>${item.ENF_ACTION_NUMBER}</td></tr>
+              <td>${item.ENF_ACTION_NUMBER}</td>
+              <td>${item.ENF_ACTION_ISSUE_DATE}</td></tr>
             `;
           }
         }).join(' ')}
