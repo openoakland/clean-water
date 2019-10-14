@@ -1,23 +1,34 @@
 export function exportList(rows) {
 
-//data are the rows in the tables
-console.log(rows[2])
-console.log("Input Variable is of type:", typeof(rows))
-
-
-
+console.log()
+console.log("First row / headers" + rows[0].querySelectorAll('th')[0].innerText)
+var rowlen = document.getElementsByClassName("head").length/2; //Get length of row
 //copied from codepen
 var csv = [];
 
+
+var frow = []
+for (var i = 0; i < rowlen; i++){
+//Get content of each header, pushing into row
+console.log(rows[0].querySelectorAll('th')[i].innerText);
+//Push item into first row
+frow.push(  '"' +rows[0].querySelectorAll('th')[i].innerText + '"');
+
+}
+csv.push(frow.join(","));
+
+ 
+
+
 for (var i = 0; i < rows.length; i++) {
   var row = [], cols = rows[i].querySelectorAll('td');
-
   for (var j = 0; j < cols.length; j++)
-  row.push(  '"' +cols[j].innerText + '"');
+  row.push(  '"' +cols[j].innerText + '"'); // push subsequent rows
 
 
   csv.push(row.join(","));
 }
+
 
 
 //var csvContent="application/vnd.ms-excel;charset=us-ascii," + rows;

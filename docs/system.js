@@ -68,7 +68,6 @@ fetch('data/'+waterSystemId+'.json')
         <th class="head" style="display:none">Violation #</th>
         <th class="head" style="display:none">Violation Type Name</th>
         <th class="head" style="display:none">Analyte Name</th>
-
         <th class="head" style="display:none">Enforcement Action #</th>
         <th class="head" style="display:none">Enforcement Action Issue Date</th>
         </tr>
