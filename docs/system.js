@@ -58,12 +58,19 @@ fetch('data/'+waterSystemId+'.json')
         <th class="head">Action</th>
         <th class="head">Absolute Exceedance</th>
         <th class="head">% Exceedance</th>
+        <th class="head" style="display:none">Regulating Agency</th>
+        <th class="head" style="display:none">Water System #</th>
+        <th class="head" style="display:none">Water System Name</th>
+        <th class="head" style="display:none">Population</th>
+        <th class="head" style="display:none">County</th>
+        <th class="head" style="display:none">City</th>
+        <th class="head" style="display:none">Zip</th>
+        <th class="head" style="display:none">Violation #</th>
+        <th class="head" style="display:none">Violation Type Name</th>
+        <th class="head" style="display:none">Analyte Name</th>
+
         <th class="head" style="display:none">Enforcement Action #</th>
         <th class="head" style="display:none">Enforcement Action Issue Date</th>
-        <th class="head" style="display:none">Regulating Agency</th>
-        <th class="head" style="display:none">Water System Name</th>
-        <th class="head" style="display:none">Classification</th>
-        <th class="head" style="display:none">Population</th>
         </tr>
         <!-- need to loop through all violations -->
         ${uniqueSystemData.map((item) => {
@@ -78,12 +85,18 @@ fetch('data/'+waterSystemId+'.json')
               <td>${item.ENF_ACTION_TYPE_ISSUED} ${new Date(item.ENF_ACTION_ISSUE_DATE).toLocaleDateString("en-US")}</td>
               <td>${absexc.toFixed(3) + " " + item.MCL_UOM}</td>
               <td>${pctexc.toFixed(2)}</td>
+              <td style="display:none">${item.REGULATING_AGENCY}</td>
+              <td style="display:none">${item.WATER_SYSTEM_NUMBER}</td>
+              <td style="display:none">${item.WATER_SYSTEM_NAME}</td>
+              <td style="display:none">${item.POPULATION}</td>
+              <td style="display:none">${item.COUNTY}</td>
+              <td style="display:none">${item.CITY}</td>
+              <td style="display:none">${item.ZIPCODE}</td>
+              <td style="display:none">${item.VIOLATION_NUMBER}</td>
+              <td style="display:none">${item.VIOLATION_TYPE_NAME}</td>
+              <td style="display:none">${item.ANALYTE_NAME}</td>
               <td style="display:none">${item.ENF_ACTION_NUMBER}</td>
               <td style="display:none">${item.ENF_ACTION_ISSUE_DATE}</td>
-              <td style="display:none">${item.REGULATING_AGENCY}</td>
-              <td style="display:none">${item.WATER_SYSTEM_NAME}</td>
-              <td style="display:none">${item.CLASSIFICATION}</td>
-              <td style="display:none">${item.POPULATION}</td>
               </tr>
             `;
           }
