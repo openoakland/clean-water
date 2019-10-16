@@ -1,7 +1,21 @@
 body {
   font-family: Helvetica;
-  background-color: blue;
+  background-color: #BBDEFB;
   margin: 0; padding: 0;
+}
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.page-title {
+  padding: 25px;
+}
+.page-title h4 {
+  font-weight: normal;
 }
 .bar {
   height: 80px;

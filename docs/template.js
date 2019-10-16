@@ -35,15 +35,15 @@ export function summary(json) {
   return `
     <div class="numcards">
       <p class="numcard">
-        <span class="bignum">${population.toLocaleString('en')}</span> 
+        <span class="bignum">${population.toLocaleString('en')}</span>
         <span>People with Unsafe Drinking Water</span>
       </p>
       <p class="numcard">
-        <span class="bignum">${systemCount}</span> 
+        <span class="bignum">${systemCount}</span>
         <span>Non-Compliant Water Systems</span>
       </p>
       <p class="numcard">
-        <span class="bignum">${analyteCount}</span> 
+        <span class="bignum">${analyteCount}</span>
         <span>Analyte(s) Exceeding a Drinking Water Standard</span>
       </p>
     </div>
@@ -64,22 +64,26 @@ export function summary(json) {
         stroke: #333;
         stroke-width: 1.5px;
       }
-      /* footer */    
+      /* footer */
       .footnote {
         color: gray;
         margin-bottom: 200px;
         margin-top: -100px;
         margin-left: 70px;
       }
+      #cali-map {
+        width: 320px;
+        height: 400px;
+      }
       </style>
       <div>
-        <div class="california-svg">
-          <svg width="320" height="400"></svg>
+        <div class="cali-map-container">
+          <img id="cali-map" src="cali-map.png" />
         </div>
         <h3>Population affected per CA Congressional district</h3>
         <a href="/leaderboard/">see leaderboard for more info</a>
       </div>
-      
+
       <style>
       .bar { fill: steelblue; }
       </style>
