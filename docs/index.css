@@ -51,24 +51,25 @@ select {
 .violating-systems {
   margin-bottom: 150px;
 }
-.violaters {
+.violaters table {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
   grid-column-gap: 1px;
   grid-row-gap: 1px;
   max-width: 90%;
-  margin: 0 auto;
+  margin: 10px auto;
+  left: 75px;
 }
 .violaters.system-specific {
   grid-template-columns: auto auto auto auto auto auto auto;
   margin-bottom: 50px;
 }
-.violaters span {
+.violaters td {
   background-color: rgba(0,0,255,.25);
   padding: 10px;
   color: #000;
 }
-.violaters span.head {
+.violaters th {
   background: rgba(0,0,255,.6);
   color: #fff;
 }
@@ -82,9 +83,42 @@ select {
 }
 button {
   position: relative;
-  left: 45px;
+  left: 75px;
+  margin: 10px auto;
   padding-top: 2px;
   padding-bottom: 2px;
   margin-bottom: 10px
   }
 }
+
+/* Style the button that is used to open and close the collapsible content   background-color: #eee;
+  color: #444;   font-size: 15px;*/
+  /* Style the button that is used to open and close the collapsible content */
+button.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+
+  p.footnote {
+    margin-top: 0px;
+  }

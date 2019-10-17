@@ -1,46 +1,45 @@
-export function exportList(data, rowlength) {
+export function exportList(rows) {
 
-//data.forEach( (item) => { console.log(item.textContent) });
-console.log(data.length)
-console.log(data)
-
-console.log("Input Variable is of type:", typeof(data))
-console.log("Length is:", rowlength)
-
-
-const rows = []
-       //["Water System Name", "ID", "City", "County", "Zip"];
+console.log()
+console.log("First row / headers" + rows[0].querySelectorAll('th')[0].innerText)
+var rowlen = document.getElementsByClassName("head").length/document.querySelectorAll('table').length; //Get length of row
+//copied from codepen
+console.log(rowlen)
+var csv = [];
 
 
-       for (var i = 0; i < data.length; i++)
-       {
+var frow = []
+for (var i = 0; i < rowlen; i++){
+//Get content of each header, pushing into row
+//console.log(rows[0].querySelectorAll('th')[i].innerText);
+//Push item into first row
+frow.push(  '"' +rows[0].querySelectorAll('th')[i].innerText + '"');
+
+}
+csv.push(frow.join(","));
+
+ 
 
 
-         if (i > 0 && i % rowlength == 0)
-          {
-          rows.push("\n" + '"' + data[i].textContent + '"'); // Put a line break right before the first element of the row except the first
-          }
+for (var i = 0; i < rows.length; i++) {
+  var row = [], cols = rows[i].querySelectorAll('td');
+  for (var j = 0; j < cols.length; j++)
+  row.push(  '"' +cols[j].innerText + '"'); // push subsequent rows
 
-        else {
-          rows.push('"' + data[i].textContent + '"');
 
-            }
+  csv.push(row.join(","));
+}
 
-        }
 
 
 //var csvContent="application/vnd.ms-excel;charset=us-ascii," + rows;
-var csvContent = rows;
-
-
-console.log(csvContent.length)
-console.log(typeof(csvContent));
+//var csvContent = rows;
 
 // Iterate through the string and where there is a comma replace with ","
 
 
 
-download("mydata.csv", csvContent);
+download("mydata.csv", csv.join("\n"));
 
 // var encodedUri = encodeURI(csvContent);
 // var link = document.createElement("a");

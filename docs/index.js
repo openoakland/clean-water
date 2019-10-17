@@ -66,7 +66,7 @@ fetch('data/violations.json')
   })
 
   document.getElementById("export-list").addEventListener("click", function() {
-    exportList(document.querySelectorAll('.violating-systems span'), document.querySelectorAll('.violating-systems span.head').length);
+    exportList(document.querySelectorAll('table tr'));
 
 
   })
@@ -84,6 +84,7 @@ function resetElements(currentName, currentIndex) {
   document.querySelector('select[name="assembly"]').selectedIndex = 0;
   document.querySelector('select[name="'+currentName+'"]').selectedIndex = currentIndex;
 }
+
 
 function regenerateCaliMapIfNeeded(shouldRegenerate, selectedDistrict) {
   if (shouldRegenerate) {

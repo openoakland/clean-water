@@ -43,46 +43,72 @@ fetch('data/'+waterSystemId+'.json')
   <br><br>
   <h3 class="erf-align">The following table(s) show all measurements for all analytes which exceeded allowed levels</h3>
   <br><br>
+  <div align="left">
+  <button id="export-list">Export Displayed Data</button>
+  </div>
   ${Array.from(uniqueAnalyteMap).map((analyte) => {
     return `
       <h2 class="erf-align">${analyte[0]} - ${analyte[1][0].VIOLATION_TYPE_NAME}</h2>
-        <div align="left">
-        <button id="export-list">Export Displayed Data</button>
-        </div>
-      <div class="violaters system-specific">
-        <span class="head">Violation Begin Date</span>
-        <span class="head">Violation End Date</span>
-        <span class="head">Measured Level</span>
-        <span class="head">Allowed Level</span>
-        <span class="head">Action</span>
-        <span class="head">Absolute Exceedance</span>
-        <span class="head">% Exceedance</span>
+      <table class="violaters system-specific">
+      <tr>
+        <th class="head">Violation Begin Date</th>
+        <th class="head">Violation End Date</th>
+        <th class="head">Measured Level</th>
+        <th class="head">Allowed Level</th>
+        <th class="head">Action</th>
+        <th class="head">Absolute Exceedance</th>
+        <th class="head">% Exceedance</th>
+        <th class="head" style="display:none">Regulating Agency</th>
+        <th class="head" style="display:none">Water System #</th>
+        <th class="head" style="display:none">Water System Name</th>
+        <th class="head" style="display:none">Population</th>
+        <th class="head" style="display:none">County</th>
+        <th class="head" style="display:none">City</th>
+        <th class="head" style="display:none">Zip</th>
+        <th class="head" style="display:none">Violation #</th>
+        <th class="head" style="display:none">Violation Type Name</th>
+        <th class="head" style="display:none">Analyte Name</th>
+        <th class="head" style="display:none">Enforcement Action #</th>
+        <th class="head" style="display:none">Enforcement Action Issue Date</th>
+        </tr>
         <!-- need to loop through all violations -->
         ${uniqueSystemData.map((item) => {
           if(item.ANALYTE_NAME == analyte[0]) {
             var absexc = item.RESULT - item.MCL_VALUE;
             var pctexc = absexc/item.MCL_VALUE*100;
-            return `
-              <span>${new Date(item.VIOL_BEGIN_DATE).toLocaleDateString("en-US")}</span>
-              <span>${new Date(item.VIOL_END_DATE).toLocaleDateString("en-US")}</span>
-              <span>${item.RESULT} ${item.RESULT_UOM}</span>
-              <span>${item.MCL_VALUE} ${item.MCL_UOM}</span>
-              <span>${item.ENF_ACTION_TYPE_ISSUED} ${new Date(item.ENF_ACTION_ISSUE_DATE).toLocaleDateString("en-US")}</span>
-              <span>${absexc.toFixed(3) + " " + item.MCL_UOM}</span>
-              <span>${pctexc.toFixed(2)}</span>
+            return `<tr>
+              <td>${new Date(item.VIOL_BEGIN_DATE).toLocaleDateString("en-US")}</td>
+              <td>${new Date(item.VIOL_END_DATE).toLocaleDateString("en-US")}</td>
+              <td>${item.RESULT} ${item.RESULT_UOM}</td>
+              <td>${item.MCL_VALUE} ${item.MCL_UOM}</td>
+              <td>${item.ENF_ACTION_TYPE_ISSUED} ${new Date(item.ENF_ACTION_ISSUE_DATE).toLocaleDateString("en-US")}</td>
+              <td>${absexc.toFixed(3) + " " + item.MCL_UOM}</td>
+              <td>${pctexc.toFixed(2)}</td>
+              <td style="display:none">${item.REGULATING_AGENCY}</td>
+              <td style="display:none">${item.WATER_SYSTEM_NUMBER}</td>
+              <td style="display:none">${item.WATER_SYSTEM_NAME}</td>
+              <td style="display:none">${item.POPULATION}</td>
+              <td style="display:none">${item.COUNTY}</td>
+              <td style="display:none">${item.CITY}</td>
+              <td style="display:none">${item.ZIPCODE}</td>
+              <td style="display:none">${item.VIOLATION_NUMBER}</td>
+              <td style="display:none">${item.VIOLATION_TYPE_NAME}</td>
+              <td style="display:none">${item.ANALYTE_NAME}</td>
+              <td style="display:none">${item.ENF_ACTION_NUMBER}</td>
+              <td style="display:none">${item.ENF_ACTION_ISSUE_DATE}</td>
+              </tr>
             `;
           }
         }).join(' ')}
-      </div>
+      </table>
     `
   }).join(' ')}
   `;
 
   document.querySelector('.system-history').innerHTML = output;
 
-  document.getElementById("export-list").addEventListener("click", function() {
-    exportList(document.querySelectorAll(".violaters > span"), document.querySelectorAll(".violaters > span.head").length);
-
+    document.getElementById("export-list").addEventListener("click", function() {
+      exportList(document.querySelectorAll('table tr'));
 
   })
 })
