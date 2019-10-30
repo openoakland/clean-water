@@ -19,8 +19,7 @@ h2 {
 }
 .bar {
   height: 80px;
-  background: #383636;
-  color: #fff;
+  background: linear-gradient(270deg, #AC0000 0%, #E76C45 25%, #FAA66A 54.69%, #F3E6C3 100%);
   display: flex;
   align-items: center;
   position: relative;
