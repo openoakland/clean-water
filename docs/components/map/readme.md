@@ -4,7 +4,7 @@ Using extrusions to add vertical columns to a map
 
 ## Example
 
-<img src="map-example.png" />
+<img src="3D-bars-map.png" />
 
 ## How to use
 

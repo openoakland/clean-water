@@ -70,6 +70,9 @@ export function formatData(json, map, color) {
 
 function buildFeatureMCL(item,coords,color) {
   let calculatedHeight = parseFloat(5000 * item.properties.proportion_mcl);
+  if(item.properties.height) {
+    calculatedHeight = item.properties.height;
+  }
   return {
     "type": "Feature",
     "properties": {
