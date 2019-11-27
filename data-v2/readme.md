@@ -29,9 +29,10 @@ fix analyte count
 
 The excel file can be transformed into the json format the site needs by running this series of scripts:
 
-- Translate the Excel active violations data to JSON: ```excel.js```
+- ```excel.js``` - Translate the Excel active violations data to JSON:
 
-Then we need to slightly reformat this by running:
+
+- Reformat
 
 ```
 node format.js
@@ -45,7 +46,7 @@ cp violations-current.json output/violations.json
 cp output/* ../docs/data/
 ```
 
-- Split up the violations into separate files per water system ID: ```write.js```
+- ```write.js``` - Split up the violations into separate files per water system ID: 
 
 The shape files are linked on the HR2W site as well <a href="https://www.waterboards.ca.gov/water_issues/programs/hr2w/">https://www.waterboards.ca.gov/water_issues/programs/hr2w/</a>, put them in the ```./shapefiles``` directory and run:
 
@@ -84,7 +85,7 @@ Recreate the files for the leaderboard page
 ```
 cd docs/leaderboard
 node data-by-district.js
-node augment.js 
+node augment.js
 ```
 
 <!--
