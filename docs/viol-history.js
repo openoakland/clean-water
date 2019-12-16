@@ -1,6 +1,8 @@
 export function barsHistory(json, containerSelector) {
   let historyCount = new Map();
 
+  console.log(json[1])
+
   json.forEach( (v) => {
     let foundHistory = historyCount.get(v.VIOLATION_HISTORY_TOTAL)
     if(typeof(foundHistory) == 'undefined') {
@@ -75,7 +77,7 @@ export function barsHistory(json, containerSelector) {
       .data(data)
     .enter().append("rect")
       .attr("class", "bar")
-      .attr("x", function(d) { return x(d.History); })
+        .attr("x", function(d) { return x(d.History); })
       .attr("width", x.bandwidth())
       .attr("y", function(d) { return y(d.Count); })
       .attr("height", function(d) { return height - y(d.Count); });

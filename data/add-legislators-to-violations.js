@@ -8,16 +8,20 @@ let augmentedViolations = [];
 
 violations.forEach( (item, index) => {
   let systemId = item.WATER_SYSTEM_NUMBER;
-  let legislatorInfo = JSON.parse(fs.readFileSync('../docs/data/leg-'+systemId+'.json', 'utf8'));
-  legislatorInfo.legislators.forEach( (legi) => {
-    if(legi.chamber == 'upper') {
-      item['CA_STATE_SENATE_DISTRICT'] = legi.district;
-    }
-    if(legi.chamber == 'lower') {
-      item['CA_STATE_ASSEMBLY_DISTRICT'] = legi.district;
-    }
-  })
-  augmentedViolations.push(item);
+  if(fs.existsSync('../docs/data/leg-'+systemId+'.json')) {
+    let legislatorInfo = JSON.parse(fs.readFileSync('../docs/data/leg-'+systemId+'.json', 'utf8'));
+    legislatorInfo.legislators.forEach( (legi) => {
+      if(legi.chamber == 'upper') {
+        item['CA_STATE_SENATE_DISTRICT'] = legi.district;
+      }
+      if(legi.chamber == 'lower') {
+        item['CA_STATE_ASSEMBLY_DISTRICT'] = legi.district;
+      }
+    })
+    augmentedViolations.push(item);
+  } else {
+    console.log('wtf ../docs/data/leg-'+systemId+'.json')
+  }
 })
 
 console.log(augmentedViolations.length)

@@ -85,7 +85,7 @@ export function summary(json) {
       </div>
 
       <style>
-      .bar { fill: steelblue; }
+      .bar { fill: #b35805; }
       </style>
       <div>
         <div class="chart-container history"></div>

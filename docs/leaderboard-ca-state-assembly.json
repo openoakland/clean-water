@@ -1,1 +1,599 @@
-[{"population":23220,"dist":"56","type":"Assembly"},{"population":198973,"dist":"32","type":"Assembly"},{"population":42587,"dist":"34","type":"Assembly"},{"population":66523,"dist":"31","type":"Assembly"},{"population":102378,"dist":"26","type":"Assembly"},{"population":34019,"dist":"5","type":"Assembly"},{"population":4105,"dist":"36","type":"Assembly"},{"population":4420,"dist":"23","type":"Assembly"},{"population":2777,"dist":"1","type":"Assembly"},{"population":2000,"dist":"3","type":"Assembly"},{"population":5214,"dist":"4","type":"Assembly"},{"population":115308,"dist":"21","type":"Assembly"},{"population":83,"dist":"10","type":"Assembly"},{"population":9841,"dist":"41","type":"Assembly"},{"population":987,"dist":"2","type":"Assembly"},{"population":580,"dist":"11","type":"Assembly"},{"population":3076,"dist":"71","type":"Assembly"},{"population":4007,"dist":"29","type":"Assembly"},{"population":25548,"dist":"30","type":"Assembly"},{"population":4925,"dist":"33","type":"Assembly"},{"population":78,"dist":"28","type":"Assembly"},{"population":6704,"dist":"67","type":"Assembly"},{"population":192547,"dist":"12","type":"Assembly"},{"population":1529,"dist":"13","type":"Assembly"},{"population":1410,"dist":"9","type":"Assembly"},{"population":1180,"dist":"75","type":"Assembly"},{"population":2074,"dist":"35","type":"Assembly"},{"population":1975,"dist":"42","type":"Assembly"},{"population":103630,"dist":"40","type":"Assembly"},{"population":668,"dist":"24","type":"Assembly"},{"population":5479,"dist":"52","type":"Assembly"}]
+[
+  {
+    "population": {
+      "population": 10368,
+      "systems": [
+        "CA0210001",
+        "CA0310004",
+        "CA0510011",
+        "CA2000506",
+        "CA2000526",
+        "CA2000527",
+        "CA2000538",
+        "CA2000551",
+        "CA2000552",
+        "CA2000561",
+        "CA2000567",
+        "CA2000589",
+        "CA2000592",
+        "CA2000612",
+        "CA2000729",
+        "CA2000737",
+        "CA2000785",
+        "CA2000828",
+        "CA2010014",
+        "CA2210907",
+        "CA2600622",
+        "CA2610003",
+        "CA5510851"
+      ]
+    },
+    "dist": "5",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 2704,
+      "systems": [
+        "CA0400012",
+        "CA0400063",
+        "CA5200534",
+        "CA5200550",
+        "CA5201137",
+        "CA5210003"
+      ]
+    },
+    "dist": "3",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 1002,
+      "systems": [
+        "CA0400081",
+        "CA2900502",
+        "CA3200104",
+        "CA4500028",
+        "CA4700585"
+      ]
+    },
+    "dist": "1",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 32549,
+      "systems": [
+        "CA0600008",
+        "CA1700519",
+        "CA1700609",
+        "CA1710003",
+        "CA1710014",
+        "CA2810005",
+        "CA2810013",
+        "CA5700788"
+      ]
+    },
+    "dist": "4",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 48297,
+      "systems": [
+        "CA1000004",
+        "CA1000019",
+        "CA1000023",
+        "CA1000054",
+        "CA1000180",
+        "CA1000187",
+        "CA1000196",
+        "CA1000199",
+        "CA1000204",
+        "CA1000206",
+        "CA1000248",
+        "CA1000345",
+        "CA1000359",
+        "CA1000407",
+        "CA1000416",
+        "CA1000445",
+        "CA1000546",
+        "CA1009051",
+        "CA1009258",
+        "CA1009281",
+        "CA1010006",
+        "CA1010019",
+        "CA1010025",
+        "CA1010035",
+        "CA1010039",
+        "CA1010044",
+        "CA2000512"
+      ]
+    },
+    "dist": "31",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 4420,
+      "systems": [
+        "CA1000042",
+        "CA1000299",
+        "CA1000484",
+        "CA1000577",
+        "CA1009039",
+        "CA2000544",
+        "CA5410503"
+      ]
+    },
+    "dist": "23",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 99988,
+      "systems": [
+        "CA1000316",
+        "CA1400036",
+        "CA1400109",
+        "CA1500393",
+        "CA1500436",
+        "CA1500458",
+        "CA1500525",
+        "CA1510033",
+        "CA5400553",
+        "CA5400558",
+        "CA5400616",
+        "CA5400636",
+        "CA5400641",
+        "CA5400651",
+        "CA5400665",
+        "CA5400666",
+        "CA5400670",
+        "CA5400682",
+        "CA5400709",
+        "CA5400711",
+        "CA5400792",
+        "CA5400795",
+        "CA5400844",
+        "CA5400994",
+        "CA5401003",
+        "CA5402036",
+        "CA5402047",
+        "CA5402048",
+        "CA5403110",
+        "CA5403144",
+        "CA5410006",
+        "CA5410007",
+        "CA5410009",
+        "CA5410015",
+        "CA5410017",
+        "CA5410024",
+        "CA5410050"
+      ]
+    },
+    "dist": "26",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 1724,
+      "systems": [
+        "CA1300616",
+        "CA3301380",
+        "CA3301577",
+        "CA3303100"
+      ]
+    },
+    "dist": "56",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 42650,
+      "systems": [
+        "CA1500096",
+        "CA1500314",
+        "CA1500344",
+        "CA1500378",
+        "CA1500401",
+        "CA1500409",
+        "CA1500459",
+        "CA1500475",
+        "CA1500544",
+        "CA1500546",
+        "CA1500555",
+        "CA1500560",
+        "CA1500561",
+        "CA1500584",
+        "CA1500588",
+        "CA1502154",
+        "CA1502229",
+        "CA1502607",
+        "CA1503140",
+        "CA1503475",
+        "CA1503669",
+        "CA1510006",
+        "CA1510016",
+        "CA1510023",
+        "CA1510051",
+        "CA1510054",
+        "CA1610007"
+      ]
+    },
+    "dist": "34",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 199162,
+      "systems": [
+        "CA1500231",
+        "CA1500289",
+        "CA1500296",
+        "CA1500493",
+        "CA1500494",
+        "CA1500575",
+        "CA1500585",
+        "CA1502164",
+        "CA1502699",
+        "CA1503526",
+        "CA1510001",
+        "CA1510005",
+        "CA1510012",
+        "CA1510013",
+        "CA1510019",
+        "CA1510021",
+        "CA1510024",
+        "CA1510801",
+        "CA1600008",
+        "CA1600048",
+        "CA1610005",
+        "CA1610009",
+        "CA5400735",
+        "CA5400964"
+      ]
+    },
+    "dist": "32",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 4105,
+      "systems": [
+        "CA1500424",
+        "CA1500442",
+        "CA1500455",
+        "CA1500461",
+        "CA1500571",
+        "CA1502231",
+        "CA1502232",
+        "CA1502247",
+        "CA1502569",
+        "CA1502744",
+        "CA1510052",
+        "CA1900038",
+        "CA1900100",
+        "CA1900520",
+        "CA1900785",
+        "CA1900961",
+        "CA1910246"
+      ]
+    },
+    "dist": "36",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 9841,
+      "systems": [
+        "CA1910020"
+      ]
+    },
+    "dist": "41",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 258200,
+      "systems": [
+        "CA1910039"
+      ]
+    },
+    "dist": "48",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 106,
+      "systems": [
+        "CA2100582",
+        "CA4900913"
+      ]
+    },
+    "dist": "10",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 937,
+      "systems": [
+        "CA2300590",
+        "CA2300663",
+        "CA4900532",
+        "CA4900640",
+        "CA4900644",
+        "CA5304501"
+      ]
+    },
+    "dist": "2",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 114527,
+      "systems": [
+        "CA2400071",
+        "CA2400079",
+        "CA2400084",
+        "CA2400097",
+        "CA2400099",
+        "CA2400167",
+        "CA2410001",
+        "CA2410002",
+        "CA2410004",
+        "CA2410010",
+        "CA2410011",
+        "CA5000019",
+        "CA5000061",
+        "CA5000077",
+        "CA5000255",
+        "CA5000295",
+        "CA5000297",
+        "CA5010007",
+        "CA5010028"
+      ]
+    },
+    "dist": "21",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 4007,
+      "systems": [
+        "CA2700536",
+        "CA2700665",
+        "CA2700686",
+        "CA2700799",
+        "CA2701221",
+        "CA2701241",
+        "CA2701926",
+        "CA2702405",
+        "CA2702409",
+        "CA2702550",
+        "CA4410301"
+      ]
+    },
+    "dist": "29",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 21889,
+      "systems": [
+        "CA2700738",
+        "CA2700771",
+        "CA2700970",
+        "CA2700992",
+        "CA2701036",
+        "CA2701040",
+        "CA2701063",
+        "CA2701676",
+        "CA2702466",
+        "CA3500505",
+        "CA3500823",
+        "CA3500923",
+        "CA3510001",
+        "CA4300575",
+        "CA4300610",
+        "CA4400665"
+      ]
+    },
+    "dist": "30",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 2074,
+      "systems": [
+        "CA2700964",
+        "CA4000637",
+        "CA4000750",
+        "CA4000774",
+        "CA4010027"
+      ]
+    },
+    "dist": "35",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 2073,
+      "systems": [
+        "CA3301491",
+        "CA3301529",
+        "CA3700897",
+        "CA3700905",
+        "CA3700918",
+        "CA3701010",
+        "CA3701341",
+        "CA3701793",
+        "CA3701995"
+      ]
+    },
+    "dist": "71",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 6704,
+      "systems": [
+        "CA3310026"
+      ]
+    },
+    "dist": "67",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 580,
+      "systems": [
+        "CA3400103",
+        "CA3400138",
+        "CA3400149",
+        "CA3400164"
+      ]
+    },
+    "dist": "11",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 750,
+      "systems": [
+        "CA3400130",
+        "CA3900624",
+        "CA3901035",
+        "CA3910022"
+      ]
+    },
+    "dist": "9",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 4925,
+      "systems": [
+        "CA3600012",
+        "CA3600025",
+        "CA3600086",
+        "CA3600114",
+        "CA3600184",
+        "CA3600222",
+        "CA3600504",
+        "CA3601015",
+        "CA3601048"
+      ]
+    },
+    "dist": "33",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 1975,
+      "systems": [
+        "CA3600196",
+        "CA3600226",
+        "CA3600391"
+      ]
+    },
+    "dist": "42",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 103630,
+      "systems": [
+        "CA3610064",
+        "CA3610117"
+      ]
+    },
+    "dist": "40",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 5479,
+      "systems": [
+        "CA3610850"
+      ]
+    },
+    "dist": "52",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 1180,
+      "systems": [
+        "CA3700919",
+        "CA3700934",
+        "CA3700936",
+        "CA3701408",
+        "CA3702754",
+        "CA3710042"
+      ]
+    },
+    "dist": "75",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 1529,
+      "systems": [
+        "CA3900579",
+        "CA3900978",
+        "CA3900983",
+        "CA3901213",
+        "CA3901337",
+        "CA3910014"
+      ]
+    },
+    "dist": "13",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 195177,
+      "systems": [
+        "CA3901167",
+        "CA3901169",
+        "CA3910005",
+        "CA5000008",
+        "CA5000033",
+        "CA5000090",
+        "CA5000116",
+        "CA5000218",
+        "CA5000249",
+        "CA5000273",
+        "CA5010008",
+        "CA5010009",
+        "CA5010018",
+        "CA5010019"
+      ]
+    },
+    "dist": "12",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 668,
+      "systems": [
+        "CA4100509",
+        "CA4100513",
+        "CA4100529"
+      ]
+    },
+    "dist": "24",
+    "type": "Assembly"
+  },
+  {
+    "population": {
+      "population": 64,
+      "systems": [
+        "CA4400528"
+      ]
+    },
+    "dist": "28",
+    "type": "Assembly"
+  }
+]
