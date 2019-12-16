@@ -8,7 +8,7 @@ import { cali } from './cali-map.js';
 import { barsHistory } from './viol-history.js';
 
 // Set to true if California map png needs to be updated
-let regenerateCaliMap = false;
+let regenerateCaliMap = true;
 
 fetch('data/violations.json')
 .then(function(response) {
