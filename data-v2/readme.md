@@ -29,15 +29,19 @@ fix analyte count
 
 The excel file can be transformed into the json format the site needs by running this series of scripts:
 
-- Translate the Excel active violations data to JSON: ```excel.js```
+1. Translate the Excel active violations data to JSON and reformat
 
-Then we need to slightly reformat this by running:
+```
+excel.js
+```
+
+2. Reformat
 
 ```
 node format.js
 ```
 
-- Remove the now compliant systems from our list of violators
+3. Remove the now compliant systems from our list of violators
 
 ```
 node more-fields.js
@@ -45,46 +49,61 @@ cp violations-current.json output/violations.json
 cp output/* ../docs/data/
 ```
 
-- Split up the violations into separate files per water system ID: ```write.js```
+### Splitting violations per water system
 
-The shape files are linked on the HR2W site as well <a href="https://www.waterboards.ca.gov/water_issues/programs/hr2w/">https://www.waterboards.ca.gov/water_issues/programs/hr2w/</a>, put them in the ```./shapefiles``` directory and run:
+4. Split up the violations into separate files per water system ID:
+
+```
+write.js
+```
+
+5. The shape files are linked on the HR2W site as well <a href="https://www.waterboards.ca.gov/water_issues/programs/hr2w/">https://www.waterboards.ca.gov/water_issues/programs/hr2w/</a>, put them in the ```./shapefiles``` directory and run:
 
 ```
 node shapes.js
 ```
 
-Which generates a fresh ```locations.json``` file, then we can split that up:
+This generates a fresh ```locations.json``` file, then we can split that up:
 
-- Create a separate JSON file with the metadata for each water system: ```write-locs.js```
+7. Create a separate JSON file with the metadata for each water system:
 
-Apply the legislative data to the files in the docs/data folder: ```legislators.js```
+```
+write-locs.js
+```
 
-Add the legislative district to each system:
+### Add Legislative Data
+
+1. Apply the legislative data to the files in the docs/data folder:
+```
+legislators.js
+```
+
+2. Add the legislative district to each system:
 
 ```
 node add-legislators-to-violations.js
 cp violations-current-plus-legislators.json ../docs/data/violations.json
 ```
 
-Add the total count of violations from that system to each record:
+3. Add the total count of violations from that system to each record:
 
 ```
 node count-viol-history.js
 cp violations-plus-viol-count.json ../docs/data/violations.json
 ```
 
-Create a file containing population counters for affected people in each CA State Assembly District
+4. Create a file containing population counters for affected people in each CA State Assembly District
 
 ```
 node count-pop-per-district.js
 ```
 
-Recreate the files for the leaderboard page
+5. Recreate the files for the leaderboard page
 
 ```
 cd docs/leaderboard
 node data-by-district.js
-node augment.js 
+node augment.js
 ```
 
 <!--
