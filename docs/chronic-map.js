@@ -16,7 +16,7 @@ document.getElementById('slider').addEventListener('input', function(e) {
   document.getElementById('month').innerHTML = 'Retrieving data from '+monthNames[stringMonth[1]]+' '+stringMonth[0];
   resetMap(newMonth)
 });
-  
+
 function getMarkerHTML(fillColor, width, height) {
   return `<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
   width="${width}" height="${height}" viewBox="0 0 1280 1207"
@@ -95,12 +95,12 @@ function resetMap(url) {
   });
 }
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYWFyb25oYW5zIiwiYSI6ImNqNGs4cms1ZzBocXkyd3FzZGs3a3VtamYifQ.HQjFfVzwwxwCmGr2nvnvSA';
+mapboxgl.accessToken = 'pk.eyJ1IjoiYWFyeDIzMDAiLCJhIjoiY2s2YjJkanU0MDFxdjNkcW0yOHM4YnNzbCJ9.bZat5rmK6nS1k8uAZXX2vA';
 var map = new mapboxgl.Map({
   container: 'map',
   zoom: 6,
   center: [-119.29007140322268, 35.96972352218545],
-  style: 'mapbox://styles/aaronhans/ck0eofhpm1v1x1co6y46u3qhi'
+  style: 'mapbox://styles/aarx2300/ck6b4jm530ho31iqsd8391sps'
 });
 
 let url = '2019-3';
@@ -154,7 +154,7 @@ function addMarkers(geojson) {
           <p><a href="/system.html?id=${marker.properties.WATER_SYSTEM_NUMBER}" target="_blank">more info</a></p>`))
         .addTo(map);
 
-      
+
       currentMarkers.push(aMarker);
     }
   });
