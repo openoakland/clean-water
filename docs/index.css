@@ -116,7 +116,7 @@ button.collapsible {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: #f1f1f1;
   }
 
   p.footnote {
