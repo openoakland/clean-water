@@ -111,7 +111,7 @@ select {
 .violating-systems {
   margin-bottom: 10px;
   overflow-y: scroll;
-  height: 500px;
+  max-height: 500px;
 }
 .violating-systems table {
   margin: 10px auto;
