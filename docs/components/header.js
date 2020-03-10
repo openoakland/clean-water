@@ -13,7 +13,7 @@ class CleanWaterHeader extends HTMLElement {
 
     const linkCSS = document.createElement('link');
     linkCSS.setAttribute('rel', 'stylesheet');
-    linkCSS.setAttribute('href', './Drinking Water Safety Violations_files/index.css');
+    linkCSS.setAttribute('href', '../index.css');
 
     shadow.appendChild(linkCSS);
     shadow.appendChild(container);
