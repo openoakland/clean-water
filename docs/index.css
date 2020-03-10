@@ -1,17 +1,69 @@
 body {
-  font-family: Montserrat, sans-serif;
+  font-family: Open Sans, Sans-serif;
 }
 h1 {
-  text-transform: uppercase;
-  font-size: 3rem;
-  text-align: center;
-  margin: 60px 0 20px 0;
-  font-weight: normal;
+  font-family: Bitter, serif;
+  color: white;
+  font-size: 40px;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0px;
 }
+
 h3 {
-  font-weight: normal;
+  font-family: Bitter, serif;
   text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;  
 }
+
+.header { /* navigation*/
+  background: #004596;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  font-variant: small-caps;
+  line-height: 19px;
+  padding-top: 22px;
+  padding-left: 40px;
+  padding-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.header a:link, a:visited {
+  color: #8FB7E7; /* light blue */
+  text-decoration: none;
+  margin-right: 30px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.header a:hover {
+  background: rgba(255, 255, 255, 0.2);  
+}
+
+.header-title {
+  background: linear-gradient(180deg, #004596 33.33%, #316DB5 100%);
+  padding-left: 40px;
+  padding-top: 16px;
+  padding-bottom: 34px;
+}
+
+.indented {
+  padding-left: 40px;
+  padding-right: 40px;  
+}
+
+.summary {
+  border: 1px solid #8FB7E7;
+  border-radius: 5px;
+  color: #004596; /*dark blue*/
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
 .numcards {
   display: flex;
   justify-content: space-around;
@@ -29,66 +81,92 @@ h3 {
 }
 .bignum {
   display: block;
-  font-size: 2em;
+  font-style: normal;
   font-weight: bold;
+  font-size: 48px;
+  line-height: 131.19%;
 }
 
 select {
-  font-size: 1.5rem;
-  min-width: 187px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #004596;
   margin-right: 10px;
+  border: 1px solid #8FB7E7;
+  border-radius: 5px;
 }
 .selects {
-  position: fixed;
   box-sizing: border-box;
-  bottom: 0;
   width: 100%;
   background: rgba(255,255,255,.7);
-  padding: 25px 0;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
 }
 .violating-systems {
-  margin-bottom: 150px;
+  margin-bottom: 10px;
+  overflow-y: scroll;
+  height: 500px;
 }
-.violaters table {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto;
-  grid-column-gap: 1px;
-  grid-row-gap: 1px;
-  max-width: 90%;
+.violating-systems table {
   margin: 10px auto;
-  left: 75px;
+  width: 100%;
 }
 .violaters.system-specific {
   grid-template-columns: auto auto auto auto auto auto auto;
-  margin-bottom: 50px;
+}
+
+.violaters a:link, a:visited {
+  text-decoration: none;
+  color: #004596;
+}
+
+.violaters a:hover {
+  text-decoration: underline
+}
+
+.violaters th {
+  background: #8FB7E7;
+  font-variant: small-caps;  
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 131.19%;
+  color: white;
+
 }
 .violaters td {
-  background-color: rgba(0,0,255,.25);
+  font-size: 12px;
+  line-height: 131.19%;  
   padding: 10px;
-  color: #000;
+  color: #004596;
 }
-.violaters th {
-  background: rgba(0,0,255,.6);
-  color: #fff;
+
+.violaters tr:nth-child(odd) {
+  background-color: #E8F0FA;
 }
-.violaters span a {
-  color: #000;
+
+.violaters tr:nth-child(even) {
+  background-color: #D8E5F4;
 }
+  
 .erf-align {
   max-width: 90%;
   margin: 10px auto;
   font-weight: 500;
 }
 button {
-  position: relative;
-  left: 75px;
-  margin: 10px auto;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  margin-bottom: 10px
-  }
+  border: 1px solid #8FB7E7;
+  border-radius: 5px;
+  color: #004596;
+  background-color: white;
+  font-size: 12px;
+  padding: 5px;
 }
 
 /* Style the button that is used to open and close the collapsible content   background-color: #eee;
@@ -110,7 +188,7 @@ button.collapsible {
   .active, .collapsible:hover {
     background-color: #ccc;
   }
-
+  
   /* Style the collapsible content. Note: hidden by default */
   .content {
     padding: 0 18px;
@@ -120,5 +198,5 @@ button.collapsible {
   }
 
   p.footnote {
-    margin-top: 0px;
+    margin-top: 40px;
   }
