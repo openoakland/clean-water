@@ -24,12 +24,12 @@ h3 {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
-  font-variant: small-caps;
   line-height: 19px;
   padding-top: 22px;
   padding-left: 40px;
   padding-bottom: 8px;
   box-sizing: border-box;
+  text-transform: uppercase;
 }
 
 .header a:link, a:visited {
@@ -60,6 +60,8 @@ h3 {
   border: 1px solid #8FB7E7;
   border-radius: 5px;
   color: #004596; /*dark blue*/
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 8px;
   margin-bottom: 16px;
 }
@@ -74,6 +76,8 @@ h3 {
   width: 20%;
   font-size: 16px;
   text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 .chartcards {
   display: flex;
@@ -96,7 +100,7 @@ select {
   align-items: center;
   text-align: center;
   color: #004596;
-  margin-right: 10px;
+  padding: 4px;
   border: 1px solid #8FB7E7;
   border-radius: 5px;
 }
@@ -109,7 +113,7 @@ select {
   justify-content: space-between;
 }
 .violating-systems {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   overflow-y: scroll;
   max-height: 500px;
 }
@@ -132,12 +136,14 @@ select {
 
 .violaters th {
   background: #8FB7E7;
-  font-variant: small-caps;  
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
+  text-transform: uppercase;
   color: white;
   padding: 5px 10px;
+  position: sticky;
+  top: 0;
 }
 
 .violaters td {
