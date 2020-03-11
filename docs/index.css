@@ -1,8 +1,8 @@
 body {
-  font-family: Open Sans, Sans-serif;
+  font-family: Open Sans, Arial, Sans-serif;
 }
 h1 {
-  font-family: Bitter, serif;
+  font-family: Bitter, Cambria, serif;
   color: white;
   font-size: 40px;
   text-align: left;
@@ -12,7 +12,7 @@ h1 {
 }
 
 h3 {
-  font-family: Bitter, serif;
+  font-family: Bitter, Cambria, serif;
   text-align: center;
   font-weight: bold;
   font-size: 18px;
@@ -136,15 +136,14 @@ select {
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
-  line-height: 131.19%;
   color: white;
-
+  padding: 5px 10px;
 }
+
 .violaters td {
   font-size: 12px;
-  line-height: 131.19%;  
-  padding: 10px;
   color: #004596;
+  padding: 5px 10px;
 }
 
 .violaters tr:nth-child(odd) {
@@ -160,6 +159,7 @@ select {
   margin: 10px auto;
   font-weight: 500;
 }
+
 button {
   border: 1px solid #8FB7E7;
   border-radius: 5px;
