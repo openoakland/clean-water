@@ -1,5 +1,6 @@
 body {
   font-family: Open Sans, Arial, Sans-serif;
+  margin: 0px;
 }
 h1 {
   font-family: Bitter, Cambria, serif;
@@ -32,11 +33,11 @@ h3 {
   text-transform: uppercase;
 }
 
-.header a:link, a:visited {
+.header a:link, .header a:visited {
   color: #8FB7E7; /* light blue */
   text-decoration: none;
   margin-right: 30px;
-  padding: 5px;
+  padding: 5px 10px;;
   border-radius: 5px;
 }
 
@@ -125,7 +126,7 @@ select {
   grid-template-columns: auto auto auto auto auto auto auto;
 }
 
-.violaters a:link, a:visited {
+.violaters a:link, .violaters a:visited {
   text-decoration: none;
   color: #004596;
 }
@@ -166,6 +167,11 @@ select {
   font-weight: 500;
 }
 
+.table_footer {
+  display: flex;
+  justify-content: space-between; 
+}
+
 button {
   border: 1px solid #8FB7E7;
   border-radius: 5px;
@@ -175,34 +181,11 @@ button {
   padding: 5px;
 }
 
-/* Style the button that is used to open and close the collapsible content   background-color: #eee;
-  color: #444;   font-size: 15px;*/
-  /* Style the button that is used to open and close the collapsible content */
-button.collapsible {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
+.dates {
+  color: #004596;
+  font-size: 12px;  
+}
 
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .collapsible:hover {
-    background-color: #ccc;
-  }
-  
-  /* Style the collapsible content. Note: hidden by default */
-  .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-  }
-
-  p.footnote {
+p.footnote {
     margin-top: 40px;
-  }
+}
