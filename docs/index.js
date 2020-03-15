@@ -40,7 +40,7 @@ fetch('data/violations.json')
         // if you changed a selector back to the default value, reset summary view to full state
         document.querySelector('.summary').innerHTML = summary(myJson)
         document.querySelector('.violating-systems').innerHTML = listViol(myJson)
-        document.querySelector('h1').innerHTML = 'California Drinking Water';
+        document.querySelector('h1').innerHTML = 'California Drinking Water Systems Out of Compliance';
         regenerateCaliMapIfNeeded(regenerateCaliMap);
         barsHistory(myJson, '.chart-container.history');
         bars(myJson, '.chart-container.analytes');
@@ -48,10 +48,10 @@ fetch('data/violations.json')
         summaryEl.innerHTML = summary(mapsObj[this.name+'Map'].get(mapKey))
         violatorsEl.innerHTML = listViol(mapsObj[this.name+'Map'].get(mapKey));
         if(this.name == 'senator') {
-          document.querySelector('h1').innerHTML = 'CA State Senate District '+mapKey+' Drinking Water';
+          document.querySelector('h1').innerHTML = 'CA State Senate District '+mapKey+' Drinking Water Systems Out of Compliance';
           regenerateCaliMapIfNeeded(regenerateCaliMap);
         } else if(this.name == 'assembly') {
-          document.querySelector('h1').innerHTML = 'CA State Assembly District '+mapKey+' Drinking Water';
+          document.querySelector('h1').innerHTML = 'CA State Assembly District '+mapKey+' Drinking Water Systems Out of Compliance';
           // writeMapData(mapsObj[this.name+'Map'].get(mapKey));
           regenerateCaliMapIfNeeded(true, mapKey);
         } else {
