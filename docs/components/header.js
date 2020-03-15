@@ -5,9 +5,9 @@ class CleanWaterHeader extends HTMLElement {
     const container = document.createElement('div');
     container.classList.add('header');
     container.innerHTML = `
-      <a href="/" class="link active">List</a>
+      <a href="/" class="link active">Overview</a>
       <a href="/leaderboard" class="link">Leaderboard</a>
-      <a href="/chronic.html" class="link">Map of Chronic Violations</a>
+      <a href="/chronic.html" class="link">Violations Map</a>
     `;
 
     const linkCSS = document.createElement('link');
