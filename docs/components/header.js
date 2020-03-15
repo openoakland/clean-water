@@ -8,7 +8,6 @@ class CleanWaterHeader extends HTMLElement {
       <a href="/" class="link active">List</a>
       <a href="/leaderboard" class="link">Leaderboard</a>
       <a href="/chronic.html" class="link">Map of Chronic Violations</a>
-      <span class="dates">Reporting Period : 2012-Current*</span>
     `;
 
     const linkCSS = document.createElement('link');
