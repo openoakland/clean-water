@@ -10,6 +10,7 @@ export function selectors(systemMap, cityMap, countyMap, zipMap, analyteMap, sen
 
   return `
     <div class="selects">
+      <span>Filter results</span>
       <select name="system">
         <option value="">Water system</option>
         ${systemKeys.map( (item) => {
