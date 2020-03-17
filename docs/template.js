@@ -48,27 +48,6 @@ export function summary(json) {
       </p>
     </div>
     <div class="chartcards">
-      <style>
-      /* D3 map */
-      path {
-        fill: lightgray;
-        stroke: #000;
-      }
-      .graticule {
-        fill: none;
-        stroke: #ccc;
-        stroke-width: .5px;
-      }
-      .foreground {
-        fill: none;
-        stroke: #333;
-        stroke-width: 1.5px;
-      }
-      #cali-map {
-        width: 320px;
-        height: 400px;
-      }
-      </style>
       <div>
         <div class="cali-map-container">
           <img id="cali-map" src="cali-map.png" />
@@ -76,10 +55,6 @@ export function summary(json) {
         <h3>Population affected per CA Congressional district</h3>
         <a href="/leaderboard/">see leaderboard for more info</a>
       </div>
-
-      <style>
-      .bar { fill: #b35805; }
-      </style>
       <div>
         <div class="chart-container history"></div>
         <h3>Previous violations in these systems</h3>
