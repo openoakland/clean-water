@@ -1,6 +1,7 @@
 body {
   font-family: Open Sans, Arial, Sans-serif;
   margin: 0px;
+  color: #004596; /* dark blue */
 }
 h1 {
   font-family: Bitter, Cambria, serif;
@@ -61,7 +62,6 @@ h3 {
 .summary {
   border: 1px solid #8FB7E7;
   border-radius: 5px;
-  color: #004596; /*dark blue*/
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 8px;
@@ -94,26 +94,34 @@ h3 {
 }
 
 select {
+  color: #004596;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  line-height: 16px;
   display: flex;
-  align-items: center;
-  text-align: center;
-  color: #004596;
   padding: 4px;
   border: 1px solid #8FB7E7;
   border-radius: 5px;
+  margin: 1px;
 }
+
 .selects {
   box-sizing: border-box;
   width: 100%;
   background: rgba(255,255,255,.7);
   padding: 20px 0;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
+
+.selects span {
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  padding: 4px;
+}
+
 .violating-systems {
   margin-bottom: 16px;
   overflow-y: scroll;
@@ -129,7 +137,6 @@ select {
 
 .violaters a:link, .violaters a:visited {
   text-decoration: none;
-  color: #004596;
 }
 
 .violaters a:hover {
@@ -150,7 +157,6 @@ select {
 
 .violaters td {
   font-size: 12px;
-  color: #004596;
   padding: 5px 10px;
 }
 
@@ -176,14 +182,12 @@ select {
 button {
   border: 1px solid #8FB7E7;
   border-radius: 5px;
-  color: #004596;
   background-color: white;
   font-size: 12px;
   padding: 5px;
 }
 
 .dates {
-  color: #004596;
   font-size: 12px;  
 }
 
