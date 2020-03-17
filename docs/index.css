@@ -187,6 +187,9 @@ button {
   font-size: 12px;  
 }
 
-p.footnote {
-    margin-top: 40px;
+.footnote {
+  color: gray;
+  margin-bottom: 200px;
+  margin-top: 40px;
+  margin-left: 40px;
 }

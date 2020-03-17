@@ -64,13 +64,6 @@ export function summary(json) {
         stroke: #333;
         stroke-width: 1.5px;
       }
-      /* footer */
-      .footnote {
-        color: gray;
-        margin-bottom: 200px;
-        margin-top: -100px;
-        margin-left: 70px;
-      }
       #cali-map {
         width: 320px;
         height: 400px;
