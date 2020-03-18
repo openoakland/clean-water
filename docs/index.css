@@ -137,6 +137,7 @@ select {
 
 .violaters a:link, .violaters a:visited {
   text-decoration: none;
+  color: #004596; /* dark blue */
 }
 
 .violaters a:hover {
