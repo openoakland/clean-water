@@ -10,16 +10,21 @@ import { barsHistory } from './viol-history.js';
 // Set to true if California map png needs to be updated
 let regenerateCaliMap = false;
 
+function updateStatistics(summary) {
+  document.querySelector('#population').innerHTML = summary.population;
+  document.querySelector('#non-compliant').innerHTML = summary.non_compliant;
+  document.querySelector('#analyte-count').innerHTML = summary.analyte_count;
+}
+
 fetch('data/violations.json')
 .then(function(response) {
   return response.json();
 })
-.then(function(incomingJSON) {
+.then(function(myJson) {
 
-  let myJson = incomingJSON;
   let mapsObj = uniqueMaps(myJson);
 
-  document.querySelector('.summary').innerHTML = summary(myJson)
+  updateStatistics(summary(myJson));
   document.querySelector('.violating-systems').innerHTML = listViol(myJson)
   document.querySelector('.selectors').innerHTML = selectors(mapsObj.systemMap, mapsObj.cityMap, mapsObj.countyMap, mapsObj.zipMap, mapsObj.analyteMap, mapsObj.senatorMap, mapsObj.assemblyMap);
 
