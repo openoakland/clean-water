@@ -26,44 +26,10 @@ export function summary(json) {
   systemMap.forEach( (item) => {
     population += parseInt(item);
   })
-  let systemCount = systemMap.size;
-  let analyteCount = analyteMap.size;
 
-  // console.log(systemMap)
-  // console.log(analyteMap)
-
-  return `
-    <div class="numcards">
-      <p class="numcard">
-        <span class="bignum">${population.toLocaleString('en')}</span>
-        <span>People with Unsafe Drinking Water</span>
-      </p>
-      <p class="numcard">
-        <span class="bignum">${systemCount}</span>
-        <span>Non-Compliant Water Systems</span>
-      </p>
-      <p class="numcard">
-        <span class="bignum">${analyteCount}</span>
-        <span>Analyte(s) Exceeding a Drinking Water Standard</span>
-      </p>
-    </div>
-    <div class="chartcards">
-      <div>
-        <div class="cali-map-container">
-          <img id="cali-map" src="cali-map.png" />
-        </div>
-        <h3>Population affected per CA Congressional district</h3>
-        <a href="/leaderboard/">see leaderboard for more info</a>
-      </div>
-      <div>
-        <div class="chart-container history"></div>
-        <h3>Previous violations in these systems</h3>
-      </div>
-      <div>
-        <div class="chart-container analytes"></div>
-        <h3>Violations per analyte</h3>
-      </div>
-
-      </div>
-  `
+  return {
+    population: population.toLocaleString('en'),
+    non_compliant: systemMap.size,
+    analyte_count: analyteMap.size
+  };
 }
