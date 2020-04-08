@@ -1,7 +1,7 @@
 body {
   font-family: Open Sans, Arial, Sans-serif;
   margin: 0px;
-  color: #004596; /* dark blue */
+  color: #004596;
 }
 h1 {
   font-family: Bitter, Cambria, serif;
@@ -35,7 +35,7 @@ h3 {
 }
 
 .header a:link, .header a:visited {
-  color: #8FB7E7; /* light blue */
+  color: #8FB7E7;
   text-decoration: none;
   margin-right: 30px;
   padding: 5px 10px;;
@@ -142,7 +142,7 @@ select {
 
 .violaters a:link, .violaters a:visited {
   text-decoration: none;
-  color: #004596; /* dark blue */
+  color: #004596;
 }
 
 .violaters a:hover {
