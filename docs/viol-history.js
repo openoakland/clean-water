@@ -46,7 +46,7 @@ export function barsHistory(json, containerSelector) {
   width = 450 - margin.left - margin.right,
   height = 400 - margin.top - margin.bottom;
 
-  // document.querySelector(containerSelector).innerHTML = `<svg></svg>`
+  document.querySelector(containerSelector).innerHTML = '';
   let svg = d3.select(containerSelector).append("svg")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
