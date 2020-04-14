@@ -51,10 +51,10 @@ fetch('data/violations.json')
         updateStatistics(summary(mapsObj[this.name+'Map'].get(mapKey)));
         violatorsEl.innerHTML = listViol(mapsObj[this.name+'Map'].get(mapKey));
         if(this.name == 'senator') {
-          document.querySelector('h1').innerHTML = 'CA State Senate District '+mapKey+' Drinking Water Systems Out of Compliance';
+          document.querySelector('h1').innerHTML = 'CA State Senate District '+mapKey+'<br>Drinking Water Systems Out of Compliance';
           regenerateCaliMapIfNeeded();
         } else if(this.name == 'assembly') {
-          document.querySelector('h1').innerHTML = 'CA State Assembly District '+mapKey+' Drinking Water Systems Out of Compliance';
+          document.querySelector('h1').innerHTML = 'CA State Assembly District '+mapKey+'<br>Drinking Water Systems Out of Compliance';
           // writeMapData(mapsObj[this.name+'Map'].get(mapKey));
           regenerateCaliMapIfNeeded(mapKey);
         } else {
