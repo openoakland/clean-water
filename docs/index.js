@@ -8,7 +8,7 @@ import { cali } from './cali-map.js';
 import { barsHistory } from './viol-history.js';
 
 // Set to true if California map png needs to be updated
-let regenerateCaliMap = false;
+let regenerateCaliMap = true;
 
 function updateStatistics(summary) {
   document.querySelector('#population').innerHTML = summary.population;
@@ -92,7 +92,6 @@ function resetElements(currentName, currentIndex) {
 
 function regenerateCaliMapIfNeeded(shouldRegenerate, selectedDistrict) {
   if (shouldRegenerate) {
-    document.getElementById('cali-map').remove();
     document.querySelector('.cali-map-container').innerHTML = '<svg width="320" height="400"></svg>';
     cali(selectedDistrict);
   }

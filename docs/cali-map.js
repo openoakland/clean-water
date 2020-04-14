@@ -17,7 +17,7 @@ export function cali(selectedDistrict) {
     var counties = d3.map();
     var colorScale = d3.scaleThreshold()
       .domain([100, 20000, 3000000, 40000000, 500000000, 600000000, 1000000000, 8000000000])
-      .range(d3.schemePuOr[7]);
+      .range(d3.schemeOrRd[7]);
 
     function drawMap(err, world) {
       var features = world.features
