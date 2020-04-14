@@ -43,12 +43,12 @@ export function cali(selectedDistrict) {
           // console.log(affPop)
           let affIndex = 0;
           affectedRanges.forEach( (thresh, index) => {
-            console.log(affPop +' > ' + thresh)
+            //console.log(affPop +' > ' + thresh)
             if(affPop > thresh) {
               affIndex = index;
             }
           })
-          console.log(affIndex);
+          //console.log(affIndex);
           // compare to affectedRanges to get index on colorVals
           return colorScale( colorVals[affIndex] )
       });
