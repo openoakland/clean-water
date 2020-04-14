@@ -7,8 +7,7 @@ import { bars } from './bars.js';
 import { cali } from './cali-map.js';
 import { barsHistory } from './viol-history.js';
 
-// Set to true if California map png needs to be updated
-let regenerateCaliMap = true;
+let lastDistrict = 'NONE';
 
 function updateStatistics(summary) {
   document.querySelector('#population').innerHTML = summary.population;
@@ -28,7 +27,7 @@ fetch('data/violations.json')
   document.querySelector('.violating-systems').innerHTML = listViol(myJson)
   document.querySelector('.selectors').innerHTML = selectors(mapsObj.systemMap, mapsObj.cityMap, mapsObj.countyMap, mapsObj.zipMap, mapsObj.analyteMap, mapsObj.senatorMap, mapsObj.assemblyMap);
 
-  regenerateCaliMapIfNeeded(regenerateCaliMap);
+  regenerateCaliMapIfNeeded();
   barsHistory(myJson, '.chart-container.history');
   bars(myJson, '.chart-container.analytes');
 
@@ -45,7 +44,7 @@ fetch('data/violations.json')
         updateStatistics(summary(myJson));
         document.querySelector('.violating-systems').innerHTML = listViol(myJson)
         document.querySelector('h1').innerHTML = 'California Drinking Water Systems Out of Compliance';
-        regenerateCaliMapIfNeeded(regenerateCaliMap);
+        regenerateCaliMapIfNeeded();
         barsHistory(myJson, '.chart-container.history');
         bars(myJson, '.chart-container.analytes');
       } else {
@@ -53,14 +52,14 @@ fetch('data/violations.json')
         violatorsEl.innerHTML = listViol(mapsObj[this.name+'Map'].get(mapKey));
         if(this.name == 'senator') {
           document.querySelector('h1').innerHTML = 'CA State Senate District '+mapKey+' Drinking Water Systems Out of Compliance';
-          regenerateCaliMapIfNeeded(regenerateCaliMap);
+          regenerateCaliMapIfNeeded();
         } else if(this.name == 'assembly') {
           document.querySelector('h1').innerHTML = 'CA State Assembly District '+mapKey+' Drinking Water Systems Out of Compliance';
           // writeMapData(mapsObj[this.name+'Map'].get(mapKey));
-          regenerateCaliMapIfNeeded(true, mapKey);
+          regenerateCaliMapIfNeeded(mapKey);
         } else {
           document.querySelector('h1').innerHTML = mapKey+' Drinking Water';
-          regenerateCaliMapIfNeeded(regenerateCaliMap);
+          regenerateCaliMapIfNeeded();
         }
         barsHistory(mapsObj[this.name+'Map'].get(mapKey), '.chart-container.history');
         bars(mapsObj[this.name+'Map'].get(mapKey), '.chart-container.analytes');
@@ -90,8 +89,9 @@ function resetElements(currentName, currentIndex) {
 }
 
 
-function regenerateCaliMapIfNeeded(shouldRegenerate, selectedDistrict) {
-  if (shouldRegenerate) {
+function regenerateCaliMapIfNeeded(selectedDistrict) {
+  if (selectedDistrict != lastDistrict) {
+    lastDistrict = selectedDistrict;
     document.querySelector('.cali-map-container').innerHTML = '<svg width="320" height="400"></svg>';
     cali(selectedDistrict);
   }
