@@ -2,7 +2,7 @@
 
 This is an Open Oakland CfA brigade project for the Community Water Center. The CWC identified specific functionality that would help them use the water quality data from Human Right to Water more effectively.
 
-The latest version of this is browseable here at <a href="https://aaronhans.github.io/community-water-center/">https://aaronhans.github.io/community-water-center/</a>
+See the latest version of the site at http://water.openoakland.org/
 
 ## This repo is the Frontend
 
