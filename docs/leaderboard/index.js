@@ -32,16 +32,16 @@ fetch('all-assembly.json')
       if(myPercent < 10) {
         myPercent += 3;
       }
-      if(myPercent > 90) {
-        myPercent += -3;
-      }
+//      if(myPercent > 90) {
+//        myPercent += -3;
+//      }
       allAssembly.forEach( (assem) => {
         if(assem.district == row.dist) {
           row.member = assem;
         }
       })
 
-      output += `<div class="bar" data-district="${row.dist}" style="width: ${myPercent}vw;">
+      output += `<div class="bar" data-district="${row.dist}" style="width: ${myPercent}%;">
         <span class="label">
           <span class="cropper">
             <img src="${row.member.image}" />
