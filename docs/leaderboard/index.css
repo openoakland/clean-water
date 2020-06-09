@@ -1,29 +1,44 @@
 body {
-  font-family: Helvetica;
-  background-color: white;
+  font-family: Open Sans, Arial, Sans-serif;
+  color: #004596;
   margin: 0; padding: 0;
 }
 h1 {
-  font-size: 48px;
+  font-family: Bitter, Cambria, serif;
+  color: white;
+  font-size: 40px;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0px;
 }
 h2 {
   font-size: 32px;
   font-weight: normal;
   margin-bottom: 0;
 }
-.page-title {
-  padding: 25px;
+p {
+  margin-left: 40px;
+  font-size: 16px;
 }
-.page-title h4 {
-  font-weight: normal;
+.page-title {
+  background: linear-gradient(180deg, #004596 33.33%, #316DB5 100%);
+  padding-left: 40px;
+  padding-top: 0px;
+  padding-bottom: 34px;
+}
+.bars {
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-right: 40px;
 }
 .bar {
   height: 80px;
-  background: linear-gradient(270deg, #AC0000 0%, #E76C45 25%, #FAA66A 54.69%, #F3E6C3 100%);
+  background-color: #FAA66A;
   display: flex;
   align-items: center;
   position: relative;
-  margin: 20px 0 0 20px;
+  margin: 0 0 20px 0;
   border-radius: 40px 10px 10px 40px;
   cursor: pointer;
 }
