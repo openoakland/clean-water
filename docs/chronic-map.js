@@ -13,7 +13,7 @@ document.getElementById('slider').addEventListener('input', function(e) {
   var month = parseInt(e.target.value, 10);
   let newMonth = monthsOfData[month];
   let stringMonth = newMonth.split('-')
-  document.getElementById('month').innerHTML = 'Retrieving data from '+monthNames[stringMonth[1]]+' '+stringMonth[0];
+  document.getElementById('month').innerHTML = monthNames[stringMonth[1]]+' '+stringMonth[0];
   resetMap(newMonth)
 });
 
@@ -91,7 +91,7 @@ function resetMap(url) {
   .then(function(geojson) {
     addMarkers(geojson);
     let stringMonth = url.split('-')
-    document.getElementById('month').innerHTML = 'Displaying data from '+monthNames[stringMonth[1]]+' '+stringMonth[0];
+    document.getElementById('month').innerHTML =  monthNames[stringMonth[1]]+' '+stringMonth[0];
   });
 }
 

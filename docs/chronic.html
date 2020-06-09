@@ -8,27 +8,33 @@
     margin: 0;padding:0;
   }
   .map-overlay {
-    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
     position: absolute;
     width: 25%;
     bottom: 20px;
     left: 0;
     padding: 10px;
+    margin-left: 40px;
+    background-color: white;
+    border: 1px solid #8FB7E7;
+    border-radius: 5px;
   }
   .map-overlay .map-overlay-inner {
-    background-color: #fff;
-    box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
-    border-radius: 3px;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding-bottom: 20px;
   }
   .map-overlay input {
     background-color: transparent;
-    display: inline-block;
+/*    display: inline-block; */
     width: 100%;
-    position: relative;
+/*    position: relative; */
     margin: 0;
     cursor: ew-resize;
+  }
+  .map-overlay h2 {
+    font-size: 14px;
+  }
+  .map-overlay label {
+    font-size: 11px;
+    font-style: italic;
   }
   .bar {
     list-style: none;
@@ -64,30 +70,25 @@
     margin-right: 0;
     left: auto;
   }
-  h1 {
-    font-size: 32px;
-  }
-  h4 {
-    font-weight: normal;
-    margin: 10px 0 20px 15px;
-  }
   </style>
   <script src="components/header.js"></script>
 </head>
 <body>
   <clean-water-header></clean-water-header>
-
-  <div id="map" style="height: 100vh; width: 100vw;""></div>
+  <div class='header-title'>
+    <h1>Map of Chronic Violations</h1>
+  </div>
+  <div id="map" style="height: 100vh; width: 100vw;"></div>
 
   <div class='map-overlay'>
-    <h1>Chronic Violations</h1>
-    <h4>Map view of chronic water system violations &mdash; use the slider to see persistent, unbroken violations over time</h4>
-    <div class='map-overlay-inner'>
-      <label id='month'>Retrieving data from March 2019</label>
-      <input id='slider' type='range' min='0' max='87' step='1' value='87' />
-    </div>
-    <div class='map-overlay-inner'>
-      <div id='legend' class='legend'>
+      <div class='map-overlay-inner'>
+        <h2>Date of Data Source</h2>
+        <input id='slider' type='range' min='0' max='87' step='1' value='87' />
+        <label id='month'>March 2019</label>
+      </div>
+      <div class='map-overlay-inner'>
+        <h2>Number of Months of Persistant Violation </h2>
+        <div id='legend' class='legend'>
         <ul class='bar'>
           <li style="background-color:#607D8B;">1</li>
           <li style="background-color:#546E7A;">3+</li>
@@ -98,12 +99,11 @@
           <li style="background-color:#E64A19;">72+</li>
           <li style="background-color:#BF360C;">96+</li>
         </ul>
-        <div>Number of months violation persisted</div>
+        </div>
       </div>
-    </div>
-
-    <div class='map-overlay-inner'>
-      <div>Marker size represents population served</div>
+      <div class='map-overlay-inner'>
+        <h2>Population Served</h2>
+      </div>
     </div>
     
   </div>
