@@ -1,0 +1,24 @@
+{
+  "legislators": [
+    {
+      "name": "Andreas Borgeas",
+      "id": "",
+      "image": "",
+      "pretty_url": "",
+      "party": "Republican",
+      "chamber": "upper",
+      "district": "8",
+      "division_id": ""
+    },
+    {
+      "name": "Devon J. Mathis",
+      "id": "",
+      "image": "https://data.openstates.org/images/small/ocd-person/3ffead8c-6856-4592-8594-182e295b8e87",
+      "pretty_url": "",
+      "party": "Republican",
+      "chamber": "lower",
+      "district": "26",
+      "division_id": ""
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "legislators": [
+    {
+      "name": "Jeff Stone",
+      "id": "",
+      "image": "https://data.openstates.org/images/small/ocd-person/b6e75feb-7eb4-4228-b33a-370add49f14c",
+      "pretty_url": "",
+      "party": "Republican",
+      "chamber": "upper",
+      "district": "28",
+      "division_id": ""
+    },
+    {
+      "name": "Eduardo Garcia",
+      "id": "",
+      "image": "https://data.openstates.org/images/small/ocd-person/c4f4c9c1-1f1b-4cb6-854b-434c53495006",
+      "pretty_url": "",
+      "party": "Democratic",
+      "chamber": "lower",
+      "district": "56",
+      "division_id": ""
+    }
+  ]
+}

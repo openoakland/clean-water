@@ -1,0 +1,24 @@
+{
+  "legislators": [
+    {
+      "name": "Shannon Grove",
+      "id": "",
+      "image": "https://data.openstates.org/images/small/ocd-person/b4b8e8fb-831b-4cae-9081-b8f75477fcd0",
+      "pretty_url": "",
+      "party": "Republican",
+      "chamber": "upper",
+      "district": "16",
+      "division_id": ""
+    },
+    {
+      "name": "Vince Fong",
+      "id": "",
+      "image": "https://data.openstates.org/images/small/ocd-person/3dc86015-2733-405e-ba6b-715006f4ab19",
+      "pretty_url": "",
+      "party": "Republican",
+      "chamber": "lower",
+      "district": "34",
+      "division_id": ""
+    }
+  ]
+}
