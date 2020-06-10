@@ -74,15 +74,15 @@ fetch('data/'+waterSystemId+'.json')
         <!-- need to loop through all violations -->
         ${uniqueSystemData.map((item) => {
           if(item.ANALYTE_NAME == analyte[0]) {
-            var absexc = item.RESULT - item.MCL_VALUE;
-            var pctexc = absexc/item.MCL_VALUE*100;
+            var absexc = item.RESULT.split(' ')[0] - item.MCL.split(' ')[0];
+            var pctexc = absexc/item.MCL.split(' ')[0]*100;
             return `<tr>
               <td>${new Date(item.VIOL_BEGIN_DATE).toLocaleDateString("en-US")}</td>
               <td>${new Date(item.VIOL_END_DATE).toLocaleDateString("en-US")}</td>
-              <td>${item.RESULT} ${item.RESULT_UOM}</td>
-              <td>${item.MCL_VALUE} ${item.MCL_UOM}</td>
+              <td>${item.RESULT}</td>
+              <td>${item.MCL}</td>
               <td>${item.ENF_ACTION_TYPE_ISSUED} ${new Date(item.ENF_ACTION_ISSUE_DATE).toLocaleDateString("en-US")}</td>
-              <td>${absexc.toFixed(3) + " " + item.MCL_UOM}</td>
+              <td>${absexc.toFixed(3) + " " + item.MCL.split(' ')[1]}</td>
               <td>${pctexc.toFixed(2)}</td>
               <td style="display:none">${item.REGULATING_AGENCY}</td>
               <td style="display:none">${item.WATER_SYSTEM_NUMBER}</td>
@@ -113,22 +113,5 @@ fetch('data/'+waterSystemId+'.json')
   })
 })
 /*
-ANALYTE_NAME: "1,2,3-TRICHLOROPROPANE"
-CITY: "DEL REY"
-CLASSIFICATION: "COMMUNITY"
-COUNTY: "FRESNO"
-ENF_ACTION_ISSUE_DATE: "2018-05-18"
-ENF_ACTION_NUMBER: "9511008"
-ENF_ACTION_TYPE_ISSUED: "CA STATE ACTION ISSUED"
-MCL: "0.005 UG/L"
-POPULATION: "1500"
-REGULATING_AGENCY: "DISTRICT 23 - FRESNO"
-RESULT: "0.006 UG/L"
-SERVICE_CONNECTIONS: "328"
-VIOLATION_NUMBER: "9111005"
-VIOLATION_TYPE_NAME: "STATE PRIMARY MCL VIOL - NOT CR6"
-VIOL_BEGIN_DATE: "2018-04-01"
-VIOL_END_DATE: "2018-06-30"
-WATER_SYSTEM_NAME: "DEL REY COMMUNITY SERV DIST"
-WATER_SYSTEM_NUMBER: "CA1010035"
-ZIPCODE: "93616"*/
+{"REGULATING_AGENCY":"DISTRICT 19 - TEHACHAPI","WATER_SYSTEM_NUMBER":"CA1500459","WATER_SYSTEM_NAME":"LAKE OF THE WOODS MOBILE VILLAGE","CLASSIFICATION":"COMMUNITY","POPULATION":"82","SERVICE_CONNECTIONS":"86","COUNTY":"KERN","CITY":"LAKE OF THE WOODS","ZIPCODE":"93225","VIOLATION_NUMBER":9619006,"VIOLATION_TYPE_NAME":"MCL, SINGLE SAMPLE","ANALYTE_NAME":"NITRATE","RESULT":"12 MG/L","MCL":"10 MG/L","VIOL_BEGIN_DATE":"2016-04-01T07:00:00.000Z","VIOL_END_DATE":"2016-06-30T07:00:00.000Z","ENF_ACTION_NUMBER":719011,"ENF_ACTION_ISSUE_DATE":"2019-06-26T07:00:00.000Z","ENF_ACTION_TYPE_ISSUED":"STATE INTENTIONAL NO ACTION TAKEN"}
+*/
