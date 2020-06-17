@@ -50,17 +50,34 @@ fetch('data/violations.json')
       } else {
         updateStatistics(summary(mapsObj[this.name+'Map'].get(mapKey)));
         violatorsEl.innerHTML = listViol(mapsObj[this.name+'Map'].get(mapKey));
-        if(this.name == 'senator') {
-          document.querySelector('h1').innerHTML = 'CA State Senate District '+mapKey+'<br>Drinking Water Systems Out of Compliance';
-          regenerateCaliMapIfNeeded();
-        } else if(this.name == 'assembly') {
-          document.querySelector('h1').innerHTML = 'CA State Assembly District '+mapKey+'<br>Drinking Water Systems Out of Compliance';
-          // writeMapData(mapsObj[this.name+'Map'].get(mapKey));
-          regenerateCaliMapIfNeeded(mapKey);
-        } else {
-          document.querySelector('h1').innerHTML = mapKey+' Drinking Water';
-          regenerateCaliMapIfNeeded();
+        let title = '';
+        switch(this.name) {
+          case 'senator': 
+            title = 'CA State Senate District ' + mapKey + ' Drinking Water';
+            break;
+          case 'assembly':
+            title = 'CA State Assembly District ' + mapKey + ' Drinking Water';
+            break;
+          case 'city':
+            title = 'City of ' + mapKey + ' Drinking Water';
+            break;
+          case 'county':
+            title = 'County of ' + mapKey + ' Drinking Water';
+            break;
+          case 'zip':
+            title = 'Zip code ' + mapKey + ' Drinking Water';
+            break;
+          case 'analyte':
+            title = mapKey + ' in Drinking Water';
+            break;
+          default:
+            title = mapKey + ' Drinking Water';
+            break;
         }
+
+        document.querySelector('h1').innerHTML = title;
+        regenerateCaliMapIfNeeded();
+
         barsHistory(mapsObj[this.name+'Map'].get(mapKey), '.chart-container.history');
         bars(mapsObj[this.name+'Map'].get(mapKey), '.chart-container.analytes');
       }
