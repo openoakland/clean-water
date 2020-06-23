@@ -76,7 +76,7 @@ fetch('data/violations.json')
         }
 
         document.querySelector('h1').innerHTML = title;
-        regenerateCaliMapIfNeeded();
+        regenerateCaliMapIfNeeded(this.name == 'assembly' ? mapKey : null);
 
         barsHistory(mapsObj[this.name+'Map'].get(mapKey), '.chart-container.history');
         bars(mapsObj[this.name+'Map'].get(mapKey), '.chart-container.analytes');
