@@ -171,12 +171,6 @@ select {
   background-color: #D8E5F4;
 }
   
-.erf-align {
-  max-width: 90%;
-  margin: 10px auto;
-  font-weight: 500;
-}
-
 .table_footer {
   display: flex;
   justify-content: space-between; 

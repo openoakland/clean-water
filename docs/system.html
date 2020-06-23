@@ -1,20 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Drinking Water Safety Violations</title>
-  <link rel="stylesheet" media="screen" href="index.css" />
-</head>
-<body>
+    <head>
+      <title>Drinking Water Safetly Violations</title>
+      <link rel="stylesheet" media="screen" href="index.css" />
+      <link rel="stylesheet" media="screen" href="system.css" />
+      <script src="components/header.js"></script>
+    </head>
+    <body>
+        <clean-water-header></clean-water-header>
+        <div class="header-title">
+            <h1>Water System</h1>
+        </div>
+        <div id="summary">
+            <div id="info">
+                <span id="population" class="bignum"></span><h2>People affected</h2>
+                <p>
+                    <span id="city"></span>, <span id="zipcode"></span>, <span id="county"></span>, <span id="reg_agency">Regulating Agency: </span>
+                </p>
+                <p>Reporting period: 2012 - 2019</p>
+                <p>Analytes out of compliance during this period: <span id="analytes"></span></p>
+            </div>
+            <div id='map'></div>
+        </div>
+        
+        <div id="tables"></div>
+      
+        <div id="actions"><button id="export-list">Export Data</button></div>
+      
 
-  <span class="dates">Reporting period 2012 - 2019</span>
-  <div class="system-history"></div>
-
-  <div id='map' style='height: 300px;'></div>
-
-  <script type="module" src="system.js"></script>
-  <script src='https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
-  <script type="module" src="map.js"></script>
-
-</body>
+      <script type="module" src="system.js"></script>
+      <script src='https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
+      <link href='https://api.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
+      <script type="module" src="map.js"></script>    
+    </body>
 </html>
