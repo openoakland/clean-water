@@ -93,6 +93,7 @@ function resetMap(url) {
     let stringMonth = url.split('-')
     document.getElementById('month').innerHTML =  monthNames[stringMonth[1]]+' '+stringMonth[0];
   });
+  window.scrollTo(0,0);  
 }
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYWFyeDIzMDAiLCJhIjoiY2s2YjJkanU0MDFxdjNkcW0yOHM4YnNzbCJ9.bZat5rmK6nS1k8uAZXX2vA';

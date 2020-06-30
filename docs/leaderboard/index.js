@@ -110,7 +110,7 @@ function buildMapOverlay(data, overlay) {
   <cfa-oak-map-columns color="${color}" center="" key="pk.eyJ1IjoiYWFyb25oYW5zIiwiYSI6ImNqNGs4cms1ZzBocXkyd3FzZGs3a3VtamYifQ.HQjFfVzwwxwCmGr2nvnvSA"></cfa-oak-map-columns>
   `
   overlay.setAttribute('display','block');
-  window.scrollTo(0,0)
+  window.scrollTo(0,0);
 
   let mapComponent = document.querySelector('cfa-oak-map-columns');
   // filter json by selectedAnalytes
