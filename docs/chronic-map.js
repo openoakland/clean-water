@@ -110,7 +110,7 @@ map.on('load', function() {
 
 let sizeRanges = [100,1000,5000,10000,50000,100000,500000,1000000,2000000,5000000]
 let colorRanges = [1,3,6,12,24,48,72,96];
-let colorValues = ['607D8B','546E7A','455A64','000000','FF7043','FF5722','E64A19','BF360C'];
+let colorValues = ['F4E5C2','F6D2A7','F7BF8C','F9AC71','F3925D','EA764C','D2472D','AE0402'];
 let currentMarkers = [];
 
 function addMarkers(geojson) {
