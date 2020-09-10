@@ -1,17 +1,76 @@
 body {
-  font-family: Montserrat, sans-serif;
+  font-family: Open Sans, Arial, Sans-serif;
+  margin: 0px;
+  color: #004596;
 }
+
 h1 {
-  text-transform: uppercase;
-  font-size: 3rem;
-  text-align: center;
-  margin: 60px 0 20px 0;
-  font-weight: normal;
+  font-family: Bitter, Cambria, serif;
+  color: white;
+  font-size: 40px;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0px;
 }
+
 h3 {
-  font-weight: normal;
+  font-family: Bitter, Cambria, serif;
   text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;  
 }
+
+.header { /* navigation*/
+  background: #004596;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  padding-top: 17px;
+  padding-left: 40px;
+  padding-bottom: 11px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+.header a:link, .header a:visited {
+  color: #8FB7E7;
+  text-decoration: none;
+  margin-right: 30px;
+  padding: 5px 10px;;
+  border-radius: 5px;
+  
+}
+
+.header a:hover {
+  background: rgba(255, 255, 255, 0.2);  
+}
+
+.header-title {
+  background: linear-gradient(180deg, #004596 33.33%, #316DB5 100%);
+  padding-left: 40px;
+  padding-top: 0px;
+  padding-bottom: 34px;
+}
+
+.indented {
+  padding-left: 40px;
+  padding-right: 40px;  
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 8px;
+  border: 1px solid #8FB7E7;
+  border-radius: 5px;
+  margin-bottom: 16px;
+}
+
 .numcards {
   display: flex;
   justify-content: space-around;
@@ -19,9 +78,10 @@ h3 {
   width: 100%;
 }
 .numcard {
-  width: 20%;
-  font-size: 2rem;
-  text-align: center;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 .chartcards {
   display: flex;
@@ -29,96 +89,108 @@ h3 {
 }
 .bignum {
   display: block;
-  font-size: 2em;
+  font-style: normal;
   font-weight: bold;
+  font-size: 48px;
+  line-height: 131.19%;
 }
 
 select {
-  font-size: 1.5rem;
-  min-width: 187px;
-  margin-right: 10px;
+  color: #004596;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  display: flex;
+  padding: 4px;
+  border: 1px solid #8FB7E7;
+  border-radius: 5px;
+  margin: 1px;
 }
+
 .selects {
-  position: fixed;
   box-sizing: border-box;
-  bottom: 0;
   width: 100%;
   background: rgba(255,255,255,.7);
-  padding: 25px 0;
+  padding: 16px 0;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
-.violating-systems {
-  margin-bottom: 150px;
+
+.selects span {
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  padding: 4px;
 }
-.violaters table {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto;
-  grid-column-gap: 1px;
-  grid-row-gap: 1px;
-  max-width: 90%;
+
+.violating-systems {
+  margin-bottom: 16px;
+  overflow-y: scroll;
+  max-height: 500px;
+}
+.violating-systems table {
   margin: 10px auto;
-  left: 75px;
+  width: 100%;
 }
 .violaters.system-specific {
   grid-template-columns: auto auto auto auto auto auto auto;
-  margin-bottom: 50px;
 }
-.violaters td {
-  background-color: rgba(0,0,255,.25);
-  padding: 10px;
-  color: #000;
+
+.violaters a:link, .violaters a:visited {
+  text-decoration: none;
+  color: #004596;
 }
+
+.violaters a:hover {
+  text-decoration: underline
+}
+
 .violaters th {
-  background: rgba(0,0,255,.6);
-  color: #fff;
+  background: #8FB7E7;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: white;
+  padding: 5px 10px;
+  position: sticky;
+  top: 0;
 }
-.violaters span a {
-  color: #000;
+
+.violaters td {
+  font-size: 12px;
+  padding: 5px 10px;
 }
-.erf-align {
-  max-width: 90%;
-  margin: 10px auto;
-  font-weight: 500;
+
+.violaters tr:nth-child(odd) {
+  background-color: #E8F0FA;
 }
+
+.violaters tr:nth-child(even) {
+  background-color: #D8E5F4;
+}
+  
+.table_footer {
+  display: flex;
+  justify-content: space-between; 
+}
+
 button {
-  position: relative;
-  left: 75px;
-  margin: 10px auto;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  margin-bottom: 10px
-  }
+  border: 1px solid #8FB7E7;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 12px;
+  padding: 5px;
 }
 
-/* Style the button that is used to open and close the collapsible content   background-color: #eee;
-  color: #444;   font-size: 15px;*/
-  /* Style the button that is used to open and close the collapsible content */
-button.collapsible {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
+.dates {
+  font-size: 12px;  
+}
 
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .collapsible:hover {
-    background-color: #ccc;
-  }
-
-  /* Style the collapsible content. Note: hidden by default */
-  .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-  }
-
-  p.footnote {
-    margin-top: 0px;
-  }
+.footnote {
+  color: gray;
+  margin-bottom: 200px;
+  margin-top: 40px;
+  margin-left: 40px;
+}

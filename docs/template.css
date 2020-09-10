@@ -1,0 +1,25 @@
+/* D3 map */
+path {
+    fill: lightgray;
+    stroke: #000;
+}
+
+.graticule {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: .5px;
+}
+
+.foreground {
+    fill: none;
+    stroke: #333;
+    stroke-width: 1.5px;
+}
+  
+#cali-map {
+    width: 320px;
+    height: 400px;
+}
+  
+.bar { fill: #E76C45; }
+  

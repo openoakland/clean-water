@@ -3,6 +3,7 @@
 <head>
   <title>Drinking Water Safety Violations</title>
   <link rel="stylesheet" media="screen" href="index.css" />
+  <link rel="stylesheet" href="template.css" />
 
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
@@ -12,26 +13,49 @@
 </head>
 <body>
   <clean-water-header></clean-water-header>
-  <div class="selectors"></div>
-
-  <div class="header-section" style="display: flex; margin: 80px 0 20px 0;">
-    <div>
-      <h1 style="margin-top: 20px;">California Drinking Water
-      <br>
-      Water Systems Out of Compliance</h1>
-      <div class="summary"></div>
-    </div>
+  <div class="header-title">
+    <h1>California Drinking Water Systems Out of Compliance</h1>
   </div>
-
-
-
-
-  <div align="left">
-    <button id="export-list">Export Displayed Data</button>
-</div>
-  
-  <div class="violating-systems"></div>
-
+  <div class="indented">
+    <div class="selectors"></div>
+    
+    <div class="summary">    
+      <div class="cards">
+        <h3>Affected People per CA Assembly District</h3>
+        <div class="cali-map-container">
+        </div>
+        <p class="numcard">
+          <span id="population" class="bignum"></span>
+          <span>People with Unsafe Drinking Water</span>
+        </p>
+      </div>
+      
+      <div class="cards">
+        <h3>Previous Violations in These Systems</h3>
+        <div class="chart-container history"></div>
+        <p class="numcard">
+          <span id="non-compliant" class="bignum"></span>
+          <span>Non-Compliant Water Systems</span>
+        </p>
+      </div>
+      
+      <div class="cards">
+        <h3>Violations per analyte</h3>
+        <div class="chart-container analytes"></div>        
+        <p class="numcard">
+          <span id="analyte-count" class="bignum"></span>
+          <span>Analyte(s) Exceeding a Drinking Water Standard</span>
+        </p>
+      </div>
+      
+    </div>
+    
+    <div class="violating-systems"></div>
+    <div class="table_footer">
+      <div><button id="export-list">Export Displayed Data</button></div>
+      <div class="dates">Reporting Period : 2012-Current*</div>
+    </div>
+   </div>
 
   <script type="module" src="index.js"></script>
   <p class="footnote">

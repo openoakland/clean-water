@@ -1,3 +1,7 @@
+export function num_sort(a, b) {
+  return parseInt(a) - parseInt(b);
+}
+
 export function selectors(systemMap, cityMap, countyMap, zipMap, analyteMap, senateMap, assemblyMap) {
 
   let systemKeys = Array.from( systemMap.keys() ).sort();
@@ -5,11 +9,12 @@ export function selectors(systemMap, cityMap, countyMap, zipMap, analyteMap, sen
   let countyKeys = Array.from( countyMap.keys() ).sort();
   let zipKeys = Array.from( zipMap.keys() ).sort();
   let analyteKeys = Array.from( analyteMap.keys() ).sort();
-  let senateKeys = Array.from( senateMap.keys() ).sort();
-  let assemblyKeys = Array.from( assemblyMap.keys() ).sort();
+  let senateKeys = Array.from( senateMap.keys() ).sort(num_sort);
+  let assemblyKeys = Array.from( assemblyMap.keys() ).sort(num_sort);
 
   return `
     <div class="selects">
+      <span>Filter results</span>
       <select name="system">
         <option value="">Water system</option>
         ${systemKeys.map( (item) => {
