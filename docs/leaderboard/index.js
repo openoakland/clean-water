@@ -61,6 +61,7 @@ fetch('all-assembly.json')
           return response.json();
         })
         .then(function(myJson) {
+          console.log(myJson)
           // create an overlay with map element
           let overlay = document.querySelector('at-overlay');
           buildMapOverlay(myJson, overlay);

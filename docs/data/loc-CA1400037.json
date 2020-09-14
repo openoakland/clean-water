@@ -1,0 +1,25 @@
+{
+  "type": "Feature",
+  "properties": {
+    "ObjectID": 93058,
+    "WATER_SYST": "CA1400037",
+    "WATER_SY_1": "FOOTHILL MOBILE HOME PARK",
+    "REGULATING": "LPA44 - INYO COUNTY",
+    "COUNTY": "INYO",
+    "POPULATION": "60",
+    "CLASSIFICA": "COMMUNITY",
+    "CITY_1": "BISHOP",
+    "ZIPCODE": "93514",
+    "GIS_STATUS": "",
+    "DEFAULT_ME": null,
+    "Service_Co": 48,
+    "DETAILED_V": "https://www.waterboards.ca.gov/water_issues/programs/hr2w/docs/data/hr2w_web_data_active.xlsx"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -118.396912,
+      37.372434
+    ]
+  }
+}

@@ -5,6 +5,7 @@ const fetch = require('node-fetch');
 let count = 0;
 
 let legislators = new Map();
+let fails = 0;
 
 async function readFiles(dir) {
   const files = await readDirDeep(dir);
@@ -20,16 +21,27 @@ async function readFiles(dir) {
           let outputItem = {
             "type": "Feature"
           }
-          let locData = JSON.parse(fs.readFileSync('../docs/data/loc-'+item.WATER_SYSTEM_NUMBER+'.json'))
-          outputItem.properties = item;
-          outputItem.geometry = locData.geometry;
-          outputData.push(outputItem)
+          let waterSystemNumber = item.WATER_SYSTEM_NUMBER;
+          if(!waterSystemNumber && item.properties) {
+            waterSystemNumber = item.properties.WATER_SYSTEM_NUMBER;
+          }
+          if(waterSystemNumber && fs.existsSync('../docs/data/loc-'+waterSystemNumber+'.json')) {
+            let locData = JSON.parse(fs.readFileSync('../docs/data/loc-'+waterSystemNumber+'.json'))
+            outputItem.properties = item;
+            outputItem.geometry = locData.geometry;
+            outputData.push(outputItem)  
+          } else {
+            fails++;
+            console.log('COULD NOT FIND')
+            console.log(item)
+            console.log('../docs/data/loc-'+waterSystemNumber+'.json')
+          }
         }
       })
       fs.writeFileSync('./data-by-district/augmented-'+file,JSON.stringify(outputData),'utf8')
     }
   }
   console.log('total files; '+count)
-
+  console.log('fails: '+fails)
 }
 readFiles('./data-by-district');
