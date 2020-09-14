@@ -12,26 +12,30 @@ export function formatData(json, map, color) {
   json.forEach(function(result) {
     recordsFound++;
     let coords = getCoords(result.geometry.coordinates);
-    if(result.properties.RESULT.trim() != '') {
-      result.properties.proportion_mcl = parseFloat(result.properties.RESULT) / parseFloat(result.properties.MCL_VALUE)
+    if(coords) {
+      if(result.properties.RESULT.trim() != '') {
+        result.properties.proportion_mcl = parseFloat(result.properties.RESULT.split(' ')[0]) / parseFloat(result.properties.MCL.split(' ')[0])
+      }
+      let featureBlue = buildFeatureMCL(result,coords,color)
+      dataObj.features.push(featureBlue);
+  
+      // create a HTML element for each feature
+      var el = document.createElement('div');
+      el.innerHTML = `${result.properties['ANALYTE_NAME']}`;
+  
+      if(result.properties.RESULT.trim() != '' && result.properties.MCL.trim() != '') {
+        el.innerHTML = `${result.properties['ANALYTE_NAME']} ${parseInt(result.properties.proportion_mcl * 100)}% MCL`;
+      }
+      el.className = 'marker';
+  
+      // make a marker for each feature and add to the map
+      new mapboxgl.Marker(el)
+      .setLngLat(result.geometry.coordinates)
+      .addTo(map);      
+    } else {
+      console.log('fail no coords')
+      console.log(result)
     }
-    let featureBlue = buildFeatureMCL(result,coords,color)
-    dataObj.features.push(featureBlue);
-
-    // create a HTML element for each feature
-    var el = document.createElement('div');
-    el.innerHTML = `${result.properties['ANALYTE_NAME']}`;
-
-    if(result.properties.RESULT.trim() != '' && result.properties.MCL_VALUE.trim() != '') {
-      el.innerHTML = `${result.properties['ANALYTE_NAME']} ${parseInt(result.properties.proportion_mcl * 100)}% MCL`;
-    }
-    el.className = 'marker';
-
-    // make a marker for each feature and add to the map
-    new mapboxgl.Marker(el)
-    .setLngLat(result.geometry.coordinates)
-    .addTo(map);    
-
   });
   
   

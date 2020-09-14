@@ -18,12 +18,16 @@ class OpenOaklandMapboxColumns extends HTMLElement {
   }
 
   render() {
+    let centerPoint = [-119.01383640716884,35.31035103381756];
+    if(this.getAttribute('center')) {
+      centerPoint = this.getAttribute('center').split(',');
+    }
     this.id = 'map'
     mapboxgl.accessToken = this.getAttribute('key');
     var map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v9',
-      center: this.getAttribute('center').split(','),
+      center: centerPoint,
       zoom: 9.8,
       pitch: 47,
       bearing: -38.37113944877393
