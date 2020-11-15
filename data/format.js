@@ -3,9 +3,16 @@ const fs = require('fs')
 let data = JSON.parse(fs.readFileSync('./violations-unformatted.json'));
 let outputArr = [];
 
-let fields = data['hr2w_web_data_active_OOC'][0];
+function getRowsOnFirstSheet(xls) {
+  for (const x in xls) {
+    return xls[x];
+  }
+}
 
-data['hr2w_web_data_active_OOC'].forEach( (item, index) => {
+let rows = getRowsOnFirstSheet(data);
+let fields = rows[0];
+
+rows.forEach( (item, index) => {
   if(index > 0) {
     let obj = {};
     for(var key in fields) {
